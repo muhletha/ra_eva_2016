@@ -44,6 +44,7 @@
 
 \documentclass{ra2016}
 
+
 %SKEL - v0.4 - 2016 (Utiliser pour les stats d'utilisation de Skel, merci de ne effacer cette ligne)
 
 % ne pas enlever 
@@ -1151,13 +1152,14 @@ satellites can be used for slot synchronization.
 To prevent collisions on the transmission channel, our TDMA scheduling mechanism requires that every packet transmitted by 
 any vehicle must contain additional information, called Frame Information (FI). The FI consists of a set of ID Fields (IDFs) of 
 size equal to the number of time slots per frame, $\tau$. Each IDF is dedicated to the corresponding time slot of a frame. The 
-basic FI structure is shown in Figure~\ref{figc:DTMAC_Frame}. Each time slot is dynamically reserved by an active vehicle 
+basic FI structure is shown in Figure~\ref{figc:DTMAC_Frame}.
+Each time slot is dynamically reserved by an active vehicle 
 (the vehicle whose communication device is transmitting) for collision-free delivery of safety messages or other control messages.
 The VC\_ID field contains the ID of the vehicle that is accessing this slot. Each vehicle is identified by its MAC address. The 
 SLT\_STS field contains the status of each slot which indicates whether the slot is Idle, Busy or in Collision. Finally, the 
 PKT\_TYP field indicates the type of packet transmitted by the vehicle, i.e. periodic information or event-driven safety messages.
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
   \begin{center}
   % Requires \usepackage{graphicx}
   \includegraphics[height=10cm,width=13cm]{IMG/DTMACFrame.jpg}
@@ -1206,6 +1208,10 @@ vehicle $u\in N(v)$, denoted by $B(v)$. In order to avoid any collision problem,
 any neighboring vehicles. Therefore,  vehicle $v$ can determine the set of available time slots $F(v)$ and then attempts to 
 select one of them at random, say time slot $k$.
 
+The simulation results show that, compared to VeMAC which is the reference in terms of TDMA protocols for VANETs, DTMAC provides a lower rate of access and merging collisions, which results in significantly improved broadcast coverage. For further details see~\cite{hadded:hal-01379216}. 
+
+
+
 \subsubsection{TDMA-aware routing protocol for multi-hop communications}
  
 The main idea of TRPM is to select the next hop using the vehicle position and the time 
@@ -1221,7 +1227,7 @@ vehicle that will broadcast a message received from vehicle A. As shown in Figur
 multi-hop path between vehicle A and G (one relay node in the area $x_2$ and another one in the area $x_3$). 
 
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
   \begin{center}
   % Requires \usepackage{graphicx}
  \includegraphics[height=9cm,width=15cm]{IMG/TRPM.jpg}
@@ -1230,6 +1236,59 @@ multi-hop path between vehicle A and G (one relay node in the area $x_2$ and ano
  \label{figc:trpm}
   \end{center}
 \end{figure}
+
+In the following, the DTMAC protocol has been used by the vehicles to organize the channel access. The TDMA slot 
+scheduling obtained by DTMAC is illustrated in Figure \ref{figc:trpm}. Firstly, vehicle A forwards a packet to B, as  vehicle A uses its frame 
+information to choose a vehicle that is accessing the channel during the set $S_1$. Upon receiving the packet for forwarding, vehicle B 
+will choose by using its frame information a vehicle that's accessing the channel during the set of time slots $S_2$ 
+(say vehicle D). Then, vehicle D will forward the packet to G, as G is moving in area $x_4$ (accessing the channel during the 
+set $S_0$) and it is the direct neighbor of vehicle D. By using DTMAC as the MAC layer, we can note that the path A-B-D-G is 
+the shortest, in terms of the number of hops as well as the end-to-end delay which  is equal to 6 time slots  (2 time slots 
+between $t_0$ and $t_2$ as $t_2$ is the transmission slot for vehicle B, then 2 time slots between $t_2$ and $t_4$ as $t_4$ is the 
+transmission slot for vehicle D and finally 2 time slots between $t_4$ and $t_0$ as $t_0$ is the transmission slot in which vehicle 
+G will broadcast the message received from  vehicle A). 
+
+Packet forwarding algorithm
+
+The idea of TRPM is the following. Whenever a vehicle $i$ accessing the channel during the set $S_k$ wants to send/forward an 
+event-driven safety message, it constructs two sets of candidate forwarders based on its frame information FI as 
+follows, where $TS(j)$ indicates the time slot reserved by vehicle $j$.
+
+\begin{itemize}
+	\item $A_i=\{j\in N(i)~|~TS(j)\in S_{(k+1)\%3}\}$ // \textit{The set of vehicles that are moving in the adjacent right-hand 
+	area.}
+	\item $B_i=\{j\in N(i)~|~TS(j)\in S_{(k+2)\%3}\}$ // \textit{The set of vehicles that are moving in the adjacent 
+	left-hand area.}
+\end{itemize}
+
+Each source vehicle uses the position of a packet's destination and the TDMA scheduling information to make packet forwarding 
+decisions. In fact, when a source vehicle $i$ is moving behind the destination vehicle, it will select a next hop relay that 
+belongs to set $B_i$; when the transmitter is moving in front of the destination vehicle, it will select a forwarder vehicle 
+from those in  set $A_i$. %Algorithm~\ref{ALGO1} outlines the behavior of our scheme during the procedure for sending an event-driven safety messages. 
+For each vehicle $i$ that will send or forward a message, we define the normalized weight function WHS (Weighted next-Hop 
+Selection) which depends on the delay and the distance between each neighboring vehicle $j$. WHS is calculated as follows:
+
+\begin{center}
+\vspace{2mm}
+$WHS_{i,j}=\alpha*\frac{\Delta t_{i,j}}{\tau}-(1-\alpha)*\frac{d_{i,j}}{R}~~~~~~(1)$ 
+\vspace{2mm}
+\end{center}
+Where:
+\begin{itemize}
+\item $\tau$ is the length of the TDMA frame (in number of time slots).
+\item $j$ is one of the neighbors of vehicle $i$, which represents the potential next hop that will relay the message 
+received from vehicle $i$.
+\item $\Delta t_{i,j}$ is the gap between the sending slot of vehicle $i$ and the sending slot of vehicle $j$.
+\item $d_{i,j}$ is the distance between the two vehicles $i$ and $j$, and $R$ is the communication range. 
+\item $\alpha$ is a weighted value in the interval $[0,1]$ that gives more weight to either distance or delay. When $\alpha$ is 
+high, more weight is given to the delay. Otherwise, when $\alpha$ is small, more weight is given to the distance.
+\end{itemize}
+We note that the two weight factors $\frac{\Delta t_{i,j}}{\tau}$ and $\frac{d_{i,j}}{R}$ are in conflict. For simplicity, we assume 
+that all the factors should be minimized. In fact, the multiplication of the second weight factor
+by (-1) allows us to transform a maximization to a minimization. Therefore, the forwarding vehicle for $i$ is the 
+vehicle $j$ that is moving in an adjacent area for which $WHS_{i,j}$ is the lowest value.
+
+
 
 \subsubsection{Centralized TDMA: CTMAC}
 
@@ -1248,7 +1307,7 @@ broadcast a Slot Announcement message (SA) to the vehicles within its coverage a
 provide an efficient time slot utilization for the participating vehicles, while minimizing transmission collisions caused 
 by the hidden node problem.
 
-  \begin{figure}[!h]
+  \begin{figure}[!htbp]
   \begin{center}
   % Requires \usepackage{graphicx}
  \includegraphics[height=8cm,width=14cm]{IMG/CTMACprinciple.png}
@@ -1284,7 +1343,108 @@ time slot to transmit its packet on the control channel.
   \end{center}
 \end{figure}
 
+In CTMAC, each RSU constructs and maintains a Frame Information (FI) 
+of length equal to the number of time slots per frame, $\tau$. The FI consists 
+of a set of ID Fields (IDFs) and each one is dedicated to the corresponding 
+time slot of a frame. The FI structure is shown in Figure~\ref{fig:CTSA_FI}. 
+Each IDF consists of three fields: VC\_ID, SLT\_STS and PKT\_TYP. 
+The VC\_ID field contains the ID of the vehicle that is accessing this slot. 
+The SLT\_STS field contains the status of each slot which indicates whether 
+the slot is Idle, Busy or in Collision. Finally, the PKT\_TYP field indicates 
+the type of packet transmitted by the vehicle, i.e. periodic information or 
+event-driven safety messages. Unlike the VeMAC and ADHOC MAC 
+protocols, in the CTMAC protocol, only the RSU nodes periodically 
+broadcast their frame information and each vehicle will update its frame
+ information based on the packet transmitted by its RSU. However, a 
+ vehicle broadcasts its frame information only when an access collision problem is detected. 
 
+At the end of each frame, each RSU $u$ can determine the set of 
+free time slots based on its frame information, denoted by $F(u)$. 
+When an RSU has one or more available time slots, it announces that 
+by broadcasting a Slot Announcement (SA) message containing its 
+identity $(SA->NODE\_ID)$ to all the vehicles in its coverage area. 
+
+%\begin{algorithm}[!htbp]
+%\caption{Action at each vehicle that will reserve a time slot}\label{SlotReservation}
+%\textbf{Input~~} \\
+ %$S_{j}(v):$ the set of time slots that the vehicle $v$ can reserve.\\
+ %$\alpha_j,~\beta_j$: are the indexes of the first and the last slot of the set $S_{j}(v)$, respectively. 
+
+
+
+
+%\begin{algorithmic}[1]
+%
+%\STATE ~//~TDMA slot assignment
+%\IF{\textit{vehicle $v$ receives an SA message from RSU $u$}}
+%\STATE \textit{$MY\_RSU\_ID=SA->NODE\_ID$}
+%\STATE \textit{vehicle $v$ randomly reserves a temporary time slot, say slot $k$.}
+%\STATE \textit{vehicle $v$ sends a SREQ to RSU $u$ during the time slot $k$.}
+%\ENDIF
+%\WHILE{$timer_1!=0$}
+%\IF{\textit{vehicle $v$ receives an SREP message from RSU $u$}}
+%\STATE \textit{vehicle $v$ starts to broadcast its message during the time slot \textit{$SREP->SLT\_ID.$}}
+%\ENDIF  
+%\ENDWHILE
+%\IF{$(time_1==0)~and~(TS(v)==\emptyset)$}
+%\STATE \textit{go to 2.}
+%\ENDIF
+%\STATE ~//~TDMA schedule maintenance
+%\WHILE{$TS(v)!=\emptyset$}
+%\IF{\textit{$MY\_RSU\_ID!=SA->NODE\_ID$}}
+%\STATE \textit{go to 2.}
+%\ENDIF   
+%\ENDWHILE
+%\end{algorithmic}
+%\end{algorithm}
+
+When a vehicle receives 
+an SA message, and if it wishes to access the channel, it tries to get the 
+%attention of the RSU by sending it a Slot REQuest message (SREQ) including its identity. Algorithm~\ref{SlotReservation} outlines the details of the slot 
+%reservation mechanism.
+ $v$ represents the vehicle that needs to reserve a 
+time slot, $timer_1$ is a timer and $TS(v)$ is the time slot that is successfully 
+acquired by vehicle $v$. When an RSU receives the SERQ message, it checks 
+whether there is an available time slot and, if there is, the RSU sends a Slot REPly 
+message (SREP) to the corresponding vehicle including the slot index $(SREP->SLT\_ID)$. 
+After the reception of the SREP, the vehicle $v$ starts to broadcast its message 
+during its time slot, $TS(v)=SREP->SLT\_ID$. Otherwise, if the timer expires and 
+no response has been received from the RSU (lines 12-14), the vehicle $v$ will repeat the same steps.
+If a vehicle receives an SA message from another RSU (line 17), the vehicle 
+will send an SREQ to allocate a new time slot and if it receives an SREP from 
+the RSU it will release its current time slot and it will start to broadcast its packet 
+during the time slot allocated by the new RSU. Moreover, when an RSU does 
+not receive a message from a vehicle $v$ during its slot, it considers that it has 
+left its coverage area and it releases its time slot. 
+
+%Algorithm~\ref{SlotScheduling} 
+%outlines the behavior of our scheme during the procedure of slot scheduling at the RSU.  
+
+%
+%\begin{algorithm}[!htbp]
+%\caption{Slot scheduling procedure executed at each RSU}\label{SlotScheduling}
+%$\alpha_j,~\beta_j$: are the indexes of the first and the last slot of the set $S_{j}(v)$, respectively. 
+%\begin{algorithmic}[1]
+%\STATE \textbf{Input:} 
+%\STATE \textit{$S_{j}:$ The set of time slots managed by the RSU $u$.}
+%\IF{\textit{current\_slot$==TS(u)$ and $F(u)\neq\{\emptyset\}$}}
+%\STATE \textit{$u$ broadcasts an SA message.}
+%\ENDIF
+%
+%\IF{\textit{$u$ receives an SREQ message from vehicle $v$}}
+%\IF{\textit{$\exists~k \in S_j$ such that FI[k].SLT\_STS=Free}}    
+%\STATE \textit{$u$ allocates the slot $k$ to vehicle $v$.}
+%\STATE \textit{$u$ sends a SREP to vehicle $v$.}
+%\ENDIF
+%\ENDIF
+%\WHILE{true}
+%\IF{\textit{$u$ detects that there is a vehicle has leaved its coverage area, say vehicle $i$}}
+%\STATE \textit{ FI[TS($i$)].SLT\_STS=Free}
+%\ENDIF   
+%\ENDWHILE
+
+%\end{algorithmic}
+%\end{algorithm}
 
 
 
@@ -1328,6 +1488,14 @@ We assume that each node in our PPP has a random receiver at a typical distance.
 We choose the average distance to its closest neighbor.
 We also assume that all the network nodes always have a pending packet.
 With all these assumptions, we analytically study the density of throughput of successful transmission and we show that it can be optimized with the carrier-sense threshold. 
+ The model makes it possible analytically compute the 
+ performance of a CSMA system and gives 
+ interesting results on the network performance such as the capture probability 
+ when the throughput is optimized, and the effect on a non-optimization of the 
+ carrier sense threshold on the throughput. We can also study the influence 
+of the parameters and  see their effects on the overall performance. 
+We observe a significant difference between 2D an 1D networks.
+
 
 % - - - - - - - - - - - - - -
 \subsubsection{Performance analysis of IEEE 802.11 broadcast schemes}
