@@ -1166,6 +1166,46 @@ PKT\_TYP field indicates the type of packet transmitted by the vehicle, i.e. per
  \label{figc:DTMAC_Frame}
 \end{figure}
 
+Our distributed TDMA scheduling mechanism uses vehicles location and slot reuse concept to ensure that vehicles in 
+adjacent areas have collision-free schedule. The channel time is partitioned into frames and each frame is further 
+partitioned into three sets of time slots $S_0, S_1,$ and $S_2$ of size equal to $n1, n2~$and$~n3$, respectively. These sets 
+are associated with vehicles moving in the areas $x_i,~x_{i+1},~$and$~x_{i+2}$, respectively. As shown in 
+Figure~\ref{figc:DTMAC_idea}, by dividing the time slots into three sets, vehicles $v_1$ and $v_3$ that are moving 
+within the two areas $x_1$ and $x_3$, respectively, can not transmit simultaneously to  vehicle $v_2$ because they 
+are accessing disjoint sets of time slots. Therefore, our TDMA scheduling mechanism can decrease the collisions rate 
+caused by the hidden node problem. In each area, the vehicles access the time slots associated to their locations 
+with the same probability. In the rest of this chapter, we adopt the following notations:
+\begin{itemize}
+\item $S_{j}(v)$: The set of time slots associated to the area in which the vehicle $v$ is traveling. \vspace{1mm}
+\item $N(v)$: The set of neighbors\footnote{The set of neighbors is the set of vehicles that are moving within the same area.} of vehicle $v$ on the transmission channel. \vspace{1mm}
+\end{itemize}
+Every active vehicle in the network should be allocated a fixed slot in the frame for safety messages or other control 
+packet transmissions. It is obvious that a vehicle's slot cannot be used by any neighboring vehicles within the same area or in  adjacent areas, otherwise collisions will occur. The goal of this work is to propose an efficient slot reuse algorithm  without having to use expensive spectrum and complex broadband mechanisms such as FDMA or CDMA. In fact, the three subsets of time slots will be reused between neighboring areas in such a way no vehicle in different adjacent areas can access the channel at the same time, and thus no interference will occur. 
+
+
+Let us suppose that an active vehicle $v$ moving within the area $x_i$ needs to acquire a time slot on the transmission channel. Vehicle $v$ starts listening to the channel during the set of time slots reserved for the area in which it is traveling, let $S_{j}(v)$, where $j=(i+2)~mod~3$.
+
+\begin{itemize}
+
+\item Each vehicle that hears exactly one node transmission in a time slot reserved for its location, will set the status 
+of the slot to ''busy'' and record the ID of the vehicle accessing the channel in this time slot in the corresponding VC\_ID field.
+%\item Each vehicle that hears multiple FIs from different vehicles during the same time slot, will consider that the slot is occupied by more than one vehicle and sets its status to collision.
+\item If a vehicle does not hear anything during a specific time slot, it will set its status to ''free'' in the FI.
+\item If a vehicle can not decode the data during a specific time slot, it will set its status to ''collision'' in the FI.
+\item When a vehicle A has sent data in a given slot, it looks in the field information of the next slots to 
+discover whether its neighbors 
+have correctly received its data. If a neighbor of A reports  collision for this slot  (in the FI) or even if this slot is reported 
+to be ''busy'' 
+but being sent by another node (say B in the VC\_ID), A considers that its transmission has led to a 
+collision\footnote{Actually a node A considers that its transmission is a success if and only if all its neighbors 
+report a success in the FI of their slots specifying that the data was sent by node A.}. 
+\end{itemize}
+
+At the end of the frame the vehicle $v$ can determine the set $N(v)$ and the set of busy slots in $S_{j}(v)$ used by each 
+vehicle $u\in N(v)$, denoted by $B(v)$. In order to avoid any collision problem, this set of time slots can not be used by 
+any neighboring vehicles. Therefore,  vehicle $v$ can determine the set of available time slots $F(v)$ and then attempts to 
+select one of them at random, say time slot $k$.
+
 \subsubsection{TDMA-aware routing protocol for multi-hop communications}
  
 The main idea of TRPM is to select the next hop using the vehicle position and the time 
