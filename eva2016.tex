@@ -1452,28 +1452,32 @@ left its coverage area and it releases its time slot.
 \begin{participants}
     \pers{Nadjib}{Achir}
     \pers{Younes}{Bouchaala}
-    \pers{Guy}{Fayolle}
     \pers{Paul}{Muhlethaler}
     \pers{Oyunchimeg}{shagdar}
 \end{participants}
 
-%% - - - - - - - - - - - - - -
-%\subsubsection{Model of IEEE 802.11 broadcast scheme with infinite queue}
-%
-%We have analyzed the so-called back-off technique of the IEEE 802.11 protocol
-%in broadcast mode with waiting queues. In contrast to existing models, packets arriving when a
-%station (or node) is in back-off state are not discarded, but are stored in a buffer of infinite capacity.
-%As in previous studies, the key point of our analysis hinges on the assumption that the time on
-%the channel is viewed as a random succession of transmission slots (whose duration corresponds
-%to the length of a packet) and mini-slots during which the back-off of the station is decremented.
-%These events occur independently, with given probabilities. The state of a node is represented by a
-%two-dimensional Markov chain in discrete-time, formed by the back-off counter and the number of
-%packets at the station. Two models are proposed both of which are shown to cope reasonably well
-%with the physical principles of the protocol. The stabillity (ergodicity) conditions are obtained and
-%interpreted in terms of maximum throughput. Several approximations related to these models are
-%also discussed.
+\subsubsection{Performance analysis of IEEE 802.11 broadcast schemes with different inter-frame spacings}
 
-% - - - - - - - - - - - - - -
+We have started to build a model which analyzes the performance 
+of IEEE 802.11p managing different class of priorities. 
+The differentiation of the traffics is obtained with different 
+inter-frame spacings:  AIFSs (for Arbitration Inter Frame Spacings) and with 
+different back-off windows: CWs (for Collision Windows). 
+This model is based on a Markov model where the state is the remaining 
+number of idle slot that a packet of given class has to wait before transmission. 
+However in addition of this Markov for which we compute a steady state 
+we also consider the Markov chain which counts the number of idle slots after 
+the smallest AIFS. As a matter of fact the probability these states are not evenly 
+distributed since with different AIFSs the arrival rate is not constant 
+when the number of idle slots experiences after the smallest AIFS varies. 
+The resolution of the steady state of this two inter-mixed Markov chains
+lead to non linear and intertwined equations that can be easily  solved with a software 
+such as Maple. 
+With the model we have obtained, we can compute the delivery rate 
+of packets of different class and show the influence of system parameters: 
+AIFSs and CWs. The preliminary results show a a very important influence 
+of different AIFSs on the performance for each traffic classes.  
+
 \subsubsection{Model and optimization of CSMA}
 
 We have studied  the maximum throughput of CSMA in scenarios with spatial reuse.
@@ -1515,42 +1519,35 @@ successful transmissions easily scales linearly in $\lambda$ when we vary
 $\lambda$ whereas in CSMA networks the protocol must be carefully 
 tuned to obtain this scaling. 
 
+\subsubsection{Adaptive CSMA}
+
+Using the model, we have built for CSMA, we have shown that when optimized 
+with the carrier sense detection threshold $P_{cs}$, 
+the probability $p^*$ of transmission for a node 
+in the CSMA network does not depend on the density of nodes $\lambda$. 
+In other words when the CSMA is optimized to obtain the largest density of successful 
+transmissions (communication from nodes to their neighbors), $p^*$  is constant.
+We have verified this statement 
+on a few examples and we think that a formal proof of this remark is possible using 
+scaling  reasons. The average access delay is a direct function of the probability of transmission $p$. Thus the average delay when the carrier sense detection threshold is optimized 
+is a constant $D_{target}$ which does not depend on $\lambda$. 
+A stabilization algorithm which 
+adapts $P_{cs}$ to reach the $D_{target}$ can thus 
+
+
+
+
 
 % - - - - - - - - - - - - - -
-\subsubsection{Performance analysis of IEEE 802.11 broadcast schemes}
 
-We have analyzed different broadcast
-strategies in IEEE 802.11p Vehicular Ad-hoc NETworks
-(VANETs). The first strategy is the default IEEE 802.11p strategy.
-Using a model derived from the Bianchi model, we provide
-the network performance in terms of throughput and success
-rate. The second strategy is to use an acknowledgment technique
-similar to the acknowledgment with point-to-point traffic. A node
-will send its broadcast packet as in the default case,but it requires
-an acknowledgment from a neighbor node. This node may be a
-random neighbor or may be selected according to precise rules.
-We analyze this second strategy in terms of throughput and
-success rate. Somewhat surprisingly, we show that this second
-strategy improves the delivery ratio of the transmitted packets
-but reduces the overall throughput. This means that if the CAM
-messages (Cooperative Awareness Messages) are broadcasted, the
-total number of packets actually delivered will be greater with
-the default strategy than with the improved strategy. We propose
-a third strategy which consists in using the default strategy for
-normal packets, but we add random redundant transmissions to
-ensure greater reliability for very important packets. We show
-that with this simple technique, not only do we obtain suitable
-reliability, but we also achieve larger global throughput than with
-the acknowledgment-oriented technique.
-We have also computed network performance
-in terms of throughput and success rate with respect to the
-network parameters and to analyze their impact on performances.
+
+
 
 \end{module} 
 
 \begin{module}{resultats}{results:modelswireless}{Models for wireless networks}
 
-%------------------------------------------------------------------------------
+%--------------- ---------------------------------------------------------------
 \subsection{Interference and SINR coverage in spatial non-slotted Aloha networks}
 
 \begin{participants}
