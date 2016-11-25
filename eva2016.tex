@@ -943,7 +943,7 @@ We then propose an integer linear program formulation of the MRDS problem. We pr
 \end{participants}
 
 Sensor networks are often used to collect data from the environment where they are located. These data can then be transmitted regularly to a special node called a {\em sink}, which can be fixed or mobile. For critical data (like military or medical data), it is important that sinks and simple sensors can mutually authenticate so as to avoid data to be collected and/or accessed by fake nodes.
-For some applications, the collection frequency can be very high. As a result, the authentication mechanism used between a node and a sink must be fast and efficient both in terms of calculation time and energy consumption. This is especially important for nodes which computing capabilities and battery lifetime are very low. Moreover, an extra effort has been done to develop alternative solutions to secure, authenticate, and ensure the confidentiality of sensors, and the distribution of keys in the sensor network. Specific researches have also been conducted for large-scale sensors. At present, we work on an exchange protocol between sensors and sinks based on low-cost shifts and xor operations.
+For some applications, the collection frequency can be very high. As a result, the authentication mechanism used between a node and a sink must be fast and efficient both in terms of calculation time and energy consumption. This is especially important for nodes which computing capabilities and battery lifetime are very low. Moreover, an extra effort has been done to develop alternative solutions to secure, authenticate, and ensure the confidentiality of sensors, and the distribution of keys in the sensor network. Specific researches have also been conducted for large-scale sensors. At present, we work on an exchange protocol between sensors and sinks based on low-cost shifts and xor operations. This study was published in~\cite{boumerdassi:hal-01251917}. 
 
 %------------------------------------------------------------------------------
 \subsection{Massive MIMO Cooperative Communications for Wireless Sensor Networks}
@@ -1104,23 +1104,30 @@ degree of users.
 
 
 %==============================================================================
-\begin{module}{resultats}{results:vanets}{Protocols and Models for Wireless Networks Application to VANETs}
+\begin{module}{resultats}{results:vanets}{Protocols and Models for Wireless Networks - Application to VANETs}
 
 %------------------------------------------------------------------------------
 \subsection{Protocols for VANETs}
 
-\begin{participants}
-    \pers{Nadjib}{Achir}
-   % \pers{Younes}{Bouchaala}
-    \pers{Selma}{Boumerdassi}
-    \pers{Mohamed}{Elhadad or Hadded}
-    \pers{Paul}{Muhlethaler}
-    \pers{Eric}{Renault}
-    %\pers{Oyunchimeg}{Shagdar}
-\end{participants}
+%\begin{participants}
+%    \pers{Nadjib}{Achir}
+%    \pers{Younes}{Bouchaala}
+%    \pers{Selma}{Boumerdassi}
+%    \pers{Mohamed}{Elhadad or Hadded}
+%    \pers{Guy}{Fayolle}
+%    \pers{Anis}{Laouiti}
+%    \pers{Paul}{Muhlethaler}
+%    \pers{Eric}{Renault}
+%\end{participants}
 
 % - - - - - - - - - - - - - -
 \subsubsection{An Infrastructure-Free Slot Assignment Algorithm for Reliable Broadcast of Periodic Messages in VANETs}\label{ch:DTMAC}
+\begin{participants}
+    \pers{Mohamed}{Elhadad or Hadded}
+    \pers{Paul}{Muhlethaler}
+    \pers{Anis}{Laouiti}
+\end{participants}
+
 
 We have designed a novel \textbf{D}istributed \textbf{T}DMA based \textbf{MAC} protocol, named DTMAC, developed specifically for a highway scenario. DTMAC is designed 
 to provide the efficient delivery of both periodic and event-driven safety messages. The protocol uses the vehicles' location and a new slot 
@@ -1150,70 +1157,80 @@ equipped with a GPS and thus the one-Pulse-Per-Second (1PPS) signal that a GPS r
 satellites can be used for slot synchronization. 
 
 To prevent collisions on the transmission channel, our TDMA scheduling mechanism requires that every packet transmitted by 
-any vehicle must contain additional information, called Frame Information (FI). The FI consists of a set of ID Fields (IDFs) of 
-size equal to the number of time slots per frame, $\tau$. Each IDF is dedicated to the corresponding time slot of a frame. The 
-basic FI structure is shown in Figure~\ref{figc:DTMAC_Frame}.
-Each time slot is dynamically reserved by an active vehicle 
-(the vehicle whose communication device is transmitting) for collision-free delivery of safety messages or other control messages.
-The VC\_ID field contains the ID of the vehicle that is accessing this slot. Each vehicle is identified by its MAC address. The 
-SLT\_STS field contains the status of each slot which indicates whether the slot is Idle, Busy or in Collision. Finally, the 
-PKT\_TYP field indicates the type of packet transmitted by the vehicle, i.e. periodic information or event-driven safety messages.
-
-\begin{figure}[!htbp]
-  \begin{center}
-  % Requires \usepackage{graphicx}
-  \includegraphics[height=10cm,width=13cm]{IMG/DTMACFrame.jpg}
-  \end{center}
-  \caption{Frame information (FI) structure.}
- \label{figc:DTMAC_Frame}
-\end{figure}
-
-Our distributed TDMA scheduling mechanism uses vehicles location and slot reuse concept to ensure that vehicles in 
-adjacent areas have collision-free schedule. The channel time is partitioned into frames and each frame is further 
-partitioned into three sets of time slots $S_0, S_1,$ and $S_2$ of size equal to $n1, n2~$and$~n3$, respectively. These sets 
-are associated with vehicles moving in the areas $x_i,~x_{i+1},~$and$~x_{i+2}$, respectively. As shown in 
-Figure~\ref{figc:DTMAC_idea}, by dividing the time slots into three sets, vehicles $v_1$ and $v_3$ that are moving 
-within the two areas $x_1$ and $x_3$, respectively, can not transmit simultaneously to  vehicle $v_2$ because they 
-are accessing disjoint sets of time slots. Therefore, our TDMA scheduling mechanism can decrease the collisions rate 
-caused by the hidden node problem. In each area, the vehicles access the time slots associated to their locations 
-with the same probability. In the rest of this chapter, we adopt the following notations:
-\begin{itemize}
-\item $S_{j}(v)$: The set of time slots associated to the area in which the vehicle $v$ is traveling. \vspace{1mm}
-\item $N(v)$: The set of neighbors\footnote{The set of neighbors is the set of vehicles that are moving within the same area.} of vehicle $v$ on the transmission channel. \vspace{1mm}
-\end{itemize}
-Every active vehicle in the network should be allocated a fixed slot in the frame for safety messages or other control 
-packet transmissions. It is obvious that a vehicle's slot cannot be used by any neighboring vehicles within the same area or in  adjacent areas, otherwise collisions will occur. The goal of this work is to propose an efficient slot reuse algorithm  without having to use expensive spectrum and complex broadband mechanisms such as FDMA or CDMA. In fact, the three subsets of time slots will be reused between neighboring areas in such a way no vehicle in different adjacent areas can access the channel at the same time, and thus no interference will occur. 
-
-
-Let us suppose that an active vehicle $v$ moving within the area $x_i$ needs to acquire a time slot on the transmission channel. Vehicle $v$ starts listening to the channel during the set of time slots reserved for the area in which it is traveling, let $S_{j}(v)$, where $j=(i+2)~mod~3$.
-
-\begin{itemize}
-
-\item Each vehicle that hears exactly one node transmission in a time slot reserved for its location, will set the status 
-of the slot to ''busy'' and record the ID of the vehicle accessing the channel in this time slot in the corresponding VC\_ID field.
-%\item Each vehicle that hears multiple FIs from different vehicles during the same time slot, will consider that the slot is occupied by more than one vehicle and sets its status to collision.
-\item If a vehicle does not hear anything during a specific time slot, it will set its status to ''free'' in the FI.
-\item If a vehicle can not decode the data during a specific time slot, it will set its status to ''collision'' in the FI.
-\item When a vehicle A has sent data in a given slot, it looks in the field information of the next slots to 
-discover whether its neighbors 
-have correctly received its data. If a neighbor of A reports  collision for this slot  (in the FI) or even if this slot is reported 
-to be ''busy'' 
-but being sent by another node (say B in the VC\_ID), A considers that its transmission has led to a 
-collision\footnote{Actually a node A considers that its transmission is a success if and only if all its neighbors 
-report a success in the FI of their slots specifying that the data was sent by node A.}. 
-\end{itemize}
-
-At the end of the frame the vehicle $v$ can determine the set $N(v)$ and the set of busy slots in $S_{j}(v)$ used by each 
-vehicle $u\in N(v)$, denoted by $B(v)$. In order to avoid any collision problem, this set of time slots can not be used by 
-any neighboring vehicles. Therefore,  vehicle $v$ can determine the set of available time slots $F(v)$ and then attempts to 
-select one of them at random, say time slot $k$.
+any vehicle must contain additional information, called Frame Information (FI).
+For the frame, this field gives the status of the slot (Idle, Busy, Collision) and 
+the ID of the vehicles accessing each slot with the characteristic of the data 
+sent: periodic or event-driven safety messages.
+ 
+  
+%The FI consists of a set of ID Fields (IDFs) of 
+%size equal to the number of time slots per frame, $\tau$. Each IDF is dedicated to the corresponding time slot of a frame. The 
+%basic FI structure is shown in Figure~\ref{figc:DTMAC_Frame}.
+%Each time slot is dynamically reserved by an active vehicle 
+%(the vehicle whose communication device is transmitting) for collision-free delivery of safety messages or other control messages.
+%The VC\_ID field contains the ID of the vehicle that is accessing this slot. Each vehicle is identified by its MAC address. The 
+%SLT\_STS field contains the status of each slot which indicates whether the slot is Idle, Busy or in Collision. Finally, the 
+%PKT\_TYP field indicates the type of packet transmitted by the vehicle, i.e. periodic information or event-driven safety messages.
+%
+%\begin{figure}[!htbp]
+%  \begin{center}
+%  % Requires \usepackage{graphicx}
+%  \includegraphics[height=10cm,width=13cm]{IMG/DTMACFrame.jpg}
+%  \end{center}
+%  \caption{Frame information (FI) structure.}
+% \label{figc:DTMAC_Frame}
+%\end{figure}
+%
+%Our distributed TDMA scheduling mechanism uses vehicles location and slot reuse concept to ensure that vehicles in 
+%adjacent areas have collision-free schedule. The channel time is partitioned into frames and each frame is further 
+%partitioned into three sets of time slots $S_0, S_1,$ and $S_2$ of size equal to $n1, n2~$and$~n3$, respectively. These sets 
+%are associated with vehicles moving in the areas $x_i,~x_{i+1},~$and$~x_{i+2}$, respectively. As shown in 
+%Figure~\ref{figc:DTMAC_idea}, by dividing the time slots into three sets, vehicles $v_1$ and $v_3$ that are moving 
+%within the two areas $x_1$ and $x_3$, respectively, can not transmit simultaneously to  vehicle $v_2$ because they 
+%are accessing disjoint sets of time slots. Therefore, our TDMA scheduling mechanism can decrease the collisions rate 
+%caused by the hidden node problem. In each area, the vehicles access the time slots associated to their locations 
+%with the same probability. In the rest of this chapter, we adopt the following notations:
+%\begin{itemize}
+%\item $S_{j}(v)$: The set of time slots associated to the area in which the vehicle $v$ is traveling. \vspace{1mm}
+%\item $N(v)$: The set of neighbors\footnote{The set of neighbors is the set of vehicles that are moving within the same area.} of vehicle $v$ on the transmission channel. \vspace{1mm}
+%\end{itemize}
+%Every active vehicle in the network should be allocated a fixed slot in the frame for safety messages or other control 
+%packet transmissions. It is obvious that a vehicle's slot cannot be used by any neighboring vehicles within the same area or in  adjacent areas, otherwise collisions will occur. The goal of this work is to propose an efficient slot reuse algorithm  without having to use expensive spectrum and complex broadband mechanisms such as FDMA or CDMA. In fact, the three subsets of time slots will be reused between neighboring areas in such a way no vehicle in different adjacent areas can access the channel at the same time, and thus no interference will occur. 
+%
+%
+%Let us suppose that an active vehicle $v$ moving within the area $x_i$ needs to acquire a time slot on the transmission channel. Vehicle $v$ starts listening to the channel during the set of time slots reserved for the area in which it is traveling, let $S_{j}(v)$, where $j=(i+2)~mod~3$.
+%
+%\begin{itemize}
+%
+%\item Each vehicle that hears exactly one node transmission in a time slot reserved for its location, will set the status 
+%of the slot to ''busy'' and record the ID of the vehicle accessing the channel in this time slot in the corresponding VC\_ID field.
+%%\item Each vehicle that hears multiple FIs from different vehicles during the same time slot, will consider that the slot is occupied by more than one vehicle and sets its status to collision.
+%\item If a vehicle does not hear anything during a specific time slot, it will set its status to ''free'' in the FI.
+%\item If a vehicle can not decode the data during a specific time slot, it will set its status to ''collision'' in the FI.
+%\item When a vehicle A has sent data in a given slot, it looks in the field information of the next slots to 
+%discover whether its neighbors 
+%have correctly received its data. If a neighbor of A reports  collision for this slot  (in the FI) or even if this slot is reported 
+%to be ''busy'' 
+%but being sent by another node (say B in the VC\_ID), A considers that its transmission has led to a 
+%collision\footnote{Actually a node A considers that its transmission is a success if and only if all its neighbors 
+%report a success in the FI of their slots specifying that the data was sent by node A.}. 
+%\end{itemize}
+%
+%At the end of the frame the vehicle $v$ can determine the set $N(v)$ and the set of busy slots in $S_{j}(v)$ used by each 
+%vehicle $u\in N(v)$, denoted by $B(v)$. In order to avoid any collision problem, this set of time slots can not be used by 
+%any neighboring vehicles. Therefore,  vehicle $v$ can determine the set of available time slots $F(v)$ and then attempts to 
+%select one of them at random, say time slot $k$.
 
 The simulation results show that, compared to VeMAC which is the reference in terms of TDMA protocols for VANETs, DTMAC provides a lower rate of access and merging collisions, which results in significantly improved broadcast coverage. For further details see~\cite{hadded:hal-01379216}. 
 
 
 
-\subsubsection{TRPM:  aTDMA-aware routing protocol for multi-hop communications in VANETs}
- 
+\subsubsection{TRPM:  a TDMA-aware routing protocol for multi-hop communications in VANETs}
+\begin{participants}
+    \pers{Mohamed}{Elhadad or Hadded}
+    \pers{Paul}{Muhlethaler}
+    \pers{Anis}{Laouiti}
+\end{participants}
 The main idea of TRPM is to select the next hop using the vehicle position and the time 
 slot information from the TDMA scheduling.  Like the GPSR protocol, we assume that each transmitting vehicle 
 knows the position of the packet's destination. In TRPM, the TDMA scheduling information and the position of a packet's destination 
@@ -1231,7 +1248,6 @@ multi-hop path between vehicle A and G (one relay node in the area $x_2$ and ano
   \begin{center}
   % Requires \usepackage{graphicx}
  \includegraphics[height=9cm,width=15cm]{IMG/TRPM.jpg}
- 
   \caption{VANET network using DTMAC scheduling scheme.}
  \label{figc:trpm}
   \end{center}
@@ -1289,10 +1305,19 @@ by (-1) allows us to transform a maximization to a minimization. Therefore, the 
 vehicle $j$ that is moving in an adjacent area for which $WHS_{i,j}$ is the lowest value.
 
 
+The simulation results reveal that our routing protocol significantly outperforms other
+protocols in terms of average end-to-end delay, average number
+of relay vehicles and the average delivery ratio.
 
 \subsubsection{CTMAC: a Centralized TDMA for VANETs}
 
-In this section, we present an infrastructure-based TDMA scheduling scheme which exploits the linear feature of VANET topologies.The 
+ \begin{participants}
+    \pers{Mohamed}{Elhadad or Hadded}
+    \pers{Paul}{Muhlethaler}
+    \pers{Anis}{Laouiti}
+\end{participants}
+    
+We have designed an infrastructure-based TDMA scheduling scheme which exploits the linear feature of VANET topologies. The 
 vehicles' movements in a highway environment are linear due to the fact that their movements are constrained by the road topology. Our 
 scheduling mechanism is also based on the assumption that the highway is equipped with some RSUs (i.e. one RSU 
 for each $2\times R~meters$, where $R$ is the communication range). Note that each area is covered by one RSU installed on 
@@ -1300,12 +1325,13 @@ the side of the highway and in the middle of the corresponding area. The time sl
 frame are partitioned into two sets $S_1, S_2$ associated with vehicles in two adjacent RSU 
 areas (see Figure~\ref{fig:CTSA}). Each frame consists of a constant number of time slots, denoted by $\tau$ and each time 
 slot is of a fixed time duration, denoted by $s$. Each vehicle can detect the start time of each frame as well as the 
-start time of a time slot. In the VANET studied, all the vehicles are equipped with a GPS 
-and thus the one-Pulse-Per-Second (1PPS) signal that a GPS receiver gets from GPS satellites can be used for 
-slot synchronization. The first time slot either in the set $S_1$ or $S_2$ is always used by the correspondent RSU to
-broadcast a Slot Announcement message (SA) to the vehicles within its coverage area. In the following, we detail the slot scheduling mechanism in CTMAC and we show how this protocol can 
-provide an efficient time slot utilization for the participating vehicles, while minimizing transmission collisions caused 
-by the hidden node problem.
+start time of a time slot. 
+%In the VANET studied, all the vehicles are equipped with a GPS 
+%and thus the one-Pulse-Per-Second (1PPS) signal that a GPS receiver gets from GPS satellites can be used for 
+%slot synchronization. The first time slot either in the set $S_1$ or $S_2$ is always used by the correspondent RSU to
+%broadcast a Slot Announcement message (SA) to the vehicles within its coverage area. In the following, we detail the slot scheduling mechanism in CTMAC and we show how this protocol can 
+%provide an efficient time slot utilization for the participating vehicles, while minimizing transmission collisions caused 
+%by the hidden node problem.
 
   \begin{figure}[!htbp]
   \begin{center}
@@ -1316,8 +1342,7 @@ by the hidden node problem.
   \end{center}
 \end{figure}
 
-
-Our centralized TDMA scheduling mechanism uses a slot reuse concept 
+The CTMAC scheduling mechanism uses a slot reuse concept 
 to ensure that vehicles in adjacent areas covered by two RSUs have 
 a collision-free schedule. The channel time is partitioned into frames and
 each frame is further partitioned into two sets of time slots $S_1$ and $S_2$. 
@@ -1333,36 +1358,46 @@ time slot on all subsequent frames unless it enters another area covered by anot
 RSU or a merging collision problem occurs. Each vehicle uses only its allocated 
 time slot to transmit its packet on the control channel.
 
+The simulation results
+reveal that CTMAC significantly outperforms the VeMAC and
+ADHOC MAC protocols. in terms of transmission collisions
+and the overhead required to create and maintain the TDMA
+schedules, see~\cite{hadded:hal-01379219}. 
 
-  \begin{figure}[!h]
-  \begin{center}
-  % Requires \usepackage{graphicx}
- \includegraphics[height=10cm,width=15cm]{IMG/CTMACFrame.jpg}
-  \caption{Frame information (FI) structure.}
- \label{fig:CTSA_FI}
-  \end{center}
-\end{figure}
-
-In CTMAC, each RSU constructs and maintains a Frame Information (FI) 
-of length equal to the number of time slots per frame, $\tau$. The FI consists 
-of a set of ID Fields (IDFs) and each one is dedicated to the corresponding 
-time slot of a frame. The FI structure is shown in Figure~\ref{fig:CTSA_FI}. 
-Each IDF consists of three fields: VC\_ID, SLT\_STS and PKT\_TYP. 
-The VC\_ID field contains the ID of the vehicle that is accessing this slot. 
-The SLT\_STS field contains the status of each slot which indicates whether 
-the slot is Idle, Busy or in Collision. Finally, the PKT\_TYP field indicates 
-the type of packet transmitted by the vehicle, i.e. periodic information or 
-event-driven safety messages. Unlike the VeMAC and ADHOC MAC 
-protocols, in the CTMAC protocol, only the RSU nodes periodically 
-broadcast their frame information and each vehicle will update its frame
- information based on the packet transmitted by its RSU. However, a 
- vehicle broadcasts its frame information only when an access collision problem is detected. 
-
-At the end of each frame, each RSU $u$ can determine the set of 
-free time slots based on its frame information, denoted by $F(u)$. 
-When an RSU has one or more available time slots, it announces that 
-by broadcasting a Slot Announcement (SA) message containing its 
-identity $(SA->NODE\_ID)$ to all the vehicles in its coverage area. 
+%  \begin{figure}[!h]
+%  \begin{center}
+%  % Requires \usepackage{graphicx}
+% \includegraphics[height=10cm,width=15cm]{IMG/CTMACFrame.jpg}
+%  \caption{Frame information (FI) structure.}
+% \label{fig:CTSA_FI}
+%  \end{center}
+%\end{figure}
+%
+%In CTMAC, each RSU constructs and maintains a Frame Information (FI) 
+%of length equal to the number of time slots per frame, $\tau$. 
+%For the frame, this field gives the status of the slot (Idle, Busy, Collision) and 
+%the ID of the vehicles accessing each slot with the characteristic of the data 
+%sent: periodic or event-driven safety messages. 
+%
+%The FI consists 
+%of a set of ID Fields (IDFs) and each one is dedicated to the corresponding 
+%time slot of a frame. The FI structure is shown in Figure~\ref{fig:CTSA_FI}. 
+%Each IDF consists of three fields: VC\_ID, SLT\_STS and PKT\_TYP. 
+%The VC\_ID field contains the ID of the vehicle that is accessing this slot. 
+%The SLT\_STS field contains the status of each slot which indicates whether 
+%the slot is Idle, Busy or in Collision. Finally, the PKT\_TYP field indicates 
+%the type of packet transmitted by the vehicle, i.e. periodic information or 
+%event-driven safety messages. Unlike the VeMAC and ADHOC MAC 
+%protocols, in the CTMAC protocol, only the RSU nodes periodically 
+%broadcast their frame information and each vehicle will update its frame
+% information based on the packet transmitted by its RSU. However, a 
+% vehicle broadcasts its frame information only when an access collision problem is detected. 
+%
+%At the end of each frame, each RSU $u$ can determine the set of 
+%free time slots based on its frame information, denoted by $F(u)$. 
+%When an RSU has one or more available time slots, it announces that 
+%by broadcasting a Slot Announcement (SA) message containing its 
+%identity $(SA->NODE\_ID)$ to all the vehicles in its coverage area. 
 
 %\begin{algorithm}[!htbp]
 %\caption{Action at each vehicle that will reserve a time slot}\label{SlotReservation}
@@ -1398,24 +1433,24 @@ identity $(SA->NODE\_ID)$ to all the vehicles in its coverage area.
 %\end{algorithmic}
 %\end{algorithm}
 
-When a vehicle receives 
-an SA message, and if it wishes to access the channel, it tries to get the 
-%attention of the RSU by sending it a Slot REQuest message (SREQ) including its identity. Algorithm~\ref{SlotReservation} outlines the details of the slot 
-%reservation mechanism.
- $v$ represents the vehicle that needs to reserve a 
-time slot, $timer_1$ is a timer and $TS(v)$ is the time slot that is successfully 
-acquired by vehicle $v$. When an RSU receives the SERQ message, it checks 
-whether there is an available time slot and, if there is, the RSU sends a Slot REPly 
-message (SREP) to the corresponding vehicle including the slot index $(SREP->SLT\_ID)$. 
-After the reception of the SREP, the vehicle $v$ starts to broadcast its message 
-during its time slot, $TS(v)=SREP->SLT\_ID$. Otherwise, if the timer expires and 
-no response has been received from the RSU (lines 12-14), the vehicle $v$ will repeat the same steps.
-If a vehicle receives an SA message from another RSU (line 17), the vehicle 
-will send an SREQ to allocate a new time slot and if it receives an SREP from 
-the RSU it will release its current time slot and it will start to broadcast its packet 
-during the time slot allocated by the new RSU. Moreover, when an RSU does 
-not receive a message from a vehicle $v$ during its slot, it considers that it has 
-left its coverage area and it releases its time slot. 
+%When a vehicle receives 
+%an SA message, and if it wishes to access the channel, it tries to get the 
+%%attention of the RSU by sending it a Slot REQuest message (SREQ) including its identity. Algorithm~\ref{SlotReservation} outlines the details of the slot 
+%%reservation mechanism.
+% $v$ represents the vehicle that needs to reserve a 
+%time slot, $timer_1$ is a timer and $TS(v)$ is the time slot that is successfully 
+%acquired by vehicle $v$. When an RSU receives the SERQ message, it checks 
+%whether there is an available time slot and, if there is, the RSU sends a Slot REPly 
+%message (SREP) to the corresponding vehicle including the slot index $(SREP->SLT\_ID)$. 
+%After the reception of the SREP, the vehicle $v$ starts to broadcast its message 
+%during its time slot, $TS(v)=SREP->SLT\_ID$. Otherwise, if the timer expires and 
+%no response has been received from the RSU (lines 12-14), the vehicle $v$ will repeat the same steps.
+%If a vehicle receives an SA message from another RSU (line 17), the vehicle 
+%will send an SREQ to allocate a new time slot and if it receives an SREP from 
+%the RSU it will release its current time slot and it will start to broadcast its packet 
+%during the time slot allocated by the new RSU. Moreover, when an RSU does 
+%not receive a message from a vehicle $v$ during its slot, it considers that it has 
+%left its coverage area and it releases its time slot. 
 
 %Algorithm~\ref{SlotScheduling} 
 %outlines the behavior of our scheme during the procedure of slot scheduling at the RSU.  
@@ -1448,11 +1483,15 @@ left its coverage area and it releases its time slot.
 
 \subsubsection{A Flooding-Based location services in VANETs}
 
-Location-based routing protocols for Vehicular Adhoc
-Networks (VANETs) use location information in routing
-decisions. These are provided by a location service queried by
-nodes to properly forward packets to communication partners.
-This paper presents the Partial-Flooding Location Service, a proactive
+\begin{participants}
+    \pers{Selma}{Boumerdassi}
+    \pers{Paul}{Muhlethaler}
+    \pers{Eric}{Renault}
+\end{participants}
+
+We have designed and analyzed a location service for VANETs; 
+such a service can be used in Location-based routing protocols for 
+VANETs. Our protocol is  a proactive
 flooding-based location service that drastically reduces the
 number of update packets sent over the network as compared to
 traditional flooding-based location services. This goal is achieved
@@ -1460,20 +1499,29 @@ by partially forwarding location information at each node. A
 mathematical model and some simulations are proposed to show
 the effectiveness of this solution. Cases for 1D, 2D and 3D spaces
 are studied for both deterministic and probabilistic forwarding
-decisions.
+decisions. We compare our protocol with the Multi-Point Relay (MPR) 
+technique which is used in the OLSR protocol and determine the best  technique 
+according to the network conditions.  
 
 %------------------------------------------------------------------------------
 \subsection{Models for Wireless Networks and VANETs}
 
-\begin{participants}
-    \pers{Nadjib}{Achir}
-    \pers{Younes}{Bouchaala}
-    \pers{Paul}{Muhlethaler}
-    \pers{Eric}{Renault}
-    \pers{Oyunchimeg}{Shagdar}
-\end{participants}
+%\begin{participants}
+%    \pers{Nadjib}{Achir}
+%    \pers{Younes}{Bouchaala}
+%    \pers{Guy}{Fayolle}
+%    \pers{Paul}{Muhlethaler}
+%    \pers{Oyunchimeg}{Shagdar}
+%\end{participants}
 
 \subsubsection{Performance analysis of IEEE 802.11 broadcast schemes with different inter-frame spacings}
+
+\begin{participants}
+    \pers{Younes}{Bouchaala}
+    \pers{Paul}{Muhlethaler}
+    \pers{Oyunchimeg}{Shagdar}
+       \pers{Nadjib}{Achir}
+\end{participants}
 
 We have started to build a model which analyzes the performance 
 of IEEE 802.11p managing different class of priorities. 
@@ -1495,7 +1543,36 @@ of packets of different class and show the influence of system parameters:
 AIFSs and CWs. The preliminary results show a a very important influence 
 of different AIFSs on the performance for each traffic classes.  
 
+\subsubsection{Model of IEEE 802.11 broadcast scheme with infinite queue}
+
+\begin{participants}
+    \pers{Guy}{Fayolle}
+    \pers{Paul}{Muhlethaler}
+\end{participants}
+
+We have analyzed the so-called back-off technique of the IEEE 802.11 protocol
+in broadcast mode with waiting queues. In contrast to existing models, packets arriving when a
+station (or node) is in back-off state are not discarded, but are stored in a buffer of infinite capacity.
+As in previous studies, the key point of our analysis hinges on the assumption that the time on
+the channel is viewed as a random succession of transmission slots (whose duration corresponds
+to the length of a packet) and mini-slots during which the back-off of the station is decremented.
+These events occur independently, with given probabilities. The state of a node is represented by a
+two-dimensional Markov chain in discrete-time, formed by the back-off counter and the number of
+packets at the station. Two models are proposed both of which are shown to cope reasonably well
+with the physical principles of the protocol. The stability (ergodicity) conditions are obtained and
+interpreted in terms of maximum throughput. Several approximations related to these models are
+also discussed. The results of this study are in \cite{fayolle:hal-01166082}. 
+
+
 \subsubsection{Model and optimization of CSMA}
+
+\begin{participants}
+      \pers{Younes}{Bouchaala}
+    \pers{Paul}{Muhlethaler}
+    \pers{Oyunchimeg}{Shagdar}
+     \pers{Nadjib}{Achir}
+\end{participants}
+
 
 We have studied  the maximum throughput of CSMA in scenarios with spatial reuse.
 The nodes of our network will be a Poisson Point Process (PPP) of a one or two dimensional space.
@@ -1538,6 +1615,13 @@ tuned to obtain this scaling.
 
 \subsubsection{Adaptive CSMA}
 
+\begin{participants}
+    \pers{Younes}{Bouchaala}
+    \pers{Paul}{Muhlethaler}
+    \pers{Oyunchimeg}{Shagdar}
+     \pers{Nadjib}{Achir}
+\end{participants}
+
 Using the model, we have built for CSMA, we have shown that when optimized 
 with the carrier sense detection threshold $P_{cs}$, 
 the probability $p^*$ of transmission for a node 
@@ -1551,20 +1635,6 @@ is a constant $D_{target}$ which does not depend on $\lambda$.
 A stabilization algorithm which 
 adapts $P_{cs}$ to reach the $D_{target}$ can thus 
 
-\subsubsection{Model of IEEE 802.11 broadcast scheme with infinite queue}
-
-We have analyzed the so-called back-off technique of the IEEE 802.11 protocol
-in broadcast mode with waiting queues. In contrast to existing models, packets arriving when a
-station (or node) is in back-off state are not discarded, but are stored in a buffer of infinite capacity.
-As in previous studies, the key point of our analysis hinges on the assumption that the time on
-the channel is viewed as a random succession of transmission slots (whose duration corresponds
-to the length of a packet) and mini-slots during which the back-off of the station is decremented.
-These events occur independently, with given probabilities. The state of a node is represented by a
-two-dimensional Markov chain in discrete-time, formed by the back-off counter and the number of
-packets at the station. Two models are proposed both of which are shown to cope reasonably well
-with the physical principles of the protocol. The stabillity (ergodicity) conditions are obtained and
-interpreted in terms of maximum throughput. Several approximations related to these models are
-also discussed.
 
 % - - - - - - - - - - - - - -
 \end{module} 
@@ -2168,7 +2238,7 @@ Today, virtually all industrial peach orchards are equi
     \item{\bf Carlos Oroza}, PhD student, UC Berkeley, USA, 19-30 October 2015
     \item{\bf Prof. Diego Dujovne}, Professor, Universidad Diego Portales, Chile, 28-31 July 2015
     \item{\bf Sami Malek}, PhD student, UC Berkeley, USA, 26 May - 12 June 2015
-    \item{\bf Leila Saidane}, ENSI, Tunis, Tunisia, October, November and December 2015 
+    \item{\bf Leila Saidane}, ENSI, Tunis, Tunisia, November 2016 
     \item{\bf Mohammed Erradi}, ENSIAS, Rabat, Morocco, September 2015
     \item{\bf Abdellatif Kobbane}, ENSIAS, Rabat, Morocco, September 2015
 \end{itemize}
@@ -2401,7 +2471,9 @@ TBD
 
 \subsection{Scientific Expertise}
 
-TBD
+Paul Muhlethaler is a reviewer for the European Commission. He regularly reviews 
+project; this year he was at the last review meeting of E3Network a project dedicated 
+to high-speed radio links in the E-band. 
 
 \subsection{Research Administration}
  
@@ -2499,7 +2571,6 @@ TBD
             \item Rafik Zitouni, ``Software defined radio for cognitive wireless sensor networks'', University of Paris Est, October 2015, \pascale~reviewer.
             \item Tanguy Ropitault, ``Routage et performances dans les r\'eseaux CPL pour le smart grid'', Telecom Bretagne, Juin 2015, \pascale~reviewer.
             \item Rana Diab, ``HMC-MAC : un protocole MAC hybride et multi-canal pour les r\'eseaux de capteurs sans fil'', Universit\'e Blaise Pascal,  Clermont-Ferrand, June 2015, \pascale~reviewer.      
-            \item Zakia Khalfallah  ``Underwater Wireless Sensor Network Deployment for Water Pollution Monitoring in Rivers'',  UPMC December 2015, \paul~examiner.
             \item  Ines Khoufi, ``Autonomous or assisted deployment by mobile robots of wireless sensor networks: coverage and connectivity issues'', University Pierre et Marie Curie - Paris VI, September 2015, Nadjib Achir~reviewer. 
             \item  Oussama Stiti, ``Étude de l'urbanisation des accès virtuels et stratégie de métamorphose de réseaux '', University Pierre et Marie Curie - Paris VI, November 2015, Nadjib Achir~reviewer. 
             \item  El Hadj Malick Ndoye, ``Réseaux de capteurs sans fil linéaires : impact de la connectivité et des interférences sur une méthode d'accès basée sur des jetons circulants'', Universit\'e Blaise Pascal,  Clermont-Ferrand, June 2015, Nadjib Achir~reviewer.
