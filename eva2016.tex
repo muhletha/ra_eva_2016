@@ -1802,6 +1802,8 @@ Partners: CNES, Inria.\\
 Following the SAHARA project that ended in 2015, CNES decided to fund a study about the use of wireless sensor networks in space environment.
 This new project started in November 2015 and will end in November 2016.
 
+For CNES we studied how to use a IEEE 802.15.4e TSCH (Time Slotted Channel Hopping) network in the space launch vehicles. We proposed new solutions and evaluated their performances with the NS3 simulation tool.\\
+
 \end{module}
 
 
@@ -1920,7 +1922,55 @@ We also focused on deployment algorithms for mobile wireless sensor networks in 
 
 We also studied network connectivity, more particularly how to ensure a reliable connectivity of the sink with each sensor node located at some point of interest (PoI). Our goal was to find the best trade-off between the number of relay nodes deployed and the length of the paths connecting each PoI to the sink.
 
+---------NEW 2016-------
+
+
+In the Cluster Connexion project, the goal for the EVA team was to design and implement new functionnalities for the OCARI wireless sensor network to allow it to:
+\begin{itemize}
+\item	support the mobility of some sensor nodes (targeted application: remote dosimetry to monitor the exposition of people to radiations), 
+\item	transmit commands to sensors/actuators (e.g. configuration parameters, regeneration order),
+\item	ensure data gathering during node recoloring,  
+\item	remotely manage the parameters of the OCARI network,
+\item	aggregate in a single frame several heterogeneous measures originated from different sensors on a same wireless node, 
+\item	use a generic format for the measures: type, length, value.
+\item integrate this network to the middleware of context-aware services, OPC-UA/ROSA. 
+\end{itemize}
+
+The demonstrator "a mobile connected worksite" developed in the Cluster Connexion project meets several objectives:
+\begin{itemize}
+\item	Make the wireless sensor networks more reliable in an  ionisating environment ionisant;
+\item	Make easier the diagnostic and the repairing by means of the aggregation of data originated from heterogeneous sources; 
+\item	Take into account the requirements of information security in the architectures;
+\item Ensure a continuum of solutions for the industrial involved.\\
+\end{itemize}
+
+The Industrial IoT (Internet of Things) solution proposed by Connexion is an integrated chain, from the wireless sensor\& actuator network up to the surveillance, diagnostic and health infrastructure monitoring applications, using a context-aware middleware fitting the industrial environment.\\ 
+
+At the end of the Cluster Connexion project, we made the demonstration of a command/control loop for the regeration of wireless sensor nodes in collaboration with CEA, Predict, Telecom ParisTech, EDF, ATOS and Inria highlighting the following steps:
+\begin{itemize}
+\item the upstream flow of health indicators from electronic devices,
+\item detection of an abnormal behavior by a monitoring software (KASEM),  
+\item generation of a regeneration command and transmission of this command to the misbehaving sensor node.
+\item regeneration of the involved sensor
+\item insertion of the regeretated sensor in the OCARI network.\\
+\end{itemize}
+
+
+When the Cluster Connexion project ended, the results obtained with regard to the OCARI network and the OPC-UA/ROSA middleware have been transferred to the Task Force ConnexSensors hosted by AFNeT. The goals of the ConnexSensors TaskForce are:
+\begin{itemize}
+\item	Federate industrial companies around an IoT solution IoT including wireless sensor \& actuator networks and a standardized industrial middleware.
+\item Jointly valorize the OCARI wireless sensor \& actuator network and the OPC-UA/ROSA middleware.
+\item Deploy the Connexion demonstrator in the basemenet of interested industrials. 
+\item Ensure that industrials will keep the mastership of their data. 
+\item Ensure the perennity of the solution proposed.\\
+\end{itemize}
+
+
+
+
+
 \subsection{Other collaborations}
+
 
 EVA has a collaboration with Vedecom. 
 \paul~supervises Younes Bouchaala's PhD funded by Vedecom. This PhD aims at 
