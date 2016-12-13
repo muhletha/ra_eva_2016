@@ -865,19 +865,19 @@ Note well: IoT-lab is NOT strictly speaking a project of Inria-EVA. It is a larg
 %In 2014, we study the issue of delay optimization and energy efficiency in grid wireless sensor networks (WSNs). We focus on STDMA (Spatial Reuse TDMA)) scheduling, where a predefined cycle is repeated, and where each node has fixed transmission opportunities during specific slots (defined by colors). We assume a STDMA algorithm that takes advantage of the regularity of grid topology to also provide a spatially periodic coloring (``tiling'' of the same color pattern). In this setting, the key challenges are: 1) minimizing the average routing delay by ordering the slots in the cycle 2) being energy efficient. Our work follows two directions: first, the baseline performance is evaluated when nothing specific is done and the colors are randomly ordered in the STDMA cycle. Then, we propose a solution, ORCHID that deliberately constructs an efficient STDMA schedule. It proceeds in two steps. In the first step, ORCHID starts form a colored grid and builds a hierarchical routing based on these colors. In the second step, ORCHID builds a color ordering, by considering jointly both routing and scheduling so as to ensure that any node will reach a sink in a single STDMA cycle. We study the performance of these solutions by means of simulations and modeling. Results show the excellent performance of ORCHID in terms of delays and energy compared to a shortest path routing that uses the delay as a heuristic. We also present the adaptation of ORCHID to general networks under the SINR interference model. 
 
 %------------------------------------------------------------------------------
-\subsection{Time slot and channel assignment in multichannel Wireless Sensor Networks}
-
-\begin{participants}
-    \pers{Pascale}{Minet}
-    \pers{Ridha}{Soua}
-    \pers{Erwan}{Livolant}
-\end{participants}
-
-Wireless sensor networks (WSNs) play a major role in industrial environments for data gathering (convergecast). 
-Among the industrial requirements, we can name a few like 1) determinism and bounded convergecast latencies, 2) throughput and 3) robustness against interferences.
-The classical IEEE~802.15.4 that has been designed for low power lossy networks (LLNs) partially meets these requirements. That is why the IEEE~802.15.4e MAC amendment
-has been proposed recently. This amendment combines a slotted medium access with a channel hopping (i.e. Time Slotted Channel Hopping TSCH). The MAC layer orchestrates the medium accesses of nodes according to a given schedule. Nevertheless, this amendment does not specify how this schedule is computed. We propose a distributed joint time slot and channel assignment, called $Wave$ for data gathering in LLNs. This schedule targets minimized data convergecast delays by reducing the number of slots assigned to nodes. Moreover, $Wave$ ensures the absence of conflicting transmissions in the schedule provided. In such a schedule, a node is awake only during its slots and the slots of its children in the convergecast routing graph. Thus, energy efficiency is ensured. We describe in details the functioning of $Wave$, highlighting its features (e.g. support of heterogeneous traffic, support of a sink equipped with multiple interfaces) and properties in terms of worst case delays and buffer size. We discuss 
-its features with regard to a centralized scheduling algorithm like $TMCP$ and a distributed one like $DeTAS$. Simulation results show the good performance of $Wave$ compared to $TMCP$. Since in an industrial environment, several routing graphs can coexist, we study how $Wave$ supports this coexistence.
+%\subsection{Time slot and channel assignment in multichannel Wireless Sensor Networks}
+%
+%\begin{participants}
+%    \pers{Pascale}{Minet}
+%    \pers{Ridha}{Soua}
+%    \pers{Erwan}{Livolant}
+%\end{participants}
+%
+%Wireless sensor networks (WSNs) play a major role in industrial environments for data gathering (convergecast). 
+%Among the industrial requirements, we can name a few like 1) determinism and bounded convergecast latencies, 2) throughput and 3) robustness against interferences.
+%The classical IEEE~802.15.4 that has been designed for low power lossy networks (LLNs) partially meets these requirements. That is why the IEEE~802.15.4e MAC amendment
+%has been proposed recently. This amendment combines a slotted medium access with a channel hopping (i.e. Time Slotted Channel Hopping TSCH). The MAC layer orchestrates the medium accesses of nodes according to a given schedule. Nevertheless, this amendment does not specify how this schedule is computed. We propose a distributed joint time slot and channel assignment, called $Wave$ for data gathering in LLNs. This schedule targets minimized data convergecast delays by reducing the number of slots assigned to nodes. Moreover, $Wave$ ensures the absence of conflicting transmissions in the schedule provided. In such a schedule, a node is awake only during its slots and the slots of its children in the convergecast routing graph. Thus, energy efficiency is ensured. We describe in details the functioning of $Wave$, highlighting its features (e.g. support of heterogeneous traffic, support of a sink equipped with multiple interfaces) and properties in terms of worst case delays and buffer size. We discuss 
+%its features with regard to a centralized scheduling algorithm like $TMCP$ and a distributed one like $DeTAS$. Simulation results show the good performance of $Wave$ compared to $TMCP$. Since in an industrial environment, several routing graphs can coexist, we study how $Wave$ supports this coexistence.
 
 
 
@@ -895,7 +895,11 @@ Scheduling in an IEEE802.15.4e TSCH(Time Slotted Channel Hopping 6TiSCH) low-pow
 %------------------------------------------------------------------------------
 \subsection{Deployment of wireless sensor networks}
 
-
+\begin{participants}
+    \pers{Ines}{Koufi}
+    \pers{Pascale}{Minet}
+    \pers{Laouiti}{Laouiti}
+\end{participants}
 In 2016 we studied two types of deployment for wireless sensor networks:
 \begin{itemize}
 \item those ensuring full area coverage and network connectivity;
@@ -911,6 +915,11 @@ We propose a solution that determines the positions of relay nodes based on the 
 
 \subsection{Path planning of mobile wireless nodes gathering data}
 %-------------------------------------------------------
+\begin{participants}
+     \pers{Ines}{Koufi}
+      \pers{Pascale}{Minet} 
+       \pers{Nadjib}{Achir}
+\end{participants}
 
 Mobile wireless nodes in charge of collecting data from static wireless sensor nodes constitute a very attractive solution for wireless sensor networks, WSNs, where the application requirements in terms of node autonomy are very strong unlike the requirement in terms of latency. Mobile nodes allow wireless sensor nodes to save energy.\\
 
@@ -926,6 +935,12 @@ For the second objective, we use game theory to model the problem. Game theory i
 
 \subsection{Using an IEEE 802.15.4e TSCH network}
 %------------------------------------------------
+ \begin{participants}
+     \pers{Ines}{Koufi}
+     \pers{Pascale}{Minet} 
+     \pers{Erwan}{Livolant}
+     \pers{Thomas}{Watteyne} 
+\end{participants}  
 
 Most wireless sensor networks that are currently deployed use a technology based on the IEEE 802.15.4 standard. However, this standard does not meet all requirements of industrial applications in terms of latency, throughput and robustness. That is why the IEEE 802.15.4e amendment has been designed, including the Time Slotted Channel Hopping (TSCH) mode. \\
 
@@ -935,6 +950,11 @@ The medium access in a TSCH network is ruled by a schedule that determines for e
 
 \subsection{The OCARI wireless sensor network}
 %-----------------------------------------------------
+ \begin{participants}
+     \pers{Erwan}{Livolant}
+     \pers{Pascale}{Minet} 
+     \pers{Mohammed Tahar}{Hammi} 
+\end{participants}  
 
 Wireless Sensor Networks and Industrial Internet
 of Things use smart, autonomous and usually limited capacity
@@ -958,57 +978,6 @@ We also evaluated the performances of the building of an OCARI network. The goal
 
 
 
-\subsection{Distributed and Optimized Deployment of WSNs}
-
-\begin{participants}
-    \pers{Ines}{Khoufi}
-    \pers{Pascale}{Minet}
-    %\pers{Erwan}{Livolant}
-\end{participants}
-
-This is a joint work with Telecom SudParis: Anis Laouiti.\\
-
-We are witnessing the deployment of many wireless sensor networks in various application domains such as pollution detection in the environment, intruder detection at home, preventive maintenance in industrial process, monitoring of temporary industrial worksites, damage assessment after a disaster.... Wireless sensor networks are deployed to monitor physical phenomena. The accuracy
-of the information collected depends on the position of sensor nodes. These positions must
-meet the application requirements in terms of coverage and connectivity, which therefore
-requires the use of deployment algorithms. We distinguish two cases: firstly when the nodes
-are autonomous, and secondly when they are static and the deployment is assisted by
-mobile robots. In both cases, this deployment must not only meet the application's coverage
-and connectivity requirements, but must also minimize the number of sensors needed
-while satisfying various constraints (e.g. obstacles, energy, fault-tolerant connectivity).
-We distinguished two cases: autonomous and mobile wireless sensor nodes on the one hand, and static wireless sensor nodes on the other hand.
-
-We propose a distributed and optimized deployment of mobile and autonomous sensor nodes to ensure full coverage of the 2D-area considered, as well as network connectivity. With the full coverage of the area, any event occurring in this area is detected by at least one sensor node. In addition, the connectivity ensures that this event is reported to the sink in charge of analyzing the data gathered from the sensors and acting according to these data. This distributed algorithm, called OA-DVFA, can run in an unknown area with obstacles dicovered dynamically.  We distinguish two types of obstacles: the transparent ones like ponds in outdoor environment, or tables in an indoor site that only prevent the location of sensor nodes inside them; whereas the opaque obstacles like walls or trees prevent the sensing by causing the existence of hidden zones behind them: such zones may remain uncovered. Opaque obstacles are much more complex to handle than transparent ones and require the deployment of additional sensors to eliminate coverage holes. OA-DVFA is based on virtual forces to obtain a fast spreading of sensor nodes and uses a virtual grid to stop node oscillations and save energy by making sleep redundant nodes. It automatically detects when the maximum area coverage is reached.\\
-  
-We also considered 3D volumes and proposed an algorithm, called 3D-DVFA, also based on virtual forces, to ensure full coverage of 3D volumes and ensure network connectivity. This is a joint work with Nadya Boufares from ENSI, Tunisia. Since applications of such 3D deployments may be limited, we focus on 3D surface covering, where the objective is to deploy wireless sensor nodes on a 3D-surface (e.g. a mountain) to ensure full area coverage and network connectivity. To reach this goal we propose 3D-DVFA-SC, a distributed deployment
-algorithm based on virtual forces strategy to move sensor nodes.
-
-%------------------------------------------------------------
-
-
-\subsection{WSN deployment assisted by mobile robots}
-
-\begin{participants}
-    \pers{Ines}{Khoufi}
-    \pers{Pascale}{Minet}
-    %\pers{Erwan}{Livolant}
-\end{participants}
-
-This is a joint work with Telecom SudParis: Anis Laouiti.\\
-
-Autonomous deployment may be expensive when the number of mobile sensor nodes
-is very high. In this case, an assisted deployment may be necessary: the nodes' positions
-being pre-computed and given to mobile robots that place a static sensor at each position.
-In order to reduce both the energy consumed by the robots, their exposure time to a hostile environment, as well as the time at which the wireless network becomes operational, the optimal tour of robots is this  minimizing the delay. This delay must take into account not only the time needed by the robot to travel the tour distance but also the time spent in the rotations performed by the robot each time it changes its direction. This problem is called the Multiple Robot Deploying Sensor nodes problem, in short MRDS. We first show how this problem differs from the well-known traveling salesman problem. 
-We adopt two approaches to optimize the deployment duration. The first one is based on game theory to optimize
-the length of the tours of two robots (TRDS), and the second is based on a multi-objective
-optimization, for multiple robots (MRDS). The objectives to be met are: optimizing the
-duration of the longest tour, balancing the durations of the robot tours and minimizing
-the number of robots used, while bypassing obstacles. 
-
-The TRDS problem is modeled as a non-cooperative game with two players representing the mobile robots, these robots compete for the selection of the sensor nodes to deploy. Each robots tends to maximize its utility function.
-
-We then propose an integer linear program formulation of the MRDS problem. We propose various algorithms relevant to iterative improvement by exchanging tour edges, genetic approach and hybridization. The solutions provided by these algorithms are compared and their closeness to the optimal is evaluated in various configurations.
 
 
 
@@ -1037,60 +1006,11 @@ The objective of this work is to propose a framework for massive MIMO cooperativ
 
 \end{module}
 
-\begin{module}{resultats}{results:cognitive}{Cognitive Radio Networks}
 
-%------------------------------------------------------------------------------
-\subsection{Multichannel time slot assignment in Cognitive Radio Sensor Networks}
-
-\begin{participants}
-    \pers{Ons}{Mabrouk}
-    \pers{Pascale}{Minet}
-\end{participants}
-
-This is a joint work with Hanen Idoudi and Leila Saidane from ENSI, Tunisia.\\
-
-The unlicensed spectrum bands become
-overcrowded causing an increased level of interference for
-current wireless sensor nodes. Cognitive Radio Sensor Networks
-(CRSNs) overcome this problem by allowing sensor nodes to
-access opportunistically the underutilized licensed spectrum
-bands. The sink assigns the spectrum holes to the secondary
-users (SUs). Therefore, it must rely on reliable information about
-the spectrum holes to protect the primary users (PUs).
-We focused on the MultiChannel Time Slot Assignment problem in CRSN and tackled this problem: first at the level of a cluster (i.e. Intra-cluster multichannel scheduling), second at the level of several clusters coexisting in the same CRSN (i.e. inter-cluster multichannel scheduling).
- 
-
-In 2013, we proposed an Opportunistic centralized TIme slot assignment in COgnitive Radio sensor networks (OTICOR) for the Intra-cluster multichannel scheduling. OTICOR differs from the existing schemes in its ability to allow non-interfering cognitive sensors to access the same channel and time slot pair. OTICOR takes advantages of spatial reuse, multichannel communication and multiple radio interfaces of the sink. We proved through simulations that a smaller schedule length improves the throughput. Applying OTICOR, we showed that, even in the presence of several $PUs$, the average throughput granted to $SUs$ remains important. We also showed how to get the best performances of OTICOR when the channel occupancy by $PUs$ is known.
-
-In 2014, we extended this Intra-cluster multichannel scheduling algorithm by proposing two ways for the sink
-to determine the available channels
-and alert the SUs if an unexpected activity of PU occurs. Our
-objective is to design an algorithm able to detect the unexpected
-presence of PUs in the multi-hop network while maximizing
-the throughput. If the estimation of PU presence is accurate, a channel sensing at the beginning of the slotframe is sufficient. This algorithm, called Frame-ICMS (Frame Intra-Cluster Multichannel Scheduling), takes advantage
-of the slots dedicated to the control period by allowing noninterfering
-cognitive sensors to access the control/data
-channel and time slot pair. We showed through simulations that
-using the control period also for data transmission minimizes the
-schedule length and maximizes the throughput.
-However, if the estimation of PU presence is not accurate, channel sensing should be done before each slot. We proposed the Slot-ICMS algorithm.
-
-In 2015, we focused on inter-cluster multichannel scheduling algorithm. We considered the coexistence of different clusters in a same CSRN, each cluster having an intra-cluster multichannel scheduling algorithm. Our goal is to obtain a better scalability without loosing the properties provided by OTICOR:
-\begin{itemize}
-\item collision-free schedule,
-\item minimized data gathering delays,
-\item sleeping periods per node to save node's energy. 
-\end{itemize}
-
-However, the co-existence of several clusters in the same environment may lead to conflicts in the allocation of time slots and channels between these clusters.  To avoid inter-cluster collisions, we do not require that different clusters use different channels, we assign distinct channels only to nodes having one-hop neighbors out of their cluster. Once the problem of inter-cluster collision is avoided, each cluster head schedules the transmissions of its members independently.
-This whole solution exhibits good performances as shown by the simulation results.
-
-\end{module}
-
-\begin{module}{resultats}{Learning}{Learning for an efficient and dynamic management of network resources and services}
+\begin{module}{resultats}{Learning}{Machine Learning for an efficient and dynamic management of network resources and services}
 %=====================================================================================================================
 
-\subsection{Learning in networks}
+\subsection{Machine Learning in networks}
 \begin{participants}
 \pers{Dana}{Marinca},
 \pers{Nesrine}{Ben Hassine},
@@ -1109,72 +1029,6 @@ contents in real traces of YouTube. We tuned the parameters of the DES expert. W
 on the Basic expert. Simulation results show that the DES prediction-based caching strategy provides similar Hit Ratio to the well-known LFU caching strategy. These results are usually close to the optimal ones that can be achieved only when knowing in advance the popularity
 of each video content for the next day, which is an unrealistic assumption. The exception occurs when a content whose popularity was very poor becomes suddenly very popular with millions of solicitations. In such a case, the accuracy of prediction methods becomes poor. This opens a research direction where the knowledge of societal events is taken into account to improve the prediction.
 
-\subsection{Tools for learning and prediction}
-\begin{participants}
-\pers{Dana}{Marinca},
-\pers{Nesrine}{Ben Hassine},
-\pers{Pascale}{Minet}
-\end{participants}
-
-In 2015, Nesrine Ben Hassine developped an extraction tool to provide real traces from YouTube. these real traces are used as a learning sample by the different prediction algorithms used.
-
-Nesrine Ben Hassine and Dana Marinca extended their simulation tool developed in Python to integrate:
-\begin{itemize}
-\item various prediction strategies SES (Single Explonential Smoothing), DES (Double Exponential Smoothing), Basic and enhanced basic, strategies based on averages (e.g. Average on a Moving Window), regressions (e.g. polynomial or Savitzky Golay), as well as prediction strategies adapting dynamically their parameters according to the loss obtained.
-\item various loss functions (e.g. absolute value, square). The prediction accuracy is evaluated by a loss function as the discrepancy between the prediction value and the real number obtained. 
-\item different forecaster strategies: Best expert, Exponential Weighted Average, K Best-Experts, etc.
-\end{itemize}
-
-With these tools, we can now tune parameters of prediction strategies and evaluate them.
-
-\subsection{Popularity prediction in CDNs}
-\begin{participants}
-\pers{Dana}{Marinca},
-\pers{Nesrine}{Ben Hassine},
-\pers{Pascale}{Minet}
-\end{participants}
-
-To predict the popularity of video contents, expressed as the number of solicitations, we compared three prediction strategies: Single Exponential Smooting (SES), Double Exponential Smoothing (DES) and Basic. The best tuning of each strategy is
-determined, depending on the considered phase of the solicitation
-curve. For DES, values of the smoothing factor close to 1 probide the best results. We study the behavior of each strategy within a phase and around a phase change, where a phase is defined as an interval of time
-during which a measured metric remains relatively stable.
-
-Basic expert makes large errors at the phase change,
-but it quickly corrects its prediction and it is the expert having
-the closest prediction to the real value within a phase. DES expert provides also good quality predictions within a phase.
-Since DES and Basic experts outperform the SES expert,
-we recommend the use of on the one hand, the best DES
-expert per phase within a phase and on the other hand, the
-Basic expert to automatically detect phase changes, because of
-its better reactivity. This self-learning and prediction
-method can be applied to optimize resources allocation in service
-oriented architectures and self-adaptive networks, more precisely
-for cache management in CDNs.
-
-\subsection{Automatic phase detection in popularity evolution of video contents}
-\begin{participants}
-\pers{Dana}{Marinca},
-\pers{Nesrine}{Ben Hassine},
-\pers{Pascale}{Minet}
-\end{participants}
-
-In Content Delivery Networks (CDNs) where experts predict the number of solicitations of video contents, simulations based on real YouTube traces show that the accuracy of prediction is improved by splitting the video content profile in contiguous phases. A phase is an interval of time
-during which a measured metric remains relatively stable.
- The best expert per phase
-outperforms the best expert on the whole video content profile. Different prediction methods are compared and also different phase change-points detection methods are evaluated:
-\begin{itemize}
-\item the R tool using Bayesian inference,
-\item the Basic expert (an important loss may indicate a phase change),
-\item a fixed time interval (e.g. each week).
-\end{itemize}
-The goal is to identify the method (or method parameters) minimizing the cumulated discrepancy compared to real solicitations of video contents.
-The use of this machine learning method
-allows the Content Delivery Network to self-adapt to users
-solicitations by caching the most popular contents near the end
-users. More generally, such method can be applied to decide
-which contents should be replicated to improve the performance
-of audio and video applications and maximize the satisfaction
-degree of users.
 
 \end{module}
 
