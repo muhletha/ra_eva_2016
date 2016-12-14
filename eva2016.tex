@@ -1454,24 +1454,24 @@ according to the network conditions.
 \end{participants}
 
 We have started to build a model which analyzes the performance 
-of IEEE 802.11p managing different class of priorities. 
-The differentiation of the traffics is obtained with different 
+of IEEE 802.11p managing different classes of priorities. 
+The differentiation of traffic streams is obtained with different 
 inter-frame spacings:  AIFSs (for Arbitration Inter Frame Spacings) and with 
 different back-off windows: CWs (for Collision Windows). 
 This model is based on a Markov model where the state is the remaining 
-number of idle slot that a packet of given class has to wait before transmission. 
-However in addition of this Markov for which we compute a steady state 
+number of idle slots that a packet of a given class has to wait before transmission. 
+However, in addition to this Markov model for which we compute a steady state 
 we also consider the Markov chain which counts the number of idle slots after 
 the smallest AIFS. As a matter of fact the probability these states are not evenly 
 distributed since with different AIFSs the arrival rate is not constant 
-when the number of idle slots experiences after the smallest AIFS varies. 
-The resolution of the steady state of this two inter-mixed Markov chains
+when the number of idle slots experienced after the smallest AIFS varies. 
+The resolution of the steady state of these two inter-mixed Markov chains
 lead to non linear and intertwined equations that can be easily  solved with a software 
 such as Maple. 
 With the model we have obtained, we can compute the delivery rate 
-of packets of different class and show the influence of system parameters: 
-AIFSs and CWs. The preliminary results show a a very important influence 
-of different AIFSs on the performance for each traffic classes.  
+of packets of different classes and show the influence of system parameters: 
+AIFSs and CWs. The preliminary results show a a very strong influence 
+of different AIFSs on the performance for each traffic streams.  
 
 \subsubsection{Model of IEEE 802.11 broadcast scheme with infinite queue}
 
@@ -1505,16 +1505,16 @@ also discussed. The results of this study are in \cite{fayolle:hal-01166082}.
 
 
 We have studied  the maximum throughput of CSMA in scenarios with spatial reuse.
-The nodes of our network will be a Poisson Point Process (PPP) of a one or two dimensional space.
-The one dimensional well fits VANETs.
+The nodes of our network form a Poisson Point Process (PPP) of a one- or two-dimensional space.
+The one-dimensional PPP well represents VANETs.
 To model the effect of Carrier Sense Multiple Access (CSMA), we give random marks to our nodes and to elect transmitting nodes in the PPP we choose the nodes with the smallest marks in their neighborhood, this is the Matern hardcore selection process.
 To describe the signal propagation, we use a signal with power-law decay and we add a random Rayleigh fading.
 To decide whether or not a transmission is successful, we adopt the Signal-over-Interference Ratio (SIR) model in which a packet is correctly received if its transmission power divided by the interference power is above a capture threshold.
 We assume that each node in our PPP has a random receiver at a typical distance.
 We choose the average distance to its closest neighbor.
 We also assume that all the network nodes always have a pending packet.
-With all these assumptions, we analytically study the density of throughput of successful transmission and we show that it can be optimized with the carrier-sense threshold. 
- The model makes it possible analytically compute the 
+With these assumptions, we analytically study the density of throughput of successful transmissions and we show that it can be optimized with the carrier-sense threshold. 
+ The model makes it possible to analytically compute the 
  performance of a CSMA system and gives 
  interesting results on the network performance such as the capture probability 
  when the throughput is optimized, and the effect on a non-optimization of the 
@@ -1525,7 +1525,7 @@ We observe a significant difference between 2D an 1D networks.
 
 We have built two models  to compare the spatial density of successful 
 transmissions of CSMA and Aloha. 
-To carry out a  fair comparison, we will optimize both schemes by adjusting their parameters. 
+To carry out a  fair comparison, we optimize both schemes by adjusting their parameters. 
 For spatial Aloha, we can adapt the 
 transmission probability, whereas for spatial CSMA we have to find the suitable carrier sense threshold. The results obtained show that CSMA, when optimized, outperforms Aloha 
 for nearly all the parameters of the network model values 
@@ -1533,7 +1533,7 @@ and we evaluate the gain of CSMA over Aloha.
 We also find interesting results concerning the effect of the model parameters on the performance 
 of both Aloha and CSMA. 
 The closed formulas we have obtained provide immediate evaluation of performance, whereas 
-simulations may take minutes to give their results. Even if Aloha and CSMA are old protocols, 
+simulations may take minutes to give their results. Even if Aloha and CSMA are not recent protocols, 
 this comparison of spatial performance is new and provides interesting and useful results. 
 
 For Aloha networks, when we study transmissions over the average distance to the closest 
@@ -1559,11 +1559,11 @@ in the CSMA network does not depend on the density of nodes $\lambda$.
 In other words when the CSMA is optimized to obtain the largest density of successful 
 transmissions (communication from nodes to their neighbors), $p^*$  is constant.
 We have verified this statement 
-on a few examples and we think that a formal proof of this remark is possible using 
-scaling  reasons. The average access delay is a direct function of the probability of transmission $p$. Thus the average delay when the carrier sense detection threshold is optimized 
+on several examples and we think that a formal proof of this remark is possible using 
+scaling  arguments. The average access delay is a direct function of the probability of transmission $p$. Thus the average delay when the carrier sense detection threshold is optimized 
 is a constant $D_{target}$ which does not depend on $\lambda$. 
 A stabilization algorithm which 
-adapts $P_{cs}$ to reach the $D_{target}$ can thus 
+adapts $P_{cs}$ to reach the $D_{target}$ can thus be envisioned. 
 
 
 % - - - - - - - - - - - - - -
