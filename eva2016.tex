@@ -44,9 +44,6 @@
 
 %SKEL - v0.4 - 2016 (Utiliser pour les stats d'utilisation de Skel, merci de ne effacer cette ligne)
 
-\usepackage{color}
-\usepackage{xspace}
-
 % ne pas enlever 
 \renewenvironment{motscle}{\begin{xmlelement}{keywords}}{\end{xmlelement}}
 
@@ -250,7 +247,7 @@
     % Visiting Scientists (Visiteur)
     \pers{Mario}{Gerla}{Visiteur}[    Professor,   UCLA,                       USA,    visit 10-20 December 2016]
     \pers{Felipe}{Lalanne}{Visiteur}[ Reseacher,   Inria Chile,                Chile,  visit 19–26 Octobre 2016]
-    \pers{Mario}{Gerla}{Visiteur}[    Professor,   UCLA,                       USA,    visit 31 August -- 23 September 2016]
+    \pers{Mario}{Gerla}{Visiteur}[    Professor,   UCLA,                       USA,    visit 31 August - 23 September 2016]
     \pers{Travis}{Massey}{Visiteur}[  PhD Studen,  UC Berkeley,                USA,    visit 22 July 2016]
     \pers{Diego}{Dujovne}{Visiteur}[  Professor,   Universidad Diego Portales, Chile,  visit 22-31 July 2016]
     \pers{Carlos}{Oroza}{Visiteur}[   PhD Student, UC Berkeley,                USA,    visit 23-29 July 2016]
@@ -262,15 +259,14 @@
     % Administrative Assistant (Assistant)
     \pers{Christine}{Anocq}{Assistant}[Inria, Assistant]
     % Others (AutreCategorie)
-    \pers{Nadjib}{Achir}{AutreCategorie}[Univ. Paris XIII,Associate professor][Habilite]
-    \pers{Selma}{Boumerdassi}{AutreCategorie}[CNAM,  Associate professor]
-    \pers{Samia}{Bouzefrane}{AutreCategorie}[CNAM, Associate professor]
-    \pers{Philippe}{Jacquet}{AutreCategorie}[Bell Labs (Alcatel), Division leader][Habilite]
-    \pers{Anis}{Laouiti}{AutreCategorie}[France Telecom, Associate professor][Habilite]
-    \pers{Dana}{Marinca}{AutreCategorie}[Univ. Versailles,Associate professor ]
-    \pers{Nadjib}{Ait Saadi}{AutreCategorie}[Univ. Paris Est, Associate professor]
-    \pers{Jiangnan}{Yang}{AutreCategorie}[Inria, Internship, from Apr 2016 until Aug 2016]
-    %\pers{Ons}{Mabrouk}{AutreCategorie}[\_\_\_EMPLOYEUR???\_\_\_, \_\_\_PROFESSION???\_\_\_, until Jan 2016]
+    \pers{Nadjib}{Achir}{AutreCategorie}[Univ. Paris XIII, Associate Professor][Habilite]
+    \pers{Selma}{Boumerdassi}{AutreCategorie}[CNAM,  Associate Professor]
+    \pers{Samia}{Bouzefrane}{AutreCategorie}[CNAM, Associate Professor]
+    \pers{Philippe}{Jacquet}{AutreCategorie}[Bell Labs (Alcatel), Division Leader][Habilite]
+    \pers{Anis}{Laouiti}{AutreCategorie}[France Telecom, Associate Professor][Habilite]
+    \pers{Dana}{Marinca}{AutreCategorie}[Univ. Versailles,Associate Professor]
+    \pers{Nadjib}{Ait Saadi}{AutreCategorie}[Univ. Paris Est, Associate Professor]
+    \pers{Jiangnan}{Yang}{AutreCategorie}[Inria, Internship, Apr-Aug 2016]
 \end{composition}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -816,35 +812,35 @@ Highlights for 2015:
 \end{module}
 
 %==============================================================================
-\begin{module}{logiciels}{soft:finterop}{F-Interop}
+\begin{module}{logiciels}{soft:finterop}{F-Interop (Software)}
 
 \commentthomas{TODO}
 
 \end{module}
 
 %==============================================================================
-\begin{module}{logiciels}{soft:dissector}{6TiSCH Wireshark Dissector}
+\begin{module}{logiciels}{soft:dissector}{6TiSCH Wireshark Dissector (Software)}
 
 \commentthomas{TODO}
 
 \end{module}
 
 %==============================================================================
-\begin{module}{logiciels}{soft:mercator}{Mercator}
+\begin{module}{logiciels}{soft:mercator}{Mercator (Software)}
 
 \commentthomas{TODO}
 
 \end{module}
 
 %==============================================================================
-\begin{module}{logiciels}{soft:solsystem}{SolSystem}
+\begin{module}{logiciels}{soft:solsystem}{SolSystem (Software)}
 
 \commentthomas{TODO}
 
 \end{module}
 
 %==============================================================================
-\begin{module}{logiciels}{soft:argus}{Argus}
+\begin{module}{logiciels}{soft:argus}{Argus (Software)}
 
 \commentthomas{TODO}
 
@@ -1091,7 +1087,7 @@ In 2016, we evaluated the time needed for a joining node to detect beacons adver
 
 The medium access in a TSCH network is ruled by a schedule that determines for each pair (slot offset, channel offset) the transmitting node(s) and the receiving node(s). Each node in the TSCH network must have this schedule. The question is how to install it on all nodes. We proposed and evaluated different ways of installing a schedule in a TSCH network, comparing them in terms of the number of messages required. This study has been presented at the AdHoc Now 2016 conference.
 
-%-----------------------------------------------------
+%------------------------------------------------------------------------------
 \subsection{The OCARI Wireless Sensor Network}
 
 \begin{participants}
@@ -1188,6 +1184,7 @@ of each video content for the next day, which is an unrealistic assumption. The 
 
 % - - - - - - - - - - - - - -
 \subsubsection{An Infrastructure-Free Slot Assignment Algorithm for Reliable Broadcast of Periodic Messages in VANETs}\label{ch:DTMAC}
+
 \begin{participants}
     \pers{Mohamed}{Hadded}
     \pers{Paul}{Muhlethaler}
@@ -1286,7 +1283,7 @@ sent: periodic or event-driven safety messages.
 
 The simulation results show that, compared to VeMAC which is the reference in terms of TDMA protocols for VANETs, DTMAC provides a lower rate of access and merging collisions, which results in significantly improved broadcast coverage. For further details see~\cite{hadded:hal-01379216}. 
 
-
+% - - - - - - - - - - - - - -
 \subsubsection{TRPM: a TDMA-aware routing protocol for multi-hop communications in VANETs}
 
 \begin{participants}
@@ -1370,6 +1367,7 @@ The simulation results reveal that our routing protocol significantly outperform
 protocols in terms of average end-to-end delay, average number
 of relay vehicles and the average delivery ratio.
 
+% - - - - - - - - - - - - - -
 \subsubsection{CTMAC: a Centralized TDMA for VANETs}
 
 \begin{participants}
@@ -1538,6 +1536,7 @@ schedules, see~\cite{hadded:hal-01379219}.
 %\end{algorithmic}
 %\end{algorithm}
 
+% - - - - - - - - - - - - - -
 \subsubsection{A Flooding-Based Location Service in VANETs}
 
 \begin{participants}
@@ -1571,6 +1570,7 @@ according to the network conditions.
 %    \pers{Oyunchimeg}{Shagdar}
 %\end{participants}
 
+% - - - - - - - - - - - - - -
 \subsubsection{Performance analysis of IEEE 802.11 broadcast schemes with different inter-frame spacings}
 
 \begin{participants}
@@ -1600,6 +1600,7 @@ of packets of different classes and show the influence of system parameters:
 AIFSs and CWs. The preliminary results show a a very strong influence 
 of different AIFSs on the performance for each traffic streams.  
 
+% - - - - - - - - - - - - - -
 \subsubsection{Model of IEEE 802.11 Broadcast Scheme with Infinite Queue}
 
 \begin{participants}
@@ -1620,6 +1621,7 @@ with the physical principles of the protocol. The stability (ergodicity) conditi
 interpreted in terms of maximum throughput. Several approximations related to these models are
 also discussed. The results of this study are in \cite{fayolle:hal-01166082}. 
 
+% - - - - - - - - - - - - - -
 \subsubsection{Model and optimization of CSMA}
 
 \begin{participants}
@@ -1667,6 +1669,7 @@ successful transmissions easily scales linearly in $\lambda$ when we vary
 $\lambda$ whereas in CSMA networks the protocol must be carefully 
 tuned to obtain this scaling. 
 
+% - - - - - - - - - - - - - -
 \subsubsection{Adaptive CSMA}
 
 \begin{participants}
@@ -1694,7 +1697,7 @@ adapts $P_{cs}$ to reach the $D_{target}$ can thus be envisioned.
 %==============================================================================
 %\begin{module}{resultats}{results:modelswireless}{Models for wireless networks}
 
-%--------------- ---------------------------------------------------------------
+%------------------------------------------------------------------------------
 %\subsection{Interference and SINR coverage in spatial non-slotted Aloha networks}
 %
 %\begin{participants}
@@ -1721,7 +1724,7 @@ adapts $P_{cs}$ to reach the $D_{target}$ can thus be envisioned.
 %slotted one, which has almost exclusively been previously
 %studied in context of wired ad-hoc networks.
 %
-%
+%------------------------------------------------------------------------------
 %\subsection{Random linear multihop relaying in a general field of interferers using spatial Aloha }
 %
 %\begin{participants}
@@ -1852,6 +1855,7 @@ For CNES we studied how to use a IEEE 802.15.4e TSCH (Time Slotted Channel Hoppi
 
 %------------------------------------------------------------------------------
 %\subsection{ANR}
+
 %EVA has currently no ANR project but plan to submit an ASTRID project in 2016. 
 
 %------------------------------------------------------------------------------ 
@@ -1936,21 +1940,14 @@ When the Cluster Connexion project ended, the results obtained with regard to th
     \item Ensure the perennity of the solution proposed.\\
 \end{itemize}
 
-
-
-
-
+%------------------------------------------------------------------------------
 \subsection{Other collaborations}
-
 
 EVA has a collaboration with Vedecom. 
 \paul~supervises Younes Bouchaala's PhD funded by Vedecom. This PhD aims at 
 studying vehicle-to-vehicle communication to improve roads safety. 
 
 \end{module} 
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -1971,7 +1968,11 @@ studying vehicle-to-vehicle communication to improve roads safety.
 
 %%% En savoir plus : https://intranet.inria.fr/Vie-scientifique/Information-edition-scientifiques/Comment-rediger-le-RAweb/Les-sections#eztoc27554_14
 
-\subsection{FP7 \& H2020 Projects}
+%------------------------------------------------------------------------------
+\subsection{H2020 Projects}
+
+% - - - - - - - - - - - - - -
+\subsubsection{F-Interop}
 
 \begin{itemize}
     \XMLaddatt*{type}{sanspuces}
@@ -1996,17 +1997,14 @@ studying vehicle-to-vehicle communication to improve roads safety.
     \item Inria-EVA contact: \thomas
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Donnees  construites d'aprÃ¨s les informations de la base DPE pour 2016
-% Source : https://drone.inria.fr/
-% Date : jeudi 17 novembre 2016, 10:40:56 (UTC+0100)
-%
+% - - - - - - - - - - - - - -
 \subsubsection{Project Reviewing} 
 
 \begin{itemize}
     \item \paul~was reviewer for the E3Network project  (E-band transceiver for the backhaul infrastructure of the future networks). The transceiver designed in the E3Network project will use modern digital multi-level modulations to achieve high spectral efficiency. This together with the huge bandwidth will enable high capacities above 10 Gbps.
 \end{itemize}
 
+%------------------------------------------------------------------------------
 \subsection{Collaborations in European Programs, Except FP7 \& H2020}
 
 \begin{itemize}
@@ -2027,9 +2025,7 @@ studying vehicle-to-vehicle communication to improve roads safety.
 %% 	\item Abstract: 
 %% \end{itemize}
 
-% organisation europeenne 
-% \subsection{Major European Organizations with which the Team have followed Collaborations}
-
+%------------------------------------------------------------------------------
 \subsection{Collaborations with Major European Organizations}
 
 \begin{itemize}
@@ -2075,12 +2071,14 @@ studying vehicle-to-vehicle communication to improve roads safety.
 \begin{module}{partenariat}{internationalInitiatives}{International Initiatives}
 %%% En savoir plus : https://intranet.inria.fr/Vie-scientifique/Information-edition-scientifiques/Comment-rediger-le-RAweb/Les-sections#eztoc27554_15
 
-%%\subsection{Inria International Labs}
+%------------------------------------------------------------------------------
 \subsection{Inria International Labs}
 
 %%% Implication dans les activités des laboratoires conjoints à l'étranger 
 %%% (Inria-Chile, JLPC Etats-Unis, LIRIMA Afrique,  LIAMA Chine, Inria@SiliconValley, CWI)
 %%% Les équipes associées impliquées dans un IIL apparaissent ici :
+
+% - - - - - - - - - - - - - -
 \subsubsection{REALMS}
 \label{sec:realms}
 
@@ -2090,21 +2088,21 @@ studying vehicle-to-vehicle communication to improve roads safety.
     \item Inria International Lab: Inria@SiliconValley
     \item Associate teams: Inria-EVA, Prof. Glaser's team (UC Berkeley), Prof. Kerkez's team (University of Michigan, Ann Arbor)
     \item Duration: 2015-2017
-    \item Objective: Prof. Glaser's and Prof. Kerkez's teams are revolutionizing environmental monitoring by using low power wireless TSCH networks to produce continuous environmental data accessible in real time. They are successfully deploying these networks to study mountain hydrology, observe water quality in urban watersheds, and build intelligent urban stormwater grids. The REALMS associate team conducts research across the environmental engineering and networking research domains. Its 3-year goal is to develop easy-to-use real-world network monitoring solutions to provide real-time data for environmental and urban applications. This goal leads to the following objectives: building a long-term large-scale public connectivity dataset of the networks deployed; using that dataset to model TSCH networks; and building an ecosystem of tools around this technology.
+    \item Objective:
+        Prof. Glaser's and Prof. Kerkez's teams are revolutionizing environmental monitoring by using low power wireless TSCH networks to produce continuous environmental data accessible in real time.
+        They are successfully deploying these networks to study mountain hydrology, observe water quality in urban watersheds, and build intelligent urban stormwater grids.
+        The REALMS associate team conducts research across the environmental engineering and networking research domains.
+        Its 3-year goal is to develop easy-to-use real-world network monitoring solutions to provide real-time data for environmental and urban applications.
+        This goal leads to the following objectives: building a long-term large-scale public connectivity dataset of the networks deployed; using that dataset to model TSCH networks; and building an ecosystem of tools around this technology.
     \item website: \url{https://realms-team.github.io/}
     \item Inria contact: \thomas
 \end{itemize}
 
-
-
 %%% Ci-dessous, les projets rattachés à l'IIL hors les équipes associées
 %\subsubsection{Other IIL projects}
 
-
-
-
-%\subsection{Inria Associate Teams Not Involved in an Inria International Labs}
-
+%------------------------------------------------------------------------------
+\subsection{Inria Associate Teams Not Involved in an Inria International Labs}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Donnees construites d'aprÃ¨s les informations de la base DRI pour 2016
@@ -2112,8 +2110,7 @@ studying vehicle-to-vehicle communication to improve roads safety.
 % Date : jeudi 17 novembre 2016, 10:40:56 (UTC+0100)
 %
 
-
-
+% - - - - - - - - - - - - - -
 \subsubsection{\href{http://glaser.berkeley.edu et http://www-personal.umich.edu/~bkerkez/}{REALMS }}
 
 \begin{itemize}
@@ -2129,8 +2126,9 @@ studying vehicle-to-vehicle communication to improve roads safety.
  \item La révolution de l’Internet des objets a suscité le développement de nouveaux produits et standards; Le standard IEEE802.15.4e (2012) a introduit le saut de fréquences en temps slotté (TSCH) qui peut assurer une fiabilité de bout-en-bout de 99,999\%Â§ et une autonomie énergétique de plusieurs années. Ces performances exceptionnelles ont suscité la création à l’IETF du groupe de travail 6TISCH pour standardiser l’intégration des réseaux TSCH dans Internet. Alors que les premières données expérimentales ont mis en évidence la grande robustesse de ces réseaux, il n’existe pas de données d’un vrai réseau, accessibles en temps réel, à large échelle et portant sur une longue période. De telles données sont nécessaires pour mieux modéliser les performances du réseau et produire de meilleurs produits et standards. Les équipes des Professeurs Glaser et Kerkez déploient avec succès de tels réseaux pour étudier l’hydrologie en montagne, observer la qualité deb l’eau et gérer les eaux pluviales en environnement urbain. Il manque un modèle pour aider au déploiement et au fonctionnement de ces réseaux, ainsi qu’assurer la surveillance d’un réseau opérationnel. 
 \end{itemize}
 
-
+% - - - - - - - - - - - - - -
 \subsubsection{DIVERSITY}
+
 \begin{itemize}
 \XMLaddatt*{type}{sanspuces}
  \item Title: Measuring and Exploiting Diversity in Low-Power Wireless Networks
@@ -2144,39 +2142,39 @@ studying vehicle-to-vehicle communication to improve roads safety.
  \item The goal of the DIVERSITY associate team is to develop the networking technology for tomorrow's Smart Factory. The two teams comes with a perfectly complementary background on standardization and experimentation (Inria-EVA) and scheduling techniques (USC-ANRG). The key topic addressed by the joint team will be networking solutions for the Industrial Internet of Things (IIoT), with a particular focus on reliability and determinism. 
 \end{itemize}
 
+% - - - - - - - - - - - - - -
 \subsubsection{Tassili}
 
-The Tassili project (N° MDU 17MDU988  - Campus France  N° 37459VF) '' Gestion des caches et orchestration intelligentes dans un environnement réseau virtulaisé'' is a project in collaboration with Algeria and France. On the 
-French side, the project is leaded by Samia Bouzefrane (associated professor at CNAM) and \paul (EVA team Inria). 
+The Tassili project (N° MDU 17MDU988  - Campus France  N° 37459VF) '' Gestion des caches et orchestration intelligentes dans un environnement réseau virtulaisé'' is a project in collaboration with Algeria and France.
+On the French side, the project is leaded by Samia Bouzefrane (associated professor at CNAM) and \paul (EVA team Inria).
 On the Algerian side is leaded by the University Mouloud Mammeri of Tizi-Ouzou (UMMTO) représented by Mehammed Daoui (associated professor).
 
-This project will start in January 2017 and will last three years. Three PhD theses will be conducted in co-tutelle 
-between CNAM and UMMTO. This project will support the stay of the tree PhD candidates for  a four months 
-visit in France. These two PhD theses will be co-directed by \paul. The first subject is ''New intelligent caching and mobility strategies for MEC/ICN based architectures'' and the second subject concern the design of a safe  architecture for Name Data Networking. 
+This project will start in January 2017 and will last three years. Three PhD theses will be conducted in co-tutelle between CNAM and UMMTO.
+This project will support the stay of the tree PhD candidates for  a four months visit in France.
+These two PhD theses will be co-directed by \paul.
+The first subject is ''New intelligent caching and mobility strategies for MEC/ICN based architectures'' and the second subject concern the design of a safe  architecture for Name Data Networking.
 
-
+%------------------------------------------------------------------------------
 \subsection{Inria International Partners}
+
 %%% indique un partenariat international important pour votre équipe, 
 %%% hors Equipes Associées et hors participation aux programmes internationaux mentionnés ci-dessous
 
-	\subsubsection{Declared Inria International Partners}
+% - - - - - - - - - - - - - -
+\subsubsection{Declared Inria International Partners}
 
 \begin{itemize}
-    \XMLaddatt*{type}{sanspuces}
-    
+    \XMLaddatt*{type}{sanspuces}    
     \item Inria-EVA has a strong relationship with ENSI (Tunisia) and ENSIAS (Morocco).
         A significant part of our PhD students come from these engineering schools. 
-    
     \item University of California, Berkeley, CA, USA
         \begin{itemize}
             \item Collaboration with Prof.~Steven~Glaser, Ziran~Zhang, Carlos~Oroza, Sami~Malek and Zeshi~Zheng through the REALMS associate team, see Section~\ref{sec:realms}.
         \end{itemize}
-    
     \item University of Michigan, Ann Arbor, MI, USA
         \begin{itemize}
             \item Collaboration with Prof.~Branko~Kerkez through the REALMS associate team, see Section~\ref{sec:realms}.
         \end{itemize}
-    
     \item KU Leuven, Belgium
         \begin{itemize}
             \item Collaboration with Prof.~Danny~Hughes, Prof.~Wouter~Joosen, Dr.~Nelson~Matthys, Fan~Yang, Wilfried~Daniels on MicroPnP and on security for the IoT.
@@ -2184,16 +2182,13 @@ visit in France. These two PhD theses will be co-directed by \paul. The first su
             \item We won Third Place in the IPSO CHALLENGE 2015 for common project MicroPnP.
             \item Joint publication(s) in 2016: ... 
         \end{itemize}
-    
     \item Linear Technology/Dust Networks, Silicon Valley, USA
         \begin{itemize}
             \item Collaboration with Prof.~Kris~Pister, Dr.~Brett~Warneke, Dr.~Lance~Doherty, Dr.~Jonathan~Simon and Joy~Weiss on SmartMesh IP and 6TiSCH standardization.
             \item We won the IPSO CHALLENGE 2015 People's Choice Award for common project HeadsUp!
             \item Joint publication(s) in 2016: ...
         \end{itemize}
-    
 \end{itemize}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Donnees construites d'aprÃ¨s les informations de la base DRI pour 2016
@@ -2201,10 +2196,7 @@ visit in France. These two PhD theses will be co-directed by \paul. The first su
 % Date : jeudi 17 novembre 2016, 10:40:56 (UTC+0100)
 %
 
-
-
-
-
+% - - - - - - - - - - - - - -
 \subsubsection{Informal International Partners}
 
 \begin{itemize}
@@ -2267,12 +2259,14 @@ visit in France. These two PhD theses will be co-directed by \paul. The first su
 %%% Si les subsections précédentes sont vides utilisez plutôt le titre sans "Other" : Participation in International Programs
 %%% au lieu de : Participation in Other International Programs
 
+%------------------------------------------------------------------------------
 \subsection{Participation in Other International Programs}
+
 %%%   * Implication dans les activités des UMI CNRS :  JFLI Japon ; IFCAM Inde ; LICIA Bresil ; Poncelet Russie
 %%%   * Participation aux différents programmes soutenus par la DRI et/ou des financeurs externes :
 %%%    STIC Algérie, STIC Tunisie, STIC AmSud, Math AmSud, Inria-FAPs, Inria-CONICyT, Inria-MINCyT, Reussi USA, STIC Asie, ECOSD, Autres
 
-
+% - - - - - - - - - - - - - -
 \subsubsection{PEACH}
 
 \begin{itemize}
@@ -2292,6 +2286,7 @@ visit in France. These two PhD theses will be co-directed by \paul. The first su
     \item Goal: TPropose a design methodology for a low­power wireless IoT sensing network, given the requirements and restrictions of a Machine Learning model to predict frost events in peach orchards and vineyards.
 \end{itemize}
 
+% - - - - - - - - - - - - - -
 \subsubsection{International Initiatives}
 
 \begin{itemize}
@@ -2331,26 +2326,37 @@ Today, virtually all industrial peach orchards are equi
     \item{\bf Ruben Milocco }, Universidad Nacional Comahue, Buenos Aires, Argentina. July  2016
 \end{itemize}
 
+%------------------------------------------------------------------------------
 \subsection{Visits of International Scientists}
+
 %chercheurs invités, profs invités (via université), Les internships sont à mettre dans la subsection suivante.
 
-\subsubsection{Internships}
+\commentthomas{TODO}
+
+%------------------------------------------------------------------------------
+\subsection{Internships}
 
 \begin{itemize}
     \item{\bf Jiangnan Yang}, internship on simulation of wireless TDMA networks with NS3, March-August 2016.
 \end{itemize}
 
+%------------------------------------------------------------------------------
 \subsection{Visits to International Teams}
+
 % Les explorateurs et sabbatiques provenant des bases de la DRI sont importés dans votre trame.
 % Vérifiez et complétez.
-\subsubsection{Sabbatical programme}
+
+% - - - - - - - - - - - - - -
+\subsubsection{Sabbatical Programme}
 
 TBD
 
-\subsubsection{Explorer programme}
+% - - - - - - - - - - - - - -
+\subsubsection{Explorer Programme}
 
 TBD
 
+% - - - - - - - - - - - - - -
 \subsubsection{Research Stays Abroad}
 
 %% les séjours de chercheurs d'une durée supérieure à un mois, dans une université ou un laboratoire étranger
@@ -2381,8 +2387,10 @@ TBD
 
 %%  respecter le format : 
 
-\subsection{Scientific Events Organisation}
+%------------------------------------------------------------------------------
+\subsection{Scientific Events Organization}
 
+% - - - - - - - - - - - - - -
 \subsubsection{General Chair, Scientific Chair}
 
 \begin{itemize}
@@ -2411,6 +2419,7 @@ TBD
         \end{enumerate}
 \end{itemize}
 
+% - - - - - - - - - - - - - -
 \subsubsection{Member of the Organizing Committees}
 
 \begin{itemize}
@@ -2428,10 +2437,12 @@ TBD
         \end{enumerate}
 \end{itemize}
 
+%------------------------------------------------------------------------------
 \subsection {Scientific Events Selection}
 
 TBD 
 
+% - - - - - - - - - - - - - -
 \subsubsection {Conference Program Committee Member}
 
 \begin{itemize}
@@ -2483,15 +2494,18 @@ TBD
         \end{enumerate}
 \end{itemize}
 
+% - - - - - - - - - - - - - -
 \subsubsection{Member of the Conference Program Committees}
-    
-    TBD 
 
-%\subsubsection{Reviewer}
-    
+TBD 
+
+%------------------------------------------------------------------------------
 \subsection{Journal}
-    \subsubsection{Member of the Editorial Boards}
-    \begin{itemize}
+
+% - - - - - - - - - - - - - -
+\subsubsection{Member of the Editorial Boards}
+
+\begin{itemize}
     \item \thomas
         \begin{enumerate}
             \item Editor, EAI Transactions on Internet of Things since 2015.
@@ -2503,10 +2517,10 @@ TBD
         \end{enumerate}
 \end{itemize}
 
-    
-    \subsubsection{Reviewer - Reviewing Activities}
+% - - - - - - - - - - - - - -
+\subsubsection{Reviewer - Reviewing Activities}
  
-       \begin{itemize}
+\begin{itemize}
     \item \paul
         \begin{enumerate}
             \item Reviewer Annals of telecommunications
@@ -2521,12 +2535,12 @@ TBD
     \item \pascale
         \begin{enumerate}
            \item Annals of Telecommunications,
-		\item Ad Hoc Networks,
-		\item International Journal of Distributed Sensor Networks,
-		\item International Journal of Networked and Distributed Computing,
-		\item Journal of Sensor and Actuator Networks,
-		\item Computer Communications Journal,
-		\item Sensors Journal.
+            \item Ad Hoc Networks,
+            \item International Journal of Distributed Sensor Networks,
+            \item International Journal of Networked and Distributed Computing,
+            \item Journal of Sensor and Actuator Networks,
+            \item Computer Communications Journal,
+            \item Sensors Journal.
         \end{enumerate}
     \item \thomas
         \begin{enumerate}
@@ -2542,29 +2556,32 @@ TBD
             \item Reviewer Ad Hoc Networks Journal (Elsevier)
         \end{enumerate}
      \item Selma Boumerdassi
-				\begin{enumerate}
-					\item Reviewer TheJournal of Human-centric Computing and Information Sciences (Springer).
-				\end{enumerate}
+        \begin{enumerate}
+            \item Reviewer TheJournal of Human-centric Computing and Information Sciences (Springer).
+        \end{enumerate}
 \end{itemize}
 
-Pascale Minet was member of the evaluation committee in charge of recruiting an Assistant Professor at the University of Auvergne, Clermont-Ferrand in April and May 2016.\\
-In June 2016, she was a member of the EDITE Doctoral School's Grant Allocation Committee.\\
-She chaired the session entitled "Wireless Sensor networks II" at the IEEE MASS 2016 conference held in Brasilia in October 2016.\\ 
+Pascale Minet was member of the evaluation committee in charge of recruiting an Assistant Professor at the University of Auvergne, Clermont-Ferrand in April and May 2016.
+In June 2016, she was a member of the EDITE Doctoral School's Grant Allocation Committee.
+She chaired the session entitled "Wireless Sensor networks II" at the IEEE MASS 2016 conference held in Brasilia in October 2016.
 
+%------------------------------------------------------------------------------
 \subsection{Invited Talks}
 
 TBD
 
+%------------------------------------------------------------------------------
 \subsection{Leadership within the Scientific Community}
 
 TBD
 
+%------------------------------------------------------------------------------
 \subsection{Scientific Expertise}
 
 Paul Muhlethaler is a reviewer for the European Commission.
 He regularly reviews project; this year he was at the last review meeting of E3Network a project dedicated to high-speed radio links in the E-band. 
 
-
+%------------------------------------------------------------------------------
 \subsection{Research Administration}
  
 TBD
@@ -2574,6 +2591,7 @@ TBD
 %==============================================================================
 \begin{module}{diffusion}{enseignement}{Teaching - Supervision - Juries}
 
+%------------------------------------------------------------------------------
 \subsection {Teaching}
 %% Le module "Teaching" présente vos activités d'enseignement et d'encadrement à présenter comme suit :
 
@@ -2620,8 +2638,7 @@ TBD
         \end{itemize}
 \end{itemize}
 
-
-
+%------------------------------------------------------------------------------
 \subsection {Supervision}
 %% PhD \& HdR : Les thèses soutenues doivent figurer dans la bibliographie
 
@@ -2640,6 +2657,7 @@ TBD
         \end{itemize}
 \end{itemize}
 
+%------------------------------------------------------------------------------
 \subsection {Juries}
 \begin{itemize}
     \XMLaddatt*{type}{sanspuces}
