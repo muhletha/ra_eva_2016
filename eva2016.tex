@@ -934,7 +934,23 @@ This software appears in \url{https://bil.inria.fr/}.
 %==============================================================================
 \begin{module}{logiciels}{soft:argus}{Argus (Software)}
 
-\commentthomas{TODO}
+Share your low-power wireless sniffer through the cloud!
+
+Imagine you are a team of low-power wireless enthusiasts developing the next generation of products in standards. One essential tool in your toolkit is a low-power wireless sniffer, which shows you the frames which fly through the air.
+
+Rather than requiring each person in your team to have a sniffer, Argus allows you to put in a share a sniffer through the cloud.
+
+There are three piece to Argus:
+
+\begin{itemize}
+    \item The Argus Probe is the program which attaches to your low-power wireless sniffer and forwards its traffic to the Argus Broker.
+    \item The Argus Broker sits somewhere in the cloud. Based on MQTT, it connect Argus Probes with Argus Clients based on a pub-sub architecture.
+    \item Several Argus Clients can the started at the same time. It is a program which subscribes to the Argus Broker and displays the frames in Wireshark.
+\end{itemize}
+
+It is published under an open-source BSD license, maintained at \url{https://github.com/openwsn-berkeley/argus}.
+
+This software appears in \url{https://bil.inria.fr/}.
 
 \end{module}
 
