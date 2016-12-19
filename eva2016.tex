@@ -44,6 +44,9 @@
 
 %SKEL - v0.4 - 2016 (Utiliser pour les stats d'utilisation de Skel, merci de ne effacer cette ligne)
 
+\usepackage{color}
+\usepackage{xspace}
+
 % ne pas enlever 
 \renewenvironment{motscle}{\begin{xmlelement}{keywords}}{\end{xmlelement}}
 
@@ -66,7 +69,7 @@
 \newcommand{\thomas}           {\textbf{Thomas~Watteyne}}
 \newcommand{\achir}            {\textbf{Nadjib~Achir}}
 
-\newcommand{\commentthomas}[1] {\textbf{\textcolor{blue}{[Thomas] #1}}}
+\newcommand{\commentthomas}[1] {\textbf{[Thomas] #1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -672,7 +675,7 @@ It is therefore important to be able to accurately determine the battery lifetim
 
 %%% Merci de bien vouloir respecter cette sytnaxe : \begin{module}{highlights}{NewHighlights}{}
 
-\thomas{stopped here}
+\commentthomas{stopped here}
 
 \begin{enumerate}
     \item \thomas~and Brett~Warneke (Linear Technology) received the IPSO CHALLENGE 2015 People's Choice Award  with the project ``HeadsUp! : Monitoring the Post-surgery Position of Retinal Detachment Patients''. 3 December 2015.
