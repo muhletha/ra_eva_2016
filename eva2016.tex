@@ -799,6 +799,7 @@ Sensor data and network statistics are available at our Inria-Paris servers (\ur
 
 %==============================================================================
 \begin{module}{logiciels}{soft:openwsn}{OpenWSN (Software)}
+\label{soft:openwsn}
 
 \begin{participants}
     \pers{Tengfei}{Chang}
@@ -849,7 +850,30 @@ This software appears in \url{https://bil.inria.fr/}.
 \end{module}
 
 %==============================================================================
+\begin{module}{logiciels}{soft:opera}{OPERA and OCARI (Software)} 
+
+\begin{participants}
+    \pers{Erwan}{Livolant}
+    \pers{Pascale}{Minet}
+\end{participants}
+
+The OPERA software was developed by the Hipercom2 team in the OCARI project (see \url{https://ocari.org/}). It includes EOLSR, an  energy efficient routing protocol and OSERENA, a coloring algorithm optimized for dense wireless networks. It was registered by the APP.
+In 2013, OPERA has been made available for download as an open software from the INRIAGForge site: \url{https://gforge.inria.fr/scm/?group_id=4665}
+
+In 2014, OPERA has been ported on a more powerful platform based on the Atmel transceiver AT86RF233 and on a 32 bits microcontroler Cortex M3.
+More details and documentation about this software are available in the website made by the Eva team:
+\url{http://opera.gforge.inria.fr/index.html}
+
+In 2016, Erwan Livolant developed extensions to allow the remote management of the OCARI 
+network and the transmission of commands to sensors and actuators. 
+
+%Erwan Livolant, \pascale~from Inria as well as Tuan Dang from EDF and Maurice Sellin from DCNS showed the wireless sensor network OCARI during the Inria-Industry Meeting devoted to Telecommunications organized by Inria at Rocquencourt in November 2014. Two types of demonstration were done: one illustrating the internal behavior of OCARI and the other one illustrating a fire detection in a DCNS ship.
+
+\end{module}
+
+%==============================================================================
 \begin{module}{logiciels}{soft:f-interop}{F-Interop (Software)}
+\label{soft:f-interop}
 
 \begin{participants}
     \pers{Remy}{L\'eone}
@@ -913,6 +937,7 @@ This software appears in \url{https://bil.inria.fr/}.
 
 %==============================================================================
 \begin{module}{logiciels}{soft:mercator}{Mercator (Software)}
+\label{soft:mercator}
 
 \begin{participants}
     \pers{Keoma}{Brun-Laguna}
@@ -933,6 +958,7 @@ This software appears in \url{https://bil.inria.fr/}.
 
 %==============================================================================
 \begin{module}{logiciels}{soft:solsystem}{SolSystem (Software)}
+\label{soft:solsystem}
 
 \begin{participants}
     \pers{Keoma}{Brun-Laguna}
@@ -957,6 +983,12 @@ This software appears in \url{https://bil.inria.fr/}.
 
 %==============================================================================
 \begin{module}{logiciels}{soft:argus}{Argus (Software)}
+\label{soft:argus}
+
+\begin{participants}
+    \pers{Remy}{L\'eone}
+    \pers{Thomas}{Watteyne}
+\end{participants}
 
 Share your low-power wireless sniffer through the cloud!
 
@@ -975,28 +1007,6 @@ There are three piece to Argus:
 It is published under an open-source BSD license, maintained at \url{https://github.com/openwsn-berkeley/argus}.
 
 This software appears in \url{https://bil.inria.fr/}.
-
-\end{module}
-
-%==============================================================================
-\begin{module}{logiciels}{soft:opera}{OPERA and OCARI (Software)} 
-
-\begin{participants}
-    \pers{Erwan}{Livolant}
-    \pers{Pascale}{Minet}
-\end{participants}
-
-The OPERA software was developed by the Hipercom2 team in the OCARI project (see \url{https://ocari.org/}). It includes EOLSR, an  energy efficient routing protocol and OSERENA, a coloring algorithm optimized for dense wireless networks. It was registered by the APP.
-In 2013, OPERA has been made available for download as an open software from the INRIAGForge site: \url{https://gforge.inria.fr/scm/?group_id=4665}
-
-In 2014, OPERA has been ported on a more powerful platform based on the Atmel transceiver AT86RF233 and on a 32 bits microcontroler Cortex M3.
-More details and documentation about this software are available in the website made by the Eva team:
-\url{http://opera.gforge.inria.fr/index.html}
-
-In 2016, Erwan Livolant developed extensions to allow the remote management of the OCARI 
-network and the transmission of commands to sensors and actuators. 
-
-%Erwan Livolant, \pascale~from Inria as well as Tuan Dang from EDF and Maurice Sellin from DCNS showed the wireless sensor network OCARI during the Inria-Industry Meeting devoted to Telecommunications organized by Inria at Rocquencourt in November 2014. Two types of demonstration were done: one illustrating the internal behavior of OCARI and the other one illustrating a fire detection in a DCNS ship.
 
 \end{module}
 
@@ -1041,28 +1051,32 @@ Erwan Livolant developed a SAHARA frame dissector plugin for Wireshark (\url{htt
     \pers{Tengfei}{Chang}
 \end{participants}
 
-Note well: IoT-lab is NOT a project of Inria-EVA.
+Note well: IoT-lab is \textit{not} a project of Inria-EVA.
 It is a large project which runs from 2011 to 2021 and which involves the following other partners Inria (Lille, Sophia-Antipolis, Grenoble), INSA, UPMC, Institut T\'el\'ecom Paris, Institut T\'el\'ecom Evry, LSIIT Strasbourg.
 This section highlight Inria-EVA activity and contribution to the IoT-lab testbed in 2016.
 
+The Inria-EVA team has been using the platform extensively throughout 2016.
+During the process, we have been interacting closely with the IoT-lab team of engineers.
+
+IoT-lab-related activities include:
+
 \begin{itemize}
-    \item The Paris-Rocquencourt deployment has been stable throughout 2015.
-    \item Thomas~Watteyne and the OpenWSN community have been using the platform (all sites, not just Rocquencourt) extensively throughout 2015. Highlights include:
-    \begin{itemize}
-        \item Nicola~Accettura (then postdoc at UC Berkeley) created scripts to automate running OpenWSN on the IoT-lab, under the co-supervision of Thomas~Watteyne and Prof.~Kris~Pister.
-            Source code is available at \url{https://github.com/openwsn-berkeley/openwsn-on-iotlab}.
-        \item This work was presented during the OpenWSN hackathon held in conjunction with the IETF93 standardization meeting in Prague in July 2015.
-        \item Prof.~Diego~Dujovne from Universidad Diego Portales (Chile) visited Thomas~Watteyne in July 2015 to work on the Mercator project (\url{https://github.com/openwsn-berkeley/mercator}) to collect Dense Wireless Connectivity Datasets for the IoT on the IoT-lab.
-    \end{itemize}
-    \item The Inria-EVA team supported the IoT-lab admin team to remove malfunctioning batteries from the Inria-Rocquencourt deployment in December 2015.
-    \item Thomas~Watteyne integrated the IoT-lab admin team in December 2015. Together, they are working on a smaller test deployment with the Inria-EVA premises at Inria-Paris, on which development will be done to:
-    \begin{itemize}
-        \item Allow commercial hardware to be plugged into the IoT-lab gateways.
-        \item Allow multiple motes to be plugged into the same IoT-lab gateway.
-        \item Use the IoT-lab for deploying and verifying the correct functioning of the OpenWSN implementation on all supported hardware board.
-        \item Use the IoT-lab for deploying and verifying the correct functioning of the OpenWSN implementation at small/medium/large scale.
-    \end{itemize}
-    \item The activities above are lead by Tengfei~Chang from the Inria-EVA team, under the supervision of Thomas~Watteyne, and in close collaboration with the IoT-lab core team.
+    \item \textbf{Running OpenWSN networks at scale}.
+        The IoT-lab has been an incredibly powerful tool to verify the scalability of the protocols and implementations in OpenWSN (Section~\ref{soft:openwsn}).
+        \textit{Lead: Tengfei Chang}.
+    \item \textbf{Assessing connectivity with Mercator}.
+        The Mercator project (Section~\ref{soft:mercator}) is targetted at measuring the connectivity of the IoT-lab platform in time, space and frequency.
+        \textit{Lead: Keoma Brun-Laguna}.
+    \item \textbf{16-channel Sniffer with Argus}.
+        We are currently working extending the Argus project (Section~\ref{soft:argus}) with support for IoT-lab motes.
+        That is, rather than using a 16-channel sniffer, turn 16 IoT-lab nodes into a distributed multi-frequency sniffer.
+        \textit{Lead: Remy L\'eone}.
+    \item \textbf{IoT-lab for Interop Testing with F-Interop}.
+        Through the H2020 F-Interop project, we are developing the tools (see Section~\ref{soft:f-interop}) to run an F-Interop user's code on the IoT-lab to verify conformance and interoperability.
+        \textit{Lead: Remy L\'eone}.
+    \item \textbf{Scalable Security Solution with H2020 ARMOUR}.
+        Through the H2020 ARMOUR project, Inria-EVA is testing whether security solutions standardized at the IETF are scalable.
+        \textit{Lead: Malisa Vucinic}.
 \end{itemize}
 
 \end{module}
