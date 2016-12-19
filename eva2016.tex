@@ -910,7 +910,24 @@ This software appears in \url{https://bil.inria.fr/}.
 %==============================================================================
 \begin{module}{logiciels}{soft:solsystem}{SolSystem (Software)}
 
-\commentthomas{TODO}
+\begin{participants}
+    \pers{Keoma}{Brun-Laguna}
+    \pers{Thomas}{Watteyne}
+\end{participants}
+
+SolSystem is a back-end solution for a low-power wireless mesh network based on SmartMesh IP.
+It defines how low-power wireless devices must format and transfer sensor data, and the tools to gather, store and display sensor data.
+
+This system is used in several deployments, including \url{http://savethepeaches.com/} and \url{http://snowhow.io/}.
+
+The source code is composed of the definition of
+the SOL structure (\url{https://github.com/realms-team/sol}),
+the code that runs on the manager (\url{https://github.com/realms-team/solmanager}, written in Python) and
+the code that runs on the server receiving the data (\url{https://github.com/realms-team/solserver}, written in Python).
+
+It is published under an open-source BSD license. Information and overview at \url{http://www.solsystem.io/}.
+
+This software appears in \url{https://bil.inria.fr/}.
 
 \end{module}
 
