@@ -777,10 +777,10 @@ It is therefore important to be able to accurately determine the battery lifetim
 \begin{module}{logiciels}{soft:openwsn}{OpenWSN (Software)}
 
 \begin{participants}
-    \pers{Thomas}{Watteyne}
     \pers{Tengfei}{Chang}
-    \pers{Malisa}{Vucinic}
     \pers{Jonathan}{Mu\~noz}
+    \pers{Malisa}{Vucinic}
+    \pers{Thomas}{Watteyne}
 \end{participants}
 
 OpenWSN (\url{http://www.openwsn.org/}) is an open-source implementation of a fully standards-based protocol stack for the Internet of Things.
@@ -788,31 +788,35 @@ It has become the de-facto implementation of the IEEE802.15.4e TSCH standard, ha
 
 The OpenWSN ADT started in 2015, with Research Engineer Tengfei~Chang who joined the EVA team.
 
-Highlights for 2015:
+Highlights for 2016:
 \begin{itemize}
     \item Development:
         \begin{itemize}
-            \item Moving the project from UC Berkeley to Inria (\thomas)
-            \item Implementation of a layer-2 security based on AES-128 and CCM* (Malisa~Vucinic)
-            \item Implementation of draft-ietf-6tisch-minimal (Tengfei~Chang)
-            \item Implementation of draft-dujovne-6tisch-6top-sf0 (Tengfei~Chang)
-            \item Implementation of draft-wang-6tisch-6top-sublayer (Tengfei~Chang)
-            \item Creation of ``Golden Image'' used as a reference during interoperability testing (Tengfei~Chang)
+            \item better (continuous) testing of the existing OpenWSN code.
+            \item Build a image for a RaspberryPi which contains the OpenVisualizer preinstalled.
+            \item Port OpenWSN to the First prototype of the ``Single-Chip uMote'' (SCuM), developed in Prof. Pister's lab at UC Berkeley.
+            \item Create a Virtual Machine image with all OpenWSN development tools preinstalled.
+            \item Implementation of 6TiSCH standards as they appear, including revisions.
+            \item Maintenance of the ``Golden Image'' used as a reference during interoperability testing
         \end{itemize}
     \item Recognition:
         \begin{itemize}
-            \item OpenWSN was selected by ETSI as the reference implementation for IETF 6TiSCH-related standards. It is therefore the base for the ETSI's Golden Device for 6TiSCH standards, including IEEE802.15.4e TSCH, 6LoWPAN and RPL.
+            \item OpenWSN remains ETSI's reference implementation for IETF 6TiSCH-related standards. It is therefore the base for the ETSI's Golden Device for 6TiSCH standards, including IEEE802.15.4e TSCH, 6LoWPAN and RPL.
         \end{itemize}
     \item Events:
         \begin{itemize}
             \item \textbf{Tutorial}\\
-                OpenWSN \& OpenMote: Hands-on Tutorial on Open Source Industrial IoT. Thomas Watteyne, Xavier Vilajosana, Pere Tuset. IEEE Global Telecommunications Conference (GLOBECOM), San Diego, CA, USA, 6-10 December 2015.
+                Standards for the Industrial IoT: a Hands-on Tutorial with OpenWSN and OpenMote.
+                Xavier Vilajosana, Pere Tuset-Peiro, Tengfei Chang, \thomas.
+                IEEE International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC), Valencia, Spain, 4-8 September 2016.
             \item \textbf{Tutorial}\\
-                OpenWSN Tutorial [presented by Xavi Vilsajosana] Workshop Internet Of Things / Equipex FIT IoT-LAB, Lille, France, 15 October 2015.
-            \item \textbf{Hackathon}\\
-                OpenWSN/6TiSCH Hackathon, Czech Republic, 19 July 2015.
-            \item \textbf{Interop event}\\
-                First ETSI 6TiSCH plugtest (interop event) in Prague, Czech Republic, 17-18 July 2015.
+                Introduction to the IETF 6TiSCH stack with OpenWSN \& OpenMote.
+                \thomas, Xavier Vilajosana, Pere Tuset-Peiro, Tengfei Chang.
+                International Conference on Telecommunications (ICT), Thessaloniki, Greece, 16-18 May 2016.
+            \item \textbf{Interop Event}\\
+                ETSI 6TiSCH 3 plugtests, 15-16 Juny 2016, Berlin, Germany
+            \item \textbf{Interop Event}\\
+                ETSI 6TiSCH 2 plugtests, 2-4 Februay 2016, Paris, France
         \end{itemize}
 \end{itemize}
 
@@ -821,7 +825,40 @@ Highlights for 2015:
 %==============================================================================
 \begin{module}{logiciels}{soft:finterop}{F-Interop (Software)}
 
-\commentthomas{TODO}
+\begin{participants}
+    \pers{Remy}{L\'eone}
+    \pers{Thomas}{Watteyne}
+\end{participants}
+
+F-Interop is revolutionizing the way interoperability events are conducted.
+We are building a cloud-based system which allows implementors to meet online to test their implementations against one another, verify compliance in a automated way, and verify the performance of their implementations on large scale testbeds.
+This significantly cuts down time-to-market for standards-based solutions, and eventually leads to more standards-based products on the market.
+The F-Interop platform starts by targeting 6TiSCH, 6LoWPAN and CoAP standards, but our ambition is for F-Interop to become the standard way of doing interoperability, at least at the IETF IoT level.
+
+This implementation is done as part of the H2020 F-Interop project.
+More information at \url{http://www.f-interop.eu/}.
+
+\end{module}
+
+%==============================================================================
+\begin{module}{logiciels}{soft:dissector}{6TiSCH Simulator (Software)}
+
+\begin{participants}
+    \pers{Malisa}{Vucinic}
+    \pers{Thomas}{Watteyne}
+\end{participants}
+
+The 6TiSCH simulator allows one to conduct high-level simulator of an IETF 6TiSCH network and answer questions such as
+How long does it take the nodes to join the network?
+What is the average power consumption?
+What does the latency distribution look like?
+
+The simulator is written in Python.
+While it doesn't provide a cycle-accurate emulation, it does implement the functional behavior of a node running the full 6TiSCH protocol stack.
+This includes RPL, 6LoWPAN, CoAP and 6P. The implementation work tracks the progress of the standardization process at the IETF.
+
+This implementation is done as part of the H2020 ARMOUR project and the standardization activities of the Inria-EVA team at the IETF.
+It is published under an open-source BSD license and maintained at \url{https://bitbucket.org/6tisch/simulator/}.
 
 \end{module}
 
