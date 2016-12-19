@@ -61,10 +61,12 @@
 % Date : jeudi 17 novembre 2016, 10:40:56 (UTC+0100)
 %
 
-\newcommand{\paul}    {\textbf{Paul~Muhlethaler}}
-\newcommand{\pascale} {\textbf{Pascale~Minet}}
-\newcommand{\thomas}  {\textbf{Thomas~Watteyne}}
-\newcommand{\achir}   {\textbf{Nadjib~Achir}}
+\newcommand{\paul}             {\textbf{Paul~Muhlethaler}}
+\newcommand{\pascale}          {\textbf{Pascale~Minet}}
+\newcommand{\thomas}           {\textbf{Thomas~Watteyne}}
+\newcommand{\achir}            {\textbf{Nadjib~Achir}}
+
+\newcommand{\commentthomas}[1] {\textbf{\textcolor{blue}{[Thomas] #1}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -133,7 +135,6 @@
 
 \begin{moreinfo}
 %%ICI Vous pouvez ecrire du texte
-
 \end{moreinfo}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -288,27 +289,21 @@
 % Date : jeudi 17 novembre 2016, 10:40:56 (UTC+0100)
 %
 
+%==============================================================================
 \begin{module}{presentation}{overall-objectives}{Overall Objectives}
 
 It is forecast that the vast majority of Internet connections will be wireless.
-The EVA project will grasp this opportunity and focus on wireless communication.
-EVA will tackle challenges related to providing efficient communication in wireless networks and, more generally, in all networks that are not already organized when set up, and consequently need to evolve and spontaneously find a match between application requirements and the environment.
+The EVA project grasps this opportunity and focus on wireless communication.
+EVA tackles challenges related to providing efficient communication in wireless networks and, more generally, in all networks that are not already organized when set up, and consequently need to evolve and spontaneously find a match between application requirements and the environment.
 These networks can use opportunistic and/or collaborative communication schemes.
 They can evolve through optimization and self-learning techniques.
-Every effort will be made to ensure that the results provided by EVA will have the greatest possible impact on standardization.
+Every effort is made to ensure that the results provided by EVA have the greatest possible impact through standardization.
 The miniaturization and ubiquitous nature of computing devices has opened the way to the deployment of a new generation of wireless (sensor) networks.
-These networks will be central to the work in EVA, as EVA will focus on such crucial issues as power conservation, connectivity, determinism1, reliability and latency. Wireless sensor network (WSN) deployments will also be a new key subject, especially for emergency situations (e.g. after a
-disaster).
-Industrial process automation and environmental monitoring will be considered in greater depth.
-
+These networks are central to the work in EVA, as EVA focuses on such crucial issues as power conservation, connectivity, determinism, reliability and latency.
+Wireless Sensor Network (WSN) deployments are also be a new key subject, especially for emergency situations (e.g.~after a disaster).
+Industrial process automation and environmental monitoring are considered in greater depth.
 
 \end{module}
-
-
-
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -322,40 +317,53 @@ Industrial process automation and environmental monitoring will be considered in
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%==============================================================================
 \begin{module}{fondements}{test1}{Generalities}
 
-EVA will inherit its expertise in designing  algorithms and protocols  from HiPERCOM2 (e.g. OLSR). EVA will 
-also  inherit know-how in modeling, simulation, experimentation and standardization. Armed with this know-how and experience, we feel confident that the results we expect to obtain will be both far-reaching and useful.
+EVA inherits its expertise in designing  algorithms and protocols from HiPERCOM2 (e.g. OLSR).
+EVA also inherit know-how in modeling, simulation, experimentation and standardization.
+Through this know-how and experience, the results obtained are both far-reaching and useful.
 
 \end{module}
 
+%==============================================================================
 \begin{module}{fondements}{sec:phylayer}{Physical Layer}
 
-We plan to study how advanced physical layers can be used in low-power wireless networks. For instance, collaborative techniques such as multiple antennas (e.g. the Massive MIMO
-technology) can improve communication efficiency.   
-The idea is to use a massive network densification by drastically increasing
-the number of sensors in a given area in a Time Division
-Duplex (TDD) mode with time reversal. The first
-period allows the sensors to estimate the channel state and, after 
-time reversal, the second period is to transmit the data sensed.
+We plan to study how advanced physical layers can be used in low-power wireless networks.
+For instance, collaborative techniques such as multiple antennas (e.g. the Massive MIMO technology) can improve communication efficiency.   
+The idea is to use a massive network densification by drastically increasing the number of sensors in a given area in a Time Division Duplex (TDD) mode with time reversal.
+The first period allows the sensors to estimate the channel state and, after time reversal, the second period is to transmit the data sensed.
 Other techniques, such as interference cancellation, are also possible.
+
 \end{module}
 
+%==============================================================================
 \begin{module}{fondements}{sec:wirelessaccess}{Wireless Access}
 
-Medium sharing in wireless systems has received substantial attention throughout the last decade. HiPERCOM2 has provided models to compare TDMA and CSMA. HiPERCOM2 has also studied how network nodes must be positioned to optimize the global throughput.
+Medium sharing in wireless systems has received substantial attention throughout the last decade.
+HiPERCOM2 has provided models to compare TDMA and CSMA.
+HiPERCOM2 has also studied how network nodes must be positioned to optimize the global throughput.
 
-EVA will pursue modeling tasks to compare access protocols, including multi-carrier access, adaptive CSMA (particularly in VANETs), as well as directional and multiple antennas. There is a strong need for determinism in industrial networks. The EVA team will focus particularly on scheduled medium access in the context of deterministic industrial networks; this will involve optimizing the joint time slot and channel assignment. Both centralized and distributed approaches will be considered, and the EVA team will determine their limits in terms of reliability, latency and throughput. Furthermore, adaptivity to application or environment changes will be taken into account.
+EVA will pursue modeling tasks to compare access protocols, including multi-carrier access, adaptive CSMA (particularly in VANETs), as well as directional and multiple antennas.
+There is a strong need for determinism in industrial networks.
+The EVA team will focus particularly on scheduled medium access in the context of deterministic industrial networks; this will involve optimizing the joint time slot and channel assignment.
+Distributed approaches will be considered, and the EVA team will determine their limits in terms of reliability, latency and throughput.
+Furthermore, adaptivity to application or environment changes will be taken into account.
 
 \end{module}
 
+%==============================================================================
 \begin{module}{fondements}{sec:coex}{Coexistence of Wireless Technologies}
 
-Wireless technologies such as cellular, low-power mesh networks, (Low-Power) WiFi, and Bluetooth (low-energy) can reasonably claim to fit the requirements of the IoT. Each, however, uses different trade-offs between reliability, energy consumption and throughput. The EVA team will study the limits of each technology, and will develop clear criteria to evaluate which technology is best suited to a particular set of constraints.
+Wireless technologies such as cellular, low-power mesh networks, (Low-Power) WiFi, and Bluetooth (low-energy) can reasonably claim to fit the requirements of the IoT.
+Each, however, uses different trade-offs between reliability, energy consumption and throughput.
+The EVA team will study the limits of each technology, and will develop clear criteria to evaluate which technology is best suited to a particular set of constraints.
 
 Coexistence between these different technologies (or different deployments of the same technology in a common radio space) is a valid point of concern.
 
-The EVA team aims at studying such coexistence, and, where necessary, propose techniques to improve it. Where applicable, the techniques will be put forward for standardization. Multiple technologies can also function in a symbiotic way.
+The EVA team aims at studying such coexistence, and, where necessary, propose techniques to improve it.
+Where applicable, the techniques will be put forward for standardization.
+Multiple technologies can also function in a symbiotic way.
 
 For example, to improve the quality of experience provided to end users, a wireless mesh network can transport sensor and actuator data in place of a cellular network, when and where cellular connectivity is poor.
 
@@ -364,64 +372,93 @@ A specific example of a collaborative approach is Cognitive Radio Sensor Network
 
 \end{module}
 
+%==============================================================================
 \begin{module}{fondements}{sec:enereff}{Energy-Efficiency and Determinism}
 
-Reducing the energy consumption of low-power wireless devices remains a challenging task. The overall energy budget of a system can be reduced by using less power-hungry chips, and significant research is being done in that direction. Nevertheless, power consumption is mostly influenced by the algorithms and protocols used in low-power wireless devices, since they influence the duty-cycle of the radio.
+Reducing the energy consumption of low-power wireless devices remains a challenging task.
+The overall energy budget of a system can be reduced by using less power-hungry chips, and significant research is being done in that direction. 
+Nevertheless, power consumption is mostly influenced by the algorithms and protocols used in low-power wireless devices, since they influence the duty-cycle of the radio.
 
-EVA will search for energy-efficient mechanisms in low-power wireless networks. One new requirement concerns the ability to predict energy consumption with a high degree of accuracy. Scheduled communication, such as the one used in the IEEE 802.15.4e TSCH (Time Slotted CHannel Hopping) standard, and by IETF 6TiSCH, allows for a very accurate prediction of the energy consumption of a chip. Power conservation will be a key issue in EVA.
+EVA will search for energy-efficient mechanisms in low-power wireless networks.
+One new requirement concerns the ability to predict energy consumption with a high degree of accuracy.
+Scheduled communication, such as the one used in the IEEE 802.15.4e TSCH (Time Slotted CHannel Hopping) standard, and by IETF 6TiSCH, allows for a very accurate prediction of the energy consumption of a chip. Power conservation will be a key issue in EVA.
 
 To tackle this issue and match link-layer resources to application needs, EVA's 5-year research program around Energy-Efficiency and Determinism centers around 3 studies:
 
 \begin{itemize}
-    \item Performance Bounds of a TSCH network. We propose to study a low-power wireless TSCH network as a Networked Control System (NCS), and use results from the NCS literature. A large number of publications on NCS, although dealing with wireless systems, consider wireless links to have perfect reliability, and do not consider packet loss. Results from these papers can not therefore be applied directly to TSCH networks. Instead of following a purely mathematical approach to model the network, we propose to use a non-conventional approach and build an empirical model of a TSCH network.
-    \item Centralized Scheduling in TSCH networks. Centralized scheduling may allow efficient collision-free schedules to be calculated, but may not scale, or be applicable to quickly changing topologies. The objective of our research is to determine how large the network can be, and how fast its topology can change. This study will be conducted using the model defined in the first point, and will take into account the related communication overhead  (amount of data and latency).
-    \item Distributed Scheduling in TSCH networks. Distributed scheduling is attractive due to its scalability and reactivity, but might result in a sub-optimal schedule. We continue this research by designing a distributed solution based on control theory, and verify how this solution can satisfy service level agreements in a dynamic environment. 
+    \item Performance Bounds of a TSCH network.
+        We propose to study a low-power wireless TSCH network as a Networked Control System (NCS), and use results from the NCS literature.
+        A large number of publications on NCS, although dealing with wireless systems, consider wireless links to have perfect reliability, and do not consider packet loss.
+        Results from these papers can not therefore be applied directly to TSCH networks.
+        Instead of following a purely mathematical approach to model the network, we propose to use a non-conventional approach and build an empirical model of a TSCH network.
+    \item Distributed Scheduling in TSCH networks.
+       Distributed scheduling is attractive due to its scalability and reactivity, but might result in a sub-optimal schedule.
+       We continue this research by designing a distributed solution based on control theory, and verify how this solution can satisfy service level agreements in a dynamic environment.
 \end{itemize}
 
 \end{module}
 
+%==============================================================================
 \begin{module}{fondements}{sec:netdep}{Network Deployment}
 
-Since sensor networks are very often built to monitor geographical areas, sensor deployment is a key issue. The deployment of the network must ensure full/partial, permanent/intermittent coverage and connectivity. This technical issue leads to geometrical problems which are unusual in the networking domain.
+Since sensor networks are very often built to monitor geographical areas, sensor deployment is a key issue.
+The deployment of the network must ensure full/partial, permanent/intermittent coverage and connectivity.
+This technical issue leads to geometrical problems which are unusual in the networking domain.
 
-We can identify two scenarios. In the first one, sensors are deployed over a given area to guarantee full coverage and connectivity, while minimizing the number of sensor nodes. In the second one, a network is re-deployed to improve its performance, possibly by increasing the number of points of interest covered, and by ensuring connectivity. EVA will investigate these two scenarios, as well as centralized and distributed approaches. The work starts 
-with simple 2D models and will be enriched to take into account more realistic 
-environment: obstacles, walls, 3D, fading. 
+We can identify two scenarios.
+In the first one, sensors are deployed over a given area to guarantee full coverage and connectivity, while minimizing the number of sensor nodes.
+In the second one, a network is re-deployed to improve its performance, possibly by increasing the number of points of interest covered, and by ensuring connectivity.
+EVA will investigate these two scenarios, as well as centralized and distributed approaches.
+The work starts with simple 2D models and will be enriched to take into account more realistic environment: obstacles, walls, 3D, fading. 
 
 \end{module}
 
+%==============================================================================
 \begin{module}{fondements}{sec:datgath}{Data Gathering and Dissemination}
 
-A large number of WSN applications mostly do data gathering (a.k.a ``convergecast''). These applications generally require small delays for the data to reach the gateway node, requiring time consistency across gathered data. This time consistency is usually achieved by a short gathering period.
+A large number of WSN applications mostly do data gathering (a.k.a ``convergecast'').
+These applications usually require small delays for the data to reach the gateway node, requiring time consistency across gathered data.
+This time consistency is usually achieved by a short gathering period.
 
-In many real WSN deployments, the channel used by the WSN usually encounters perturbations such as jamming, external interferences or noise caused by external sources (e.g. a polluting source such as a radar) or other coexisting wireless networks (e.g. WiFi, Bluetooth). Commercial sensor nodes can communicate on multiple frequencies as specified in the IEEE 802.15.4 standard. This reality has given birth to the multichannel communication paradigm in WSNs.
+In many real WSN deployments, the channel used by the WSN usually encounters perturbations such as jamming, external interferences or noise caused by external sources (e.g.~a polluting source such as a radar) or other coexisting wireless networks (e.g.~WiFi, Bluetooth).
+Commercial sensor nodes can communicate on multiple frequencies as specified in the IEEE 802.15.4 standard.
+This reality has given birth to the multichannel communication paradigm in WSNs.
 
 Multichannel WSNs significantly expand the capability of single-channel WSNs by allowing parallel transmissions, and avoiding congestion on channels or performance degradation caused by interfering devices.
 
-In EVA, we will focus on raw data convergecast in multichannel low-power wireless networks. In this context, we are interested in centralized/distributed algorithms that jointly optimize the channel and time slot assignment used in a data gathering frame. The limits in terms of reliability, latency and bandwidth will be evaluated. Adaptivity to additional traffic demands will be improved. 
+In EVA, we will focus on raw data convergecast in multichannel low-power wireless networks.
+In this context, we are interested in centralized/distributed algorithms that jointly optimize the channel and time slot assignment used in a data gathering frame.
+The limits in terms of reliability, latency and bandwidth will be evaluated.
+Adaptivity to additional traffic demands will be improved. 
 
 \end{module}
 
+%==============================================================================
 \begin{module}{fondements}{sec:learn}{Self-Learning Networks}
 
-To adapt to varying conditions in the environment and application requirements, the EVA team will investigate self-learning networks. Machine learning approaches, based on experts and forecasters, will be investigated to predict the quality of the wireless links in a WSN. This allows the routing protocol to avoid using links exhibiting poor quality and to change the route before a link failure. Additional applications include where to place the aggregation function in data gathering.
-In a content delivery network (CDN), it is very useful to predict the popularity, expressed 
-by the number of solicitations per day, 
-of a multimedia content. The most popular contents are cached near the end-users to maximize the hit ratio of end-users' requests. Thus the satisfaction degree of end-users is maximized and the network overhead is minimized. 
+To adapt to varying conditions in the environment and application requirements, the EVA team will investigate self-learning networks.
+Machine learning approaches, based on experts and forecasters, will be investigated to predict the quality of the wireless links in a WSN.
+This allows the routing protocol to avoid using links exhibiting poor quality and to change the route before a link failure.
+Additional applications include where to place the aggregation function in data gathering.
+In a content delivery network (CDN), it is very useful to predict the popularity, expressed by the number of solicitations per day, of a multimedia content.
+The most popular contents are cached near the end-users to maximize the hit ratio of end-users' requests.
+Thus the satisfaction degree of end-users is maximized and the network overhead is minimized. 
 
 \end{module}
 
-\begin{module}{fondements}{sec:sectrad}{Security Trade-off  in Constrained Wireless Networks}
+%==============================================================================
+\begin{module}{fondements}{sec:sectrad}{Security Trade-off in Constrained Wireless Networks}
 
-Ensuring security is a {sine qua non} condition for the widespread acceptance and adoption of the IoT, in particular in industrial and military applications. While the Public-Key Infrastructure (PKI) approach is ubiquitous on the traditional Internet, constraints in terms of embedded memory, communication bandwidth and computational power make translating PKI to constrained networks non-trivial.
+Ensuring security is a {sine qua non} condition for the widespread acceptance and adoption of the IoT, in particular in industrial and military applications.
+While the Public-Key Infrastructure (PKI) approach is ubiquitous on the traditional Internet, constraints in terms of embedded memory, communication bandwidth and computational power make translating PKI to constrained networks non-trivial.
 
-Two related standardization working groups were created in 2013 to address this issue. DICE (DTLS In Constrained Environments)  is defining a DTLS (Datagram Transport Layer Security)  profile that is suitable for IoT applications, using the (Constrained Application Protocol) CoAP protocol. ACE is standardizing authentication and authorization mechanisms for constrained environments.
+Two related standardization working groups were created in 2013 to address this issue.
+DICE (DTLS In Constrained Environments) is defining a DTLS (Datagram Transport Layer Security) profile that is suitable for IoT applications, using the (Constrained Application Protocol) CoAP protocol.
+ACE is standardizing authentication and authorization mechanisms for constrained environments.
 
 The issue is to find the best trade-off between a communication and computation overhead compatible with the limited capacity of sensor nodes and the level of protection required by the application.
 
 \end{module}
-
-
 
 %\begin{module}{fondements}{test1}{LaTeX Test Page}
 %
@@ -505,13 +542,11 @@ The issue is to find the best trade-off between a communication and computation 
 %
 %\end{module}
 
-
 %%% Un autre module dans la même section fondements 
 
 % \begin{module}{fondements}{ident2}{Identification2}
 % ...
 % \end{module}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -522,24 +557,32 @@ The issue is to find the best trade-off between a communication and computation 
 
 \begin{module}{domaine}{dom11}{Generalities}
 
-Wireless networks have become ubiquitous and are an integral part of our daily lives. These networks are present in many application domains; the most important are detailed in this section.
+Wireless networks have become ubiquitous and are an integral part of our daily lives.
+These networks are present in many application domains; the most important are detailed in this section.
 
 \end{module}
 
 %==============================================================================
-\begin{module}{domaine}{indproc}{Industrial process automation}
+\begin{module}{domaine}{indproc}{Industrial Process Automation}
 
-Networks in industrial process automation typically perform \textbf{monitoring and control} tasks. Wired industrial communication networks, such as HART\footnote{Highway Addressable Remote Transducer, \url{http://en.hartcomm.org/}.}, have been around for decades and, being wired, are highly reliable. Network administrators tempted to ``go wireless'' expect the same reliability. Reliable process automation networks -- especially when used for control -- often impose stringent latency requirements.  Deterministic wireless networks can be used in critical systems such as control loops, however, the unreliable nature of the wireless medium, coupled with their large scale and ``ad-hoc'' nature raise some of the most important challenges for low-power wireless research over the next 5-10 years.
+Networks in industrial process automation typically perform \textbf{monitoring and control} tasks.
+Wired industrial communication networks, such as HART\footnote{Highway Addressable Remote Transducer, \url{http://en.hartcomm.org/}.}, have been around for decades and, being wired, are highly reliable.
+Network administrators tempted to ``go wireless'' expect the same reliability.
+Reliable process automation networks -- especially when used for control -- often impose stringent latency requirements.
+Deterministic wireless networks can be used in critical systems such as control loops, however, the unreliable nature of the wireless medium, coupled with their large scale and ``ad-hoc'' nature raise some of the most important challenges for low-power wireless research over the next 5-10 years.
 
-Through the involvement of team members in standardization activities%\footnote{\thomas~is co-chairing the IETF 6TiSCH working group, which standardizes deterministic communication in low-power wireless networks.}
-, the protocols and techniques will be proposed for the standardization process with a view to becoming the \textit{de-facto} standard for wireless industrial process automation. Besides producing top level research publications and standardization activities, EVA intends this activity to foster further collaborations with industrial partners.
+Through the involvement of team members in standardization activities, the protocols and techniques will be proposed for the standardization process with a view to becoming the \textit{de-facto} standard for wireless industrial process automation.
+Besides producing top level research publications and standardization activities, EVA intends this activity to foster further collaborations with industrial partners.
 
 \end{module}
 
 %==============================================================================
 \begin{module}{domaine}{envmon}{Environmental Monitoring}
 
-Today, outdoor WSNs are used to monitor vast rural or semi-rural areas and may be used to detect fires. Another example is detecting fires in outdoor fuel depots, where the delivery of alarm messages to a monitoring station in an upper-bounded time is of prime importance. Other applications consist in monitoring the snow melting process in mountains, tracking the quality of water in cities, registering the height of water in pipes to foresee flooding, etc. These applications lead to a vast number of technical issues: deployment strategies to ensure suitable coverage and good network connectivity, energy efficiency, reliability and latency, etc.
+Today, outdoor WSNs are used to monitor vast rural or semi-rural areas and may be used to detect fires.
+Another example is detecting fires in outdoor fuel depots, where the delivery of alarm messages to a monitoring station in an upper-bounded time is of prime importance.
+Other applications consist in monitoring the snow melting process in mountains, tracking the quality of water in cities, registering the height of water in pipes to foresee flooding, etc.
+These applications lead to a vast number of technical issues: deployment strategies to ensure suitable coverage and good network connectivity, energy efficiency, reliability and latency, etc.
 
 We will work on such applications in an associate team ``REALMS'' comprising members from EVA, the university of Berkeley and the university of Michigan. 
 
@@ -550,41 +593,64 @@ We will work on such applications in an associate team ``REALMS'' comprising mem
 
 The general agreement is that the Internet of Things (IoT) is composed of small, often battery-powered objects which measure and interact with the physical world, and encompasses smart home applications, wearables, smart city and smart plant applications.
 
-The Internet of Things (IoT) has received continuous attention since 2013, and has been a marketing tool for industry giants such as IBM and Cisco, and the focal point of major events such the Consumer Electronics Show and the IETF. The danger of such exposure is that any under-performance may ultimately disappoint early adopters.
+The Internet of Things (IoT) has received continuous attention since 2013, and has been a marketing tool for industry giants such as IBM and Cisco, and the focal point of major events such the Consumer Electronics Show and the IETF.
+The danger of such exposure is that any under-performance may ultimately disappoint early adopters.
 
 It is absolutely essential to (1) clearly understand the limits and capabilities of the IoT, and (2) develop technologies which enable user expectation to be met.
 
 With the general public becoming increasingly familiar with the term ``Internet of Things'', its definition is broadening to include all devices which can be interacted with from a network, and which do not fall under the generic term of ``computer''.
 
-The EVA team is dedicated to understanding and contributing to the IoT. In particular, the team will maintain a good understanding of the different technologies at play (Bluetooth, IEEE 802.15.4, WiFi, cellular), and their trade-offs. Through scientific publications and other contributions, EVA will help establish which technology best fits which application.
+The EVA team is dedicated to understanding and contributing to the IoT.
+In particular, the team will maintain a good understanding of the different technologies at play (Bluetooth, IEEE 802.15.4, WiFi, cellular), and their trade-offs.
+Through scientific publications and other contributions, EVA will help establish which technology best fits which application.
 
 \end{module}
 
 %==============================================================================
 \begin{module}{domaine}{mil}{Military, Energy and Aerospace}
 
-Through the HIPERCOM project, EVA has developed cutting-edge expertise in using wireless networks for military, energy and aerospace applications. Wireless networks are a key enabling technology in the application domains, as they allow physical processes to be instrumented (e.g.~the structural health of an airplane) at a granularity not achievable by its wired counterpart. Using wireless technology in these domains does however raise many technical challenges, including end-to-end latency, energy-efficiency, reliability and Quality of Service (QoS). Mobility is often an additional constraint  in energy and military applications. Achieving scalability is of paramount importance for tactical military networks, and, albeit to a lesser degree, for power plants. EVA will work in this domain.
+Through the HIPERCOM project, EVA has developed cutting-edge expertise in using wireless networks for military, energy and aerospace applications. 
+Wireless networks are a key enabling technology in the application domains, as they allow physical processes to be instrumented (e.g.~the structural health of an airplane) at a granularity not achievable by its wired counterpart.
+Using wireless technology in these domains does however raise many technical challenges, including end-to-end latency, energy-efficiency, reliability and Quality of Service (QoS).
+Mobility is often an additional constraint in energy and military applications.
+Achieving scalability is of paramount importance for tactical military networks, and, albeit to a lesser degree, for power plants.
+EVA will work in this domain.
 
 \end{module}
 
 %==============================================================================
 \begin{module}{domaine}{smacit}{Smart Cities}
 
-It has been estimated that by 2030, 60\% of the world's population will live in cities. On the one hand, smart cities aim at making everyday life more attractive and pleasant for citizens; on the other hand, they facilitate how those citizens can participate in the life of the city.
+It has been estimated that by 2030, 60\% of the world's population will live in cities.
+On the one hand, smart cities aim at making everyday life more attractive and pleasant for citizens; on the other hand, they facilitate how those citizens can participate in the life of the city.
 
-Smart cities share the constraint of mobility (both pedestrian and vehicular) with tactical military networks. Vehicular Ad-hoc NETworks (VANETs) will play an important role in the development of smarter cities.
+Smart cities share the constraint of mobility (both pedestrian and vehicular) with tactical military networks.
+Vehicular Ad-hoc NETworks (VANETs) will play an important role in the development of smarter cities.
 
-The coexistence of different networks operating in the same radio spectrum can cause interference that should be avoided. Cognitive radio provides secondary users with the frequency channels that are temporarily unused (or unassigned) by primary users. Such opportunistic behavior can also be applied to urban wireless sensor networks. Smart cities raise the problem of transmitting, gathering, processing and storing big data. Another issue is to provide the right information at the place where it is most needed.
+The coexistence of different networks operating in the same radio spectrum can cause interference that should be avoided.
+Cognitive radio provides secondary users with the frequency channels that are temporarily unused (or unassigned) by primary users.
+Such opportunistic behavior can also be applied to urban wireless sensor networks.
+Smart cities raise the problem of transmitting, gathering, processing and storing big data.
+Another issue is to provide the right information at the place where it is most needed.
 
 \end{module}
 
 %==============================================================================
 \begin{module}{domaine}{emerapp}{Emergency Applications}
 
-In an ``emergency'' application, heterogeneous nodes of a wireless network cooperate to recover from a disruptive event in a timely fashion, thereby possibly saving human lives. These wireless networks can be rapidly deployed and are useful to assess damage and take initial decisions. Their primary goal is to maintain connectivity with the humans or mobile robots (possibly in a hostile environment) in charge of network deployment. The deployment should ensure the coverage of particular points or areas of interest. The wireless network has to cope with pedestrian mobility and robot/vehicle mobility. The environment, initially unknown, is progressively discovered and may contain numerous obstacles that should be avoided. The nodes of the wireless network are usually battery-powered. Since they are placed by a robot or a human, their weight is very limited. The protocols supported by these nodes should be energy-efficient to maximize network lifetime. In such a challenging environment, sensor nodes should be replaced before their batteries are depleted. It is therefore important to be able to accurately determine the battery lifetime of these nodes, enabling predictive maintenance.
+In an ``emergency'' application, heterogeneous nodes of a wireless network cooperate to recover from a disruptive event in a timely fashion, thereby possibly saving human lives.
+These wireless networks can be rapidly deployed and are useful to assess damage and take initial decisions.
+Their primary goal is to maintain connectivity with the humans or mobile robots (possibly in a hostile environment) in charge of network deployment. 
+The deployment should ensure the coverage of particular points or areas of interest.
+The wireless network has to cope with pedestrian mobility and robot/vehicle mobility.
+The environment, initially unknown, is progressively discovered and may contain numerous obstacles that should be avoided.
+The nodes of the wireless network are usually battery-powered.
+Since they are placed by a robot or a human, their weight is very limited.
+The protocols supported by these nodes should be energy-efficient to maximize network lifetime.
+In such a challenging environment, sensor nodes should be replaced before their batteries are depleted.
+It is therefore important to be able to accurately determine the battery lifetime of these nodes, enabling predictive maintenance.
 
 \end{module}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -602,11 +668,11 @@ In an ``emergency'' application, heterogeneous nodes of a wireless network coope
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{module}{highlights}{NewHighlights}{Awards}
 
 %%% Merci de bien vouloir respecter cette sytnaxe : \begin{module}{highlights}{NewHighlights}{}
 
+\thomas{stopped here}
 
 \begin{enumerate}
     \item \thomas~and Brett~Warneke (Linear Technology) received the IPSO CHALLENGE 2015 People's Choice Award  with the project ``HeadsUp! : Monitoring the Post-surgery Position of Retinal Detachment Patients''. 3 December 2015.
@@ -2534,8 +2600,8 @@ to high-speed radio links in the E-band.
       \item Mohamed Hadded  ``Design and Optimization of Access Control Protocols in
 Vehicular Ad Hoc Networks (VANETs)'' Th\`ese de Telecom Sud Paris. 30 Novembre 2016, Anis Laouiti~examinator, \paul~examinator, 
              \item   Samira Chouikhi  ``Tolérance aux pannes dans un réseau de capteurs sans fil multi-canal '' University of Paris East Marne-La-Vall\'ee,  June 2016, \pascale~examinator, \paul~reviewer.
-             \item Mohamed Nidhal Mejri ``Securing vehicular networks against denial of service attacks", Université Paris 13, le 19 mai 2016,  \paul~president,  \achir~examiner.
-             \item   Alexandre Ragaleux, "M\'ecanismes D’Acc\`es Multiple dans les R\'eseaux Sans Fil Large Bande", Université Pierre et Marie Curie, le 22 septembre 2016,  \achir~reviewer.  
+             \item Mohamed Nidhal Mejri ``Securing vehicular networks against denial of service attacks", Université Paris 13, le 19 mai 2016,  \paul~president, \achir~examiner.
+             \item   Alexandre Ragaleux, "M\'ecanismes D’Acc\`es Multiple dans les R\'eseaux Sans Fil Large Bande", Université Pierre et Marie Curie, le 22 septembre 2016, \achir~reviewer.  
               \item Chiraz Houaida, "Vers des m\'ecanismes de routage robustes et optimis\'es dans un r\'eseau sans-fil m\'etropolitain et collaboratif", University of Toulouse, May 2016, \pascale~reviewer.
              \item Jin Cui, "Data aggregation in wireless sensor networks", University of Lyon - INSA, June 2016, Pascale Minet, reviewer.
 		\item Naourez Mejri, "Vers une ville intelligente au service du citoyen mobile: d\'ecouverte de l'infrastructure d'acc\`es et gestion intelligente de parkings", University of La Manouba, ENSI, Tunis, November 2016, \pascale~examinator,  \paul~reviewer.
