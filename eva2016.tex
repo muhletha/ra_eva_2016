@@ -248,7 +248,7 @@
     \pers{Mario}{Gerla}{Visiteur}[    Professor,   UCLA,                       USA,    visit 10-20 December 2016]
     \pers{Felipe}{Lalanne}{Visiteur}[ Reseacher,   Inria Chile,                Chile,  visit 19–26 Octobre 2016]
     \pers{Mario}{Gerla}{Visiteur}[    Professor,   UCLA,                       USA,    visit 31 August - 23 September 2016]
-    \pers{Travis}{Massey}{Visiteur}[  PhD Studen,  UC Berkeley,                USA,    visit 22 July 2016]
+    \pers{Travis}{Massey}{Visiteur}[  PhD Student, UC Berkeley,                USA,    visit 22 July 2016]
     \pers{Diego}{Dujovne}{Visiteur}[  Professor,   Universidad Diego Portales, Chile,  visit 22-31 July 2016]
     \pers{Carlos}{Oroza}{Visiteur}[   PhD Student, UC Berkeley,                USA,    visit 23-29 July 2016]
     \pers{David}{Burnett}{Visiteur}[  PhD Student, UC Berkeley,                USA,    visit 13-15 June 2016]
@@ -458,94 +458,6 @@ The issue is to find the best trade-off between a communication and computation 
 
 \end{module}
 
-%\begin{module}{fondements}{test1}{LaTeX Test Page}
-%
-%%%% muni d'un titre, ce module apparaitra comme une sous-section
-%
-%Exemples d'équations :
-% 
-%\begin{itemize}
-%\item Equation en mode ``mathématique'' :\\
-%
-%$y=x^2$ 
-%
-%\item Equation en environnement ``equation'' : \\
-%
-%\begin{equation}
-%  P \left(\begin{array} {c}
-%     \theta_{1} \\ \vdots  \\ \theta_{r} 
-%\end{array}
-%  \right) = Q + R, \label{noisident1}
-%\end{equation}
-%
-%\item Equation en environnement ``displaymath'' : \\
-%
-%\begin{displaymath}
-%\sum_{0}^{\infty} y = x^4
-%\end{displaymath}
-%
-%\item Autre exemple : 
-%
-%\[ \forall f\in C^\infty\left(\left[-\frac{T}{2};\frac{T}{2}\right]\right),
-%   \forall t\in \left[-\frac{T}{2};\frac{T}{2}\right],
-%   f(\tau) = \sum_{k = -\infty}^{+\infty} e^{2i\pi\frac{k}{T}t} \times
-%   \underbrace{\frac{1}{T}
-%               \int_{-\frac{T}{2}}^{\frac{T}{2}} f(t) e^{-2i\pi\frac{k}{T}t} dt
-%              }_{a_k = \tilde{f}\left(\nu = \frac{k}{T}\right)}
-%\]
-%
-%\end{itemize} 
-%
-%Exemple de caractères spéciaux : \\ 
-%
-%math pi : $\pi$ \\
-%
-%lettres : æ Æ à À â Â ä Ä ç Ç é É è È ê Ê ë Ë î Î ï Ï ô Ô ö Ö ù Ù û Û ü Ü ÿ {\th} {\TH}
-%
-%Exemples d'images :
-% 
-%\begin{itemize}
-%
-%\item Image en jpeg : voir image \ref{fig:jpegimage} \\
-%
-%\begin{figure}
-%\begin{center}
-%\includegraphics[width=4cm]{IMG/imagejpeg}
-%\end{center}
-%\caption{An example of a jpeg image}
-%\label{fig:jpegimage}
-%\end{figure}
-%
-%\item  Image en eps : voir figure \ref{fig:completemap} \\ 
-%
-%\begin{figure}
-%\begin{center}
-%\includegraphics{IMG/imageeps}
-%\end{center}
-%\caption{An example of an eps file}
-%\label{fig:completemap}
-%\end{figure}
-%
-%\item Image en pdf : voir image \ref{fig:pdffile} \\ 
-%
-%%\begin{center}
-%\begin{figure}
-%\includegraphics[width=2cm]{IMG/imagepdf}
-%\caption{An example of a pdf file}
-%\label{fig:pdffile}
-%\end{figure}
-%%\end{center}
-%
-%\end{itemize}
-%
-%\end{module}
-
-%%% Un autre module dans la même section fondements 
-
-% \begin{module}{fondements}{ident2}{Identification2}
-% ...
-% \end{module}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
 %%% Section domaine (Application Domains)
@@ -667,20 +579,16 @@ It is therefore important to be able to accurately determine the battery lifetim
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%% Merci de bien vouloir respecter cette sytnaxe : \begin{module}{highlights}{NewHighlights}{}
+
 %==============================================================================
 \begin{module}{highlights}{NewHighlights}{Awards}
-
-%%% Merci de bien vouloir respecter cette sytnaxe : \begin{module}{highlights}{NewHighlights}{}
 
 \begin{enumerate}
     \item Keoma Brun-Laguna and \thomas, together with Ana Laura Diedrichs,  Javier Emilio Chaar, Diego Dujovne, Juan Carlos Taffernaberry, Gustavo Mercado. Runner up IEEE SECON 2016 Best Demo Award with ``A Demo of the PEACH IoT-based Frost Event Prediction System for Precision Agriculture'', London, UK, 28 June 2016.
     \item Remy Leone and \thomas. Recipient Google IoT Technology Research Award on ``6TiSCH and WiFi coexistence with OpenWSN'', March 2016.
     \item Tengfei Chang and \thomas, together with Pedro Henrique Gomes, Pradipta Gosh, Bhaskar Krishnamachari. EWSN dependability competition 4th place with project ``Reliability through Time-Slotted Channel Hopping and Flooding-based Routing'', 16 February 2016.
 \end{enumerate}
-
-%% ICI vous pouvez ecrire du texte
-%%
-%% citez les "Awards" sous la forme : \bestcite{xxxx}, \bestcite{yyyy}, ...
 
 \end{module}
 
@@ -957,6 +865,21 @@ This software appears in \url{https://bil.inria.fr/}.
 \end{module}
 
 %==============================================================================
+\begin{module}{logiciels}{soft:connexion}{CONNEXION (Software)} 
+
+\begin{participants}
+    \pers{Pascale}{Minet}
+    \pers{Erwan}{Livolant}
+\end{participants}
+
+In the CONNEXION project, the integration of the OCARI wireless sensor network
+in a Service-Oriented Architecture using the OPC-UA/ROSA middleware went on with Telecom ParisTech. More precisely, we developed the remote managment of the OCARI network as well as the possibility to generate commands to the sensors and actuators. 
+
+Erwan Livolant developed an OCARI frame dissector plugin for Wireshark (\url{https://www.wireshark.org}) available from the Git repository at OCARI website  (\url{https://www.ocari.org/gitlab/tools/wireshark.git}). This tool displays the contents of the packets sniffed for the MAC, the NWK and the Application layers, taking into account the specificities of OCARI.
+
+\end{module}
+
+%==============================================================================
 \begin{module}{logiciels}{soft:solsystem}{SolSystem (Software)}
 \label{soft:solsystem}
 
@@ -1011,21 +934,6 @@ This software appears in \url{https://bil.inria.fr/}.
 \end{module}
 
 %==============================================================================
-\begin{module}{logiciels}{soft:connexion}{CONNEXION (Software)} 
-
-\begin{participants}
-    \pers{Pascale}{Minet}
-    \pers{Erwan}{Livolant}
-\end{participants}
-
-In the CONNEXION project, the integration of the OCARI wireless sensor network
-in a Service-Oriented Architecture using the OPC-UA/ROSA middleware went on with Telecom ParisTech. More precisely, we developed the remote managment of the OCARI network as well as the possibility to generate commands to the sensors and actuators. 
-
-Erwan Livolant developed an OCARI frame dissector plugin for Wireshark (\url{https://www.wireshark.org}) available from the Git repository at OCARI website  (\url{https://www.ocari.org/gitlab/tools/wireshark.git}). This tool displays the contents of the packets sniffed for the MAC, the NWK and the Application layers, taking into account the specificities of OCARI.
-
-\end{module}
-
-%==============================================================================
 \begin{module}{logiciels}{soft:sahara}{SAHARA (Software)} 
 
 \begin{participants}
@@ -1034,12 +942,11 @@ Erwan Livolant developed an OCARI frame dissector plugin for Wireshark (\url{htt
     \pers{Pascale}{Minet}
 \end{participants}
 
-%The software module DimTool developed in 2014 by the Hipercom2 team in the SAHARA project has been registered by the APP in January 2014. It helps to dimension the network parameters of the SAHARA wireless sensor network and evaluate the feasibility of a given application. 
-Ines Khoufi developed modules for the simulation of the Time Slotted Channel Hopping (TSCH) on the 
-ns3 simulation tool. These modules include multi-interface management and transmission management according 
-to a given schedule. 
+Ines Khoufi developed modules for the simulation of the Time Slotted Channel Hopping (TSCH) on the ns3 simulation tool.
+These modules include multi-interface management and transmission management according to a given schedule. 
  
-Erwan Livolant developed a SAHARA frame dissector plugin for Wireshark (\url{https://www.wireshark.org}). This tool displays the contents of the packets sniffed for the MAC and the NWK layers, taking into account the specificities of the SAHARA project.
+Erwan Livolant developed a SAHARA frame dissector plugin for Wireshark (\url{https://www.wireshark.org}).
+This tool displays the contents of the packets sniffed for the MAC and the NWK layers, taking into account the specificities of the SAHARA project.
 
 \end{module}
 
@@ -1090,49 +997,6 @@ IoT-lab-related activities include:
 
 %==============================================================================
 \begin{module}{resultats}{results:wsns}{Wireless Sensor Networks}
-
-%------------------------------------------------------------------------------
-%\subsection{Node activity scheduling and routing in Wireless Sensor Networks}
-%
-%\begin{participants}
-%    \pers{C\'edric}{Adjih}
-%    \pers{Pascale}{Minet}
-%\end{participants}
-%
-%The need to maximize network lifetime in wireless ad hoc networks and especially in wireless sensor networks requires the use of energy efficient algorithms and protocols. Motivated by the fact that a node consumes the least energy when its radio is in sleep state, we achieve energy efficiency by scheduling nodes activity. Nodes are assigned time slots during which they can transmit and they can turn off their radio when they are neither transmitting nor receiving. Compared to classical TDMA-based medium access scheme, spatial bandwidth use is optimized: non interfering nodes are able to share the same time slots, collisions are avoided and overhearing and interferences are reduced. 
-%
-%In 2014, we study the issue of delay optimization and energy efficiency in grid wireless sensor networks (WSNs). We focus on STDMA (Spatial Reuse TDMA)) scheduling, where a predefined cycle is repeated, and where each node has fixed transmission opportunities during specific slots (defined by colors). We assume a STDMA algorithm that takes advantage of the regularity of grid topology to also provide a spatially periodic coloring (``tiling'' of the same color pattern). In this setting, the key challenges are: 1) minimizing the average routing delay by ordering the slots in the cycle 2) being energy efficient. Our work follows two directions: first, the baseline performance is evaluated when nothing specific is done and the colors are randomly ordered in the STDMA cycle. Then, we propose a solution, ORCHID that deliberately constructs an efficient STDMA schedule. It proceeds in two steps. In the first step, ORCHID starts form a colored grid and builds a hierarchical routing based on these colors. In the second step, ORCHID builds a color ordering, by considering jointly both routing and scheduling so as to ensure that any node will reach a sink in a single STDMA cycle. We study the performance of these solutions by means of simulations and modeling. Results show the excellent performance of ORCHID in terms of delays and energy compared to a shortest path routing that uses the delay as a heuristic. We also present the adaptation of ORCHID to general networks under the SINR interference model. 
-
-%------------------------------------------------------------------------------
-%\subsection{Time slot and channel assignment in multichannel Wireless Sensor Networks}
-%
-%\begin{participants}
-%    \pers{Pascale}{Minet}
-%    \pers{Ridha}{Soua}
-%    \pers{Erwan}{Livolant}
-%\end{participants}
-%
-%Wireless sensor networks (WSNs) play a major role in industrial environments for data gathering (convergecast). 
-%Among the industrial requirements, we can name a few like 1) determinism and bounded convergecast latencies, 2) throughput and 3) robustness against interferences.
-%The classical IEEE~802.15.4 that has been designed for low power lossy networks (LLNs) partially meets these requirements. That is why the IEEE~802.15.4e MAC amendment
-%has been proposed recently. This amendment combines a slotted medium access with a channel hopping (i.e. Time Slotted Channel Hopping TSCH). The MAC layer orchestrates the medium accesses of nodes according to a given schedule. Nevertheless, this amendment does not specify how this schedule is computed. We propose a distributed joint time slot and channel assignment, called $Wave$ for data gathering in LLNs. This schedule targets minimized data convergecast delays by reducing the number of slots assigned to nodes. Moreover, $Wave$ ensures the absence of conflicting transmissions in the schedule provided. In such a schedule, a node is awake only during its slots and the slots of its children in the convergecast routing graph. Thus, energy efficiency is ensured. We describe in details the functioning of $Wave$, highlighting its features (e.g. support of heterogeneous traffic, support of a sink equipped with multiple interfaces) and properties in terms of worst case delays and buffer size. We discuss 
-%its features with regard to a centralized scheduling algorithm like $TMCP$ and a distributed one like $DeTAS$. Simulation results show the good performance of $Wave$ compared to $TMCP$. Since in an industrial environment, several routing graphs can coexist, we study how $Wave$ supports this coexistence.
-
-%----------------------------------------------------------------------------
-\subsection{Centralized Scheduling in TSCH-based Wireless Sensor Networks}
-
-\begin{participants}
-    \pers{Erwan}{Livolant}
-    \pers{Pascale}{Minet}
-    \pers{Thomas}{Watteyne}
-\end{participants}
-
-Scheduling in an IEEE802.15.4e TSCH(Time Slotted Channel Hopping 6TiSCH) low-power wireless network can be done in a centralized or distributed way. 
-When using centralized scheduling, a scheduler installs a communication schedule into the network.
-This can be done in a standards-based way using CoAP.
-In this study, we compute the number of packets and the latency this takes, on real-world examples.
-The result is that the cost is very high using today's standards, much higher than when using an ad-hoc solution such as OCARI.
-We conclude by making recommendations to drastically reduce the number of messages and improve the efficiency of the standardized approach.
 
 %------------------------------------------------------------------------------
 \subsection{Deployment of Wireless Sensor Networks}
@@ -1217,21 +1081,49 @@ The coalition game provides a scalable solution.
 These results have been presented at the IPCCC 2016 conference.
 This work was done in cooperation Mohamed-Amine Koulali and Abdellatif Kobbane.
 
+%----------------------------------------------------------------------------
+\subsection{Centralized Scheduling in TSCH-based Wireless Sensor Networks}
+
+\begin{participants}
+    \pers{Erwan}{Livolant}
+    \pers{Pascale}{Minet}
+    \pers{Thomas}{Watteyne}
+\end{participants}
+
+Scheduling in an IEEE802.15.4e TSCH(Time Slotted Channel Hopping 6TiSCH) low-power wireless network can be done in a centralized or distributed way. 
+When using centralized scheduling, a scheduler installs a communication schedule into the network.
+This can be done in a standards-based way using CoAP.
+In this study, we compute the number of packets and the latency this takes, on real-world examples.
+The result is that the cost is very high using today's standards, much higher than when using an ad-hoc solution such as OCARI.
+We conclude by making recommendations to drastically reduce the number of messages and improve the efficiency of the standardized approach.
+
 %------------------------------------------------------------------------------
 \subsection{Using an IEEE 802.15.4e TSCH network}
 
- \begin{participants}
-     \pers{Ines}{Khoufi}
-     \pers{Pascale}{Minet} 
-     \pers{Erwan}{Livolant}
-     \pers{Thomas}{Watteyne} 
+\begin{participants}
+    \pers{Ines}{Khoufi}
+    \pers{Pascale}{Minet} 
+    \pers{Erwan}{Livolant}
+    \pers{Thomas}{Watteyne} 
 \end{participants}  
 
-Most wireless sensor networks that are currently deployed use a technology based on the IEEE 802.15.4 standard. However, this standard does not meet all requirements of industrial applications in terms of latency, throughput and robustness. That is why the IEEE 802.15.4e amendment has been designed, including the Time Slotted Channel Hopping (TSCH) mode.
+Most wireless sensor networks that are currently deployed use a technology based on the IEEE 802.15.4 standard.
+However, this standard does not meet all requirements of industrial applications in terms of latency, throughput and robustness.
+That is why the IEEE 802.15.4e amendment has been designed, including the Time Slotted Channel Hopping (TSCH) mode.
 
-In 2016, we evaluated the time needed for a joining node to detect beacons advertising the TSCH network. This time may be long due to channel hopping in the TSCH network. The beacon advertising policy is left unspecified by the standard. We propose DBA, a Deterministic Beacon Advertising algorithm. DBA ensures a collision-free and regular transmission of beacons on all the frequencies used by the TSCH network. DBA outperforms two solutions already published that are Random Horizontal and Random Vertical. Some results have been presented as a poster at the IPCCC 2016 conference.
+In 2016, we evaluated the time needed for a joining node to detect beacons advertising the TSCH network.
+This time may be long due to channel hopping in the TSCH network.
+The beacon advertising policy is left unspecified by the standard.
+We propose DBA, a Deterministic Beacon Advertising algorithm.
+DBA ensures a collision-free and regular transmission of beacons on all the frequencies used by the TSCH network.
+DBA outperforms two solutions already published that are Random Horizontal and Random Vertical.
+Some results have been presented as a poster at the IPCCC 2016 conference.
 
-The medium access in a TSCH network is ruled by a schedule that determines for each pair (slot offset, channel offset) the transmitting node(s) and the receiving node(s). Each node in the TSCH network must have this schedule. The question is how to install it on all nodes. We proposed and evaluated different ways of installing a schedule in a TSCH network, comparing them in terms of the number of messages required. This study has been presented at the AdHoc Now 2016 conference.
+The medium access in a TSCH network is ruled by a schedule that determines for each pair (slot offset, channel offset) the transmitting node(s) and the receiving node(s).
+Each node in the TSCH network must have this schedule.
+The question is how to install it on all nodes.
+We proposed and evaluated different ways of installing a schedule in a TSCH network, comparing them in terms of the number of messages required.
+This study has been presented at the AdHocNow 2016 conference.
 
 %------------------------------------------------------------------------------
 \subsection{The OCARI Wireless Sensor Network}
@@ -1242,24 +1134,16 @@ The medium access in a TSCH network is ruled by a schedule that determines for e
     \pers{Mohammed Tahar}{Hammi} 
 \end{participants}  
 
-Wireless Sensor Networks and Industrial Internet
-of Things use smart, autonomous and usually limited capacity
-devices in order to sense and monitor industrial environments.
-The devices in a wireless sensor network are managed by a
-controller, which should authenticate them before they join
-the network. OCARI is a wireless sensor network technology
-providing optimized protocols in order to reduce the energy
-consumption.\\ 
+Wireless Sensor Networks and Industrial Internet of Things use smart, autonomous and usually limited capacity devices in order to sense and monitor industrial environments.
+The devices in a wireless sensor network are managed by a controller, which should authenticate them before they join the network.
+OCARI is a wireless sensor network technology providing optimized protocols in order to reduce the energy consumption.
 
-To enhance OCARI security and ensure a robust
-authentication of devices, we propose a strong authentication
-method based on the One Time Password algorithm and deployed
-at the MAC layer. This method is specially designed to
-be implemented on devices with low storage and computing
-capacities.
-This work has been done in collaboration with Mohammed Tahar Hammi from Telecom ParisTech and presented at the PEMWN 2016 conference.\\
+To enhance OCARI security and ensure a robust authentication of devices, we propose a strong authentication method based on the One Time Password algorithm and deployed at the MAC layer.
+This method is specially designed to be implemented on devices with low storage and computing capacities.
+This work has been done in collaboration with Mohammed Tahar Hammi from Telecom ParisTech and presented at the PEMWN 2016 conference.
 
-We also evaluated the performances of the building of an OCARI network. The goal was to identify the most time consuming steps among node association, neighborhood discovery, routing tree building, stabilization of the routing tree and node coloring.\\
+We also evaluated the performances of the building of an OCARI network.
+The goal was to identify the most time consuming steps among node association, neighborhood discovery, routing tree building, stabilization of the routing tree and node coloring.
 
 %------------------------------------------------------------------------------
 \subsection{Security in Wireless Sensor Networks}
@@ -1269,8 +1153,17 @@ We also evaluated the performances of the building of an OCARI network. The goal
     \pers{Paul}{Muhlethaler}
 \end{participants}
 
-Sensor networks are often used to collect data from the environment where they are located. These data can then be transmitted regularly to a special node called a {\em sink}, which can be fixed or mobile. For critical data (like military or medical data), it is important that sinks and simple sensors can mutually authenticate so as to avoid data to be collected and/or accessed by fake nodes.
-For some applications, the collection frequency can be very high. As a result, the authentication mechanism used between a node and a sink must be fast and efficient both in terms of calculation time and energy consumption. This is especially important for nodes which computing capabilities and battery lifetime are very low. Moreover, an extra effort has been done to develop alternative solutions to secure, authenticate, and ensure the confidentiality of sensors, and the distribution of keys in the sensor network. Specific researches have also been conducted for large-scale sensors. At present, we work on an exchange protocol between sensors and sinks based on low-cost shifts and xor operations. This study was published in~\cite{boumerdassi:hal-01251917}. After this publication, we have been working on the performance evaluation of the solution to determine the memory overhead together with both computing and communication latencies.
+Sensor networks are often used to collect data from the environment where they are located.
+These data can then be transmitted regularly to a special node called a {\em sink}, which can be fixed or mobile.
+For critical data (like military or medical data), it is important that sinks and simple sensors can mutually authenticate so as to avoid data to be collected and/or accessed by fake nodes.
+For some applications, the collection frequency can be very high.
+As a result, the authentication mechanism used between a node and a sink must be fast and efficient both in terms of calculation time and energy consumption.
+This is especially important for nodes which computing capabilities and battery lifetime are very low.
+Moreover, an extra effort has been done to develop alternative solutions to secure, authenticate, and ensure the confidentiality of sensors, and the distribution of keys in the sensor network.
+Specific researches have also been conducted for large-scale sensors.
+At present, we work on an exchange protocol between sensors and sinks based on low-cost shifts and xor operations.
+This study was published in~\cite{boumerdassi:hal-01251917}.
+After this publication, we have been working on the performance evaluation of the solution to determine the memory overhead together with both computing and communication latencies.
 
 %------------------------------------------------------------------------------
 \subsection{Massive MIMO Cooperative Communications for Wireless Sensor Networks}
@@ -1282,7 +1175,16 @@ For some applications, the collection frequency can be very high. As a result, t
 
 This work is a collaboration with M\'erouane Debbah (Supelec, France).
 
-The objective of this work is to propose a framework for massive MIMO cooperative communications for Wireless Sensor Networks. Our main objective is  to analyze the performances of the deployment of a large number of sensors. This deployment should cope with a high demand for real time monitoring and should also take into account energy consumption. We have assumed a communication protocol with two phases: an initial training period followed by a second transmit period. The first period allows the sensors to estimate the channel state and the objective of the second period is to transmit the data sensed. We start analyzing the impact of the time devoted to each period. We study the throughput obtained with respect to the number of sensors when there is one sink. We also compute the optimal number of sinks with respect to the energy spent for different values of sensors. This work is a first step to establish a complete framework to study energy efficient Wireless Sensor Networks where the sensors collaborate to send information to a sink. Currently, we are exploring the multi-hop case.
+The objective of this work is to propose a framework for massive MIMO cooperative communications for Wireless Sensor Networks.
+Our main objective is  to analyze the performances of the deployment of a large number of sensors.
+This deployment should cope with a high demand for real time monitoring and should also take into account energy consumption.
+We have assumed a communication protocol with two phases: an initial training period followed by a second transmit period.
+The first period allows the sensors to estimate the channel state and the objective of the second period is to transmit the data sensed.
+We start analyzing the impact of the time devoted to each period.
+We study the throughput obtained with respect to the number of sensors when there is one sink.
+We also compute the optimal number of sinks with respect to the energy spent for different values of sensors.
+This work is a first step to establish a complete framework to study energy efficient Wireless Sensor Networks where the sensors collaborate to send information to a sink.
+Currently, we are exploring the multi-hop case.
 
 \end{module}
 
@@ -1298,16 +1200,30 @@ The objective of this work is to propose a framework for massive MIMO cooperativ
     \pers{Pascale}{Minet}
 \end{participants}
 
-Machine learning techniques can be used to improve the quality of experience for the end users of Content Delivery Networks (CDNs). In a CDN, the most popular video contents are cached near the end-users in order to minimize the contents delivery latency. The idea developed hereafter consists in using prediction techniques to evaluate the future popularity of video contents in order to decide which ones should be cached. The popularity of a video content is evaluated by the number of daily requests for this content.
+Machine learning techniques can be used to improve the quality of experience for the end users of Content Delivery Networks (CDNs).
+In a CDN, the most popular video contents are cached near the end-users in order to minimize the contents delivery latency.
+The idea developed hereafter consists in using prediction techniques to evaluate the future popularity of video contents in order to decide which ones should be cached.
+The popularity of a video content is evaluated by the number of daily requests for this content.
 
-We consider various prediction methods, called experts, coming from different fields (e.g. statistics, control theory). To evaluate the accuracy of the experts' popularity predictions, we assess these experts according to three criteria: cumulated loss, maximum instantaneous loss and best ranking. The loss function expresses the discrepancy between the prediction value and the real number of requests. We use real traces extracted from YouTube to compare different prediction methods and determine the best tuning of their parameters. The goal is to find the best trade-off between complexity and accuracy of the prediction methods used.
+We consider various prediction methods, called experts, coming from different fields (e.g.~statistics, control theory).
+To evaluate the accuracy of the experts' popularity predictions, we assess these experts according to three criteria: cumulated loss, maximum instantaneous loss and best ranking.
+The loss function expresses the discrepancy between the prediction value and the real number of requests.
+We use real traces extracted from YouTube to compare different prediction methods and determine the best tuning of their parameters.
+The goal is to find the best trade-off between complexity and accuracy of the prediction methods used.
 
-We also show the importance of a decision maker, called forecaster, that predicts the popularity based on the predictions of selection of several experts. The forecaster based on the best K experts outperforms in terms of cumulated loss the individual experts' predictions and those of the forecaster based on only one expert, even if this expert varies over time. This study has been presented at the IWCMC 2016 conference.
+We also show the importance of a decision maker, called forecaster, that predicts the popularity based on the predictions of selection of several experts.
+The forecaster based on the best K experts outperforms in terms of cumulated loss the individual experts' predictions and those of the forecaster based on only one expert, even if this expert varies over time.
+This study has been presented at the IWCMC 2016 conference.
 
-In the paper presented at the WiMob 2016 conference, we apply these prediction methods to caching. We first selected the best experts in charge of predicting the popularity of video
-contents in real traces of YouTube. We tuned the parameters of the DES expert. We proved that the well-known LFU caching strategy can also be considered as a prediction based strategy
-on the Basic expert. Simulation results show that the DES prediction-based caching strategy provides similar Hit Ratio to the well-known LFU caching strategy. These results are usually close to the optimal ones that can be achieved only when knowing in advance the popularity
-of each video content for the next day, which is an unrealistic assumption. The exception occurs when a content whose popularity was very poor becomes suddenly very popular with millions of solicitations. In such a case, the accuracy of prediction methods becomes poor. This opens a research direction where the knowledge of societal events is taken into account to improve the prediction.
+In the paper presented at the WiMob 2016 conference, we apply these prediction methods to caching.
+We first selected the best experts in charge of predicting the popularity of video contents in real traces of YouTube.
+We tuned the parameters of the DES expert.
+We proved that the well-known LFU caching strategy can also be considered as a prediction based strategy on the Basic expert.
+Simulation results show that the DES prediction-based caching strategy provides similar Hit Ratio to the well-known LFU caching strategy.
+These results are usually close to the optimal ones that can be achieved only when knowing in advance the popularity of each video content for the next day, which is an unrealistic assumption.
+The exception occurs when a content whose popularity was very poor becomes suddenly very popular with millions of solicitations.
+In such a case, the accuracy of prediction methods becomes poor.
+This opens a research direction where the knowledge of societal events is taken into account to improve the prediction.
 
 \end{module}
 
@@ -1316,17 +1232,6 @@ of each video content for the next day, which is an unrealistic assumption. The 
 
 %------------------------------------------------------------------------------
 \subsection{Protocols for VANETs}
-
-%\begin{participants}
-%    \pers{Nadjib}{Achir}
-%    \pers{Younes}{Bouchaala}
-%    \pers{Selma}{Boumerdassi}
-%    \pers{Mohamed}{Elhadad or Hadded}
-%    \pers{Guy}{Fayolle}
-%    \pers{Anis}{Laouiti}
-%    \pers{Paul}{Muhlethaler}
-%    \pers{Eric}{Renault}
-%\end{participants}
 
 % - - - - - - - - - - - - - -
 \subsubsection{An Infrastructure-Free Slot Assignment Algorithm for Reliable Broadcast of Periodic Messages in VANETs}\label{ch:DTMAC}
@@ -1368,64 +1273,6 @@ any vehicle must contain additional information, called Frame Information (FI).
 For the frame, this field gives the status of the slot (Idle, Busy, Collision) and 
 the ID of the vehicles accessing each slot with the characteristic of the data 
 sent: periodic or event-driven safety messages.
-
-%The FI consists of a set of ID Fields (IDFs) of 
-%size equal to the number of time slots per frame, $\tau$. Each IDF is dedicated to the corresponding time slot of a frame. The 
-%basic FI structure is shown in Figure~\ref{figc:DTMAC_Frame}.
-%Each time slot is dynamically reserved by an active vehicle 
-%(the vehicle whose communication device is transmitting) for collision-free delivery of safety messages or other control messages.
-%The VC\_ID field contains the ID of the vehicle that is accessing this slot. Each vehicle is identified by its MAC address. The 
-%SLT\_STS field contains the status of each slot which indicates whether the slot is Idle, Busy or in Collision. Finally, the 
-%PKT\_TYP field indicates the type of packet transmitted by the vehicle, i.e. periodic information or event-driven safety messages.
-%
-%\begin{figure}[!htbp]
-%  \begin{center}
-%  % Requires \usepackage{graphicx}
-%  \includegraphics[height=10cm,width=13cm]{IMG/DTMACFrame.jpg}
-%  \end{center}
-%  \caption{Frame information (FI) structure.}
-% \label{figc:DTMAC_Frame}
-%\end{figure}
-%
-%Our distributed TDMA scheduling mechanism uses vehicles location and slot reuse concept to ensure that vehicles in 
-%adjacent areas have collision-free schedule. The channel time is partitioned into frames and each frame is further 
-%partitioned into three sets of time slots $S_0, S_1,$ and $S_2$ of size equal to $n1, n2~$and$~n3$, respectively. These sets 
-%are associated with vehicles moving in the areas $x_i,~x_{i+1},~$and$~x_{i+2}$, respectively. As shown in 
-%Figure~\ref{figc:DTMAC_idea}, by dividing the time slots into three sets, vehicles $v_1$ and $v_3$ that are moving 
-%within the two areas $x_1$ and $x_3$, respectively, can not transmit simultaneously to  vehicle $v_2$ because they 
-%are accessing disjoint sets of time slots. Therefore, our TDMA scheduling mechanism can decrease the collisions rate 
-%caused by the hidden node problem. In each area, the vehicles access the time slots associated to their locations 
-%with the same probability. In the rest of this chapter, we adopt the following notations:
-%\begin{itemize}
-%\item $S_{j}(v)$: The set of time slots associated to the area in which the vehicle $v$ is traveling. \vspace{1mm}
-%\item $N(v)$: The set of neighbors\footnote{The set of neighbors is the set of vehicles that are moving within the same area.} of vehicle $v$ on the transmission channel. \vspace{1mm}
-%\end{itemize}
-%Every active vehicle in the network should be allocated a fixed slot in the frame for safety messages or other control 
-%packet transmissions. It is obvious that a vehicle's slot cannot be used by any neighboring vehicles within the same area or in  adjacent areas, otherwise collisions will occur. The goal of this work is to propose an efficient slot reuse algorithm  without having to use expensive spectrum and complex broadband mechanisms such as FDMA or CDMA. In fact, the three subsets of time slots will be reused between neighboring areas in such a way no vehicle in different adjacent areas can access the channel at the same time, and thus no interference will occur. 
-%
-%
-%Let us suppose that an active vehicle $v$ moving within the area $x_i$ needs to acquire a time slot on the transmission channel. Vehicle $v$ starts listening to the channel during the set of time slots reserved for the area in which it is traveling, let $S_{j}(v)$, where $j=(i+2)~mod~3$.
-%
-%\begin{itemize}
-%
-%\item Each vehicle that hears exactly one node transmission in a time slot reserved for its location, will set the status 
-%of the slot to ''busy'' and record the ID of the vehicle accessing the channel in this time slot in the corresponding VC\_ID field.
-%%\item Each vehicle that hears multiple FIs from different vehicles during the same time slot, will consider that the slot is occupied by more than one vehicle and sets its status to collision.
-%\item If a vehicle does not hear anything during a specific time slot, it will set its status to ''free'' in the FI.
-%\item If a vehicle can not decode the data during a specific time slot, it will set its status to ''collision'' in the FI.
-%\item When a vehicle A has sent data in a given slot, it looks in the field information of the next slots to 
-%discover whether its neighbors 
-%have correctly received its data. If a neighbor of A reports  collision for this slot  (in the FI) or even if this slot is reported 
-%to be ''busy'' 
-%but being sent by another node (say B in the VC\_ID), A considers that its transmission has led to a 
-%collision\footnote{Actually a node A considers that its transmission is a success if and only if all its neighbors 
-%report a success in the FI of their slots specifying that the data was sent by node A.}. 
-%\end{itemize}
-%
-%At the end of the frame the vehicle $v$ can determine the set $N(v)$ and the set of busy slots in $S_{j}(v)$ used by each 
-%vehicle $u\in N(v)$, denoted by $B(v)$. In order to avoid any collision problem, this set of time slots can not be used by 
-%any neighboring vehicles. Therefore,  vehicle $v$ can determine the set of available time slots $F(v)$ and then attempts to 
-%select one of them at random, say time slot $k$.
 
 The simulation results show that, compared to VeMAC which is the reference in terms of TDMA protocols for VANETs, DTMAC provides a lower rate of access and merging collisions, which results in significantly improved broadcast coverage. For further details see~\cite{hadded:hal-01379216}. 
 
@@ -1470,7 +1317,7 @@ between $t_0$ and $t_2$ as $t_2$ is the transmission slot for vehicle B, then 2 
 transmission slot for vehicle D and finally 2 time slots between $t_4$ and $t_0$ as $t_0$ is the transmission slot in which vehicle 
 G will broadcast the message received from  vehicle A). 
 
-%%Packet forwarding algorithm
+%Packet forwarding algorithm
 
 The idea of TRPM is the following. Whenever a vehicle $i$ accessing the channel during the set $S_k$ wants to send/forward an 
 event-driven safety message, it constructs two sets of candidate forwarders based on its frame information FI as 
@@ -1531,12 +1378,6 @@ frame are partitioned into two sets $S_1, S_2$ associated with vehicles in two a
 areas (see Figure~\ref{fig:CTSA}). Each frame consists of a constant number of time slots, denoted by $\tau$ and each time 
 slot is of a fixed time duration, denoted by $s$. Each vehicle can detect the start time of each frame as well as the 
 start time of a time slot. 
-%In the VANET studied, all the vehicles are equipped with a GPS 
-%and thus the one-Pulse-Per-Second (1PPS) signal that a GPS receiver gets from GPS satellites can be used for 
-%slot synchronization. The first time slot either in the set $S_1$ or $S_2$ is always used by the correspondent RSU to
-%broadcast a Slot Announcement message (SA) to the vehicles within its coverage area. In the following, we detail the slot scheduling mechanism in CTMAC and we show how this protocol can 
-%provide an efficient time slot utilization for the participating vehicles, while minimizing transmission collisions caused 
-%by the hidden node problem.
 
 \begin{figure}[!htbp]
     \begin{center}
@@ -1569,119 +1410,6 @@ ADHOC MAC protocols. in terms of transmission collisions
 and the overhead required to create and maintain the TDMA
 schedules, see~\cite{hadded:hal-01379219}. 
 
-%  \begin{figure}[!h]
-%  \begin{center}
-%  % Requires \usepackage{graphicx}
-% \includegraphics[height=10cm,width=15cm]{IMG/CTMACFrame.jpg}
-%  \caption{Frame information (FI) structure.}
-% \label{fig:CTSA_FI}
-%  \end{center}
-%\end{figure}
-%
-%In CTMAC, each RSU constructs and maintains a Frame Information (FI) 
-%of length equal to the number of time slots per frame, $\tau$. 
-%For the frame, this field gives the status of the slot (Idle, Busy, Collision) and 
-%the ID of the vehicles accessing each slot with the characteristic of the data 
-%sent: periodic or event-driven safety messages. 
-%
-%The FI consists 
-%of a set of ID Fields (IDFs) and each one is dedicated to the corresponding 
-%time slot of a frame. The FI structure is shown in Figure~\ref{fig:CTSA_FI}. 
-%Each IDF consists of three fields: VC\_ID, SLT\_STS and PKT\_TYP. 
-%The VC\_ID field contains the ID of the vehicle that is accessing this slot. 
-%The SLT\_STS field contains the status of each slot which indicates whether 
-%the slot is Idle, Busy or in Collision. Finally, the PKT\_TYP field indicates 
-%the type of packet transmitted by the vehicle, i.e. periodic information or 
-%event-driven safety messages. Unlike the VeMAC and ADHOC MAC 
-%protocols, in the CTMAC protocol, only the RSU nodes periodically 
-%broadcast their frame information and each vehicle will update its frame
-% information based on the packet transmitted by its RSU. However, a 
-% vehicle broadcasts its frame information only when an access collision problem is detected. 
-%
-%At the end of each frame, each RSU $u$ can determine the set of 
-%free time slots based on its frame information, denoted by $F(u)$. 
-%When an RSU has one or more available time slots, it announces that 
-%by broadcasting a Slot Announcement (SA) message containing its 
-%identity $(SA->NODE\_ID)$ to all the vehicles in its coverage area. 
-
-%\begin{algorithm}[!htbp]
-%\caption{Action at each vehicle that will reserve a time slot}\label{SlotReservation}
-%\textbf{Input~~} \\
-%$S_{j}(v):$ the set of time slots that the vehicle $v$ can reserve.\\
-%$\alpha_j,~\beta_j$: are the indexes of the first and the last slot of the set $S_{j}(v)$, respectively. 
-
-%\begin{algorithmic}[1]
-%
-%\STATE ~//~TDMA slot assignment
-%\IF{\textit{vehicle $v$ receives an SA message from RSU $u$}}
-%\STATE \textit{$MY\_RSU\_ID=SA->NODE\_ID$}
-%\STATE \textit{vehicle $v$ randomly reserves a temporary time slot, say slot $k$.}
-%\STATE \textit{vehicle $v$ sends a SREQ to RSU $u$ during the time slot $k$.}
-%\ENDIF
-%\WHILE{$timer_1!=0$}
-%\IF{\textit{vehicle $v$ receives an SREP message from RSU $u$}}
-%\STATE \textit{vehicle $v$ starts to broadcast its message during the time slot \textit{$SREP->SLT\_ID.$}}
-%\ENDIF  
-%\ENDWHILE
-%\IF{$(time_1==0)~and~(TS(v)==\emptyset)$}
-%\STATE \textit{go to 2.}
-%\ENDIF
-%\STATE ~//~TDMA schedule maintenance
-%\WHILE{$TS(v)!=\emptyset$}
-%\IF{\textit{$MY\_RSU\_ID!=SA->NODE\_ID$}}
-%\STATE \textit{go to 2.}
-%\ENDIF   
-%\ENDWHILE
-%\end{algorithmic}
-%\end{algorithm}
-
-%When a vehicle receives 
-%an SA message, and if it wishes to access the channel, it tries to get the 
-%%attention of the RSU by sending it a Slot REQuest message (SREQ) including its identity. Algorithm~\ref{SlotReservation} outlines the details of the slot 
-%%reservation mechanism.
-% $v$ represents the vehicle that needs to reserve a 
-%time slot, $timer_1$ is a timer and $TS(v)$ is the time slot that is successfully 
-%acquired by vehicle $v$. When an RSU receives the SERQ message, it checks 
-%whether there is an available time slot and, if there is, the RSU sends a Slot REPly 
-%message (SREP) to the corresponding vehicle including the slot index $(SREP->SLT\_ID)$. 
-%After the reception of the SREP, the vehicle $v$ starts to broadcast its message 
-%during its time slot, $TS(v)=SREP->SLT\_ID$. Otherwise, if the timer expires and 
-%no response has been received from the RSU (lines 12-14), the vehicle $v$ will repeat the same steps.
-%If a vehicle receives an SA message from another RSU (line 17), the vehicle 
-%will send an SREQ to allocate a new time slot and if it receives an SREP from 
-%the RSU it will release its current time slot and it will start to broadcast its packet 
-%during the time slot allocated by the new RSU. Moreover, when an RSU does 
-%not receive a message from a vehicle $v$ during its slot, it considers that it has 
-%left its coverage area and it releases its time slot. 
-
-%Algorithm~\ref{SlotScheduling} 
-%outlines the behavior of our scheme during the procedure of slot scheduling at the RSU.  
-
-%\begin{algorithm}[!htbp]
-%\caption{Slot scheduling procedure executed at each RSU}\label{SlotScheduling}
-%$\alpha_j,~\beta_j$: are the indexes of the first and the last slot of the set $S_{j}(v)$, respectively. 
-%\begin{algorithmic}[1]
-%\STATE \textbf{Input:} 
-%\STATE \textit{$S_{j}:$ The set of time slots managed by the RSU $u$.}
-%\IF{\textit{current\_slot$==TS(u)$ and $F(u)\neq\{\emptyset\}$}}
-%\STATE \textit{$u$ broadcasts an SA message.}
-%\ENDIF
-%
-%\IF{\textit{$u$ receives an SREQ message from vehicle $v$}}
-%\IF{\textit{$\exists~k \in S_j$ such that FI[k].SLT\_STS=Free}}    
-%\STATE \textit{$u$ allocates the slot $k$ to vehicle $v$.}
-%\STATE \textit{$u$ sends a SREP to vehicle $v$.}
-%\ENDIF
-%\ENDIF
-%\WHILE{true}
-%\IF{\textit{$u$ detects that there is a vehicle has leaved its coverage area, say vehicle $i$}}
-%\STATE \textit{ FI[TS($i$)].SLT\_STS=Free}
-%\ENDIF   
-%\ENDWHILE
-
-%\end{algorithmic}
-%\end{algorithm}
-
 % - - - - - - - - - - - - - -
 \subsubsection{A Flooding-Based Location Service in VANETs}
 
@@ -1707,14 +1435,6 @@ according to the network conditions.
 
 %------------------------------------------------------------------------------
 \subsection{Models for Wireless Networks and VANETs}
-
-%\begin{participants}
-%    \pers{Nadjib}{Achir}
-%    \pers{Younes}{Bouchaala}
-%    \pers{Guy}{Fayolle}
-%    \pers{Paul}{Muhlethaler}
-%    \pers{Oyunchimeg}{Shagdar}
-%\end{participants}
 
 % - - - - - - - - - - - - - -
 \subsubsection{Performance analysis of IEEE 802.11 broadcast schemes with different inter-frame spacings}
@@ -1840,80 +1560,6 @@ adapts $P_{cs}$ to reach the $D_{target}$ can thus be envisioned.
 
 \end{module} 
 
-%==============================================================================
-%\begin{module}{resultats}{results:modelswireless}{Models for wireless networks}
-
-%------------------------------------------------------------------------------
-%\subsection{Interference and SINR coverage in spatial non-slotted Aloha networks}
-%
-%\begin{participants}
-%    \pers{Bartek}{Blaszczyszyn}
-%    \pers{Paul}{Muhlethaler}
-%\end{participants}
-%
-%
-%We propose two analytically tractable stochastic-geometric models of interference in adhoc
-%networks using pure (non-slotted) Aloha as the medium access. In contrast the slotted model, the interference in
-%pure Aloha may vary during the transmission of a tagged
-%packet. We develop closed form expressions for the Laplace
-%transform of the empirical average of the interference
-%experienced during the transmission of a typical packet.
-%Both models assume a power-law path-loss function with
-%arbitrarily distributed fading and feature configurations
-%of transmitters randomly located in the Euclidean plane
-%according to a Poisson point process. Depending on the
-%model, these configurations vary over time or are static. We
-%apply our analysis of the interference to study the Signal-to-
-%Interference-and-Noise Ratio (SINR) outage probability for
-%a typical transmission in pure Aloha. The results are used
-%to compare the performance of non-slotted Aloha to the
-%slotted one, which has almost exclusively been previously
-%studied in context of wired ad-hoc networks.
-%
-%------------------------------------------------------------------------------
-%\subsection{Random linear multihop relaying in a general field of interferers using spatial Aloha }
-%
-%\begin{participants}
-%    \pers{Bartek}{Blaszczyszyn}
-%    \pers{Paul}{Muhlethaler}
-%\end{participants}
-%
-%We study a stationary Poisson
-%pattern of nodes on a line embedded in an independent planar
-%Poisson field of interfering nodes. Assuming slotted Aloha and
-%the signal-to-interference-and-noise ratio capture condition, with
-%the usual power-law path loss model and Rayleigh fading, we
-%explicitly evaluate several local and end-to-end performance
-%characteristics related to the nearest-neighbor packet relaying on
-%this line, and study their dependence on the model parameters
-%(the density of relaying and interfering nodes, Aloha tuning and
-%the external noise power). Our model can be applied in two cases:
-%the first use is for vehicular ad-hoc networks, where vehicles are
-%randomly located on a straight road. The second use is to study
-%a “typical” route traced in a (general) planar ad-hoc network by
-%some routing mechanism. The approach we have chosen allows
-%us to quantify the non-efficiency of long-distance routing in “pure
-%ad-hoc” networks and evaluate a possible remedy for it in the
-%form of additional “fixed” relaying nodes, called road-side units in
-%a vehicular network. It also allows us to consider a more general
-%field of interfering nodes and study the impact of the clustering
-%of its nodes on the routing performance. As a special case of
-%a field with more clustering than the Poison field, we consider
-%a Poisson-line field of interfering nodes, in which all the nodes
-%are randomly located on random straight lines. In this case our
-%analysis rigorously (in the sense of Palm theory) corresponds to
-%the typical route of this network. The comparison to our basic
-%model reveals a paradox: clustering of interfering nodes decreases
-%the outage probability of a single (typical) transmission on the
-%route, but increases the mean end-to-end delay
-%
-%\end{module}
-
-%==============================================================================
-%%\begin{module}{resultats}{new2}{New result 2}
-%%ICI Vous pouvez ecrire du texte
-%%\end{module}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
 %%% Section contrats (Bilateral Contracts and Grants with Industry)
@@ -1935,7 +1581,7 @@ adapts $P_{cs}$ to reach the $D_{target}$ can thus be envisioned.
     \pers{Erwan}{Livolant}
 \end{participants}
 
-Partners: CNES, Inria.\\
+Partners: CNES, Inria.
 
 Following the SAHARA project that ended in 2015, CNES decided to fund a study about the use of wireless sensor networks in space environment.
 This new project started in November 2015 and will end in November 2016.
@@ -1960,8 +1606,8 @@ Inria-EVA has signed an long-standing Memorandum of Understanding with OpenMote 
 \subsection{Gridbee CIFRE}
 
 \begin{participants}
-    \pers{Thomas}{Watteyne}
     \pers{Jonathan}{Mu\~noz}
+    \pers{Thomas}{Watteyne}
 \end{participants}
 
 \begin{itemize}
@@ -2011,7 +1657,7 @@ Inria-EVA has signed an long-standing Memorandum of Understanding with OpenMote 
 %------------------------------------------------------------------------------
 \subsection{ANR}
 
-\textit{The Inria-EVA has not been involved in an ANR project in 2016.}
+\textit{The Inria-EVA team has not been involved in an ANR project in 2016.}
 
 %------------------------------------------------------------------------------ 
 \subsection{Competitivity Clusters}
@@ -2021,7 +1667,6 @@ Inria-EVA has signed an long-standing Memorandum of Understanding with OpenMote 
 
 \begin{participants}
     \pers{Pascale}{Minet}
-    %\pers{Ridha}{Soua}
     \pers{Erwan}{Livolant}
 \end{participants}
 
@@ -2029,7 +1674,7 @@ Period: 2011 - 2016.
 
 Partners: EADS (coordinator), Astrium, BeanAir, CNES, ECE, EPMI, Eurocopter, GlobalSys, Inria, LIMOS, Oktal SE, Reflex CES, Safran Engineering Systems.
 
-SAHARA is a FUI project, labelled by ASTECH and PEGASE, which aims at designing a wireless sensor network embedded in an aircraft. The proposed solution should improve the embedded mass, the end-to-end delays, the cost and performance in the transfers of non critical data. 
+SAHARA is a FUI project, labeled by ASTECH and PEGASE, which aims at designing a wireless sensor network embedded in an aircraft. The proposed solution should improve the embedded mass, the end-to-end delays, the cost and performance in the transfers of non critical data. 
 
 This project ended in March 2016. After a presentation of the SAHARA project at the IEEE WISEE 2015 conference (Wireless for Space and Extreme Environments), we were selected to write a book chapter entitled ``Multichannel Wireless Sensor Networks for Aircraft: Challenges and Issues'' in the Wiley book
 ``Wireless sensor systems for extreme environments: space, underwater, underground and industrial''. 
@@ -2098,8 +1743,8 @@ When the Cluster Connexion project ended, the results obtained with regard to th
 \subsection{Other collaborations}
 
 EVA has a collaboration with Vedecom. 
-\paul~supervises Younes Bouchaala's PhD funded by Vedecom. This PhD aims at 
-studying vehicle-to-vehicle communication to improve roads safety. 
+\paul~supervises Younes Bouchaala's PhD funded by Vedecom.
+This PhD aims at studying vehicle-to-vehicle communication to improve roads safety.
 
 \end{module} 
 
@@ -2159,46 +1804,19 @@ studying vehicle-to-vehicle communication to improve roads safety.
 \end{itemize}
 
 %------------------------------------------------------------------------------
-\subsection{Collaborations in European Programs, Except FP7 \& H2020}
+\subsection{Collaborations in European Programs, Except H2020}
 
-\begin{itemize}
-    \XMLaddatt*{type}{sanspuces}
-    \item European Telecommunications Standards Institute (ETSI)
-    \item Co-organization First ETSI 6TiSCH plugtest (interop event) in Prague, Czech Republic, 17-18 July 2015.
-\end{itemize}
-
-% respecter le format 
-%% \begin{itemize}
-%% \XMLaddatt*{type}{sanspuces}
-%% 	\item Program:
-%% 	\item Project acronym:
-%% 	\item Project title:
-%% 	\item Duration: mois ann\'ee d\'ebut - mois ann\'ee fin
-%% 	\item Coordinator:
-%% 	\item Other partners: organisme, labo (pays)
-%% 	\item Abstract: 
-%% \end{itemize}
+\textit{The Inria-EVA team has not participated in non-H2020 European Programs in 2016.}
 
 %------------------------------------------------------------------------------
 \subsection{Collaborations with Major European Organizations}
 
+% ETSI
 \begin{itemize}
     \XMLaddatt*{type}{sanspuces}
-    \item European Telecommunications Standards Institute (ETSI)
-    \item Co-organization First ETSI 6TiSCH plugtest (interop event) in Prague, Czech Republic, 17-18 July 2015.
+    \item European Telecommunications Standards Institute (ETSI)\
+    \item co-organize two ETSI 6TiSCH plugtests in 2016 (in Paris in February, in Berlin in July).
 \end{itemize}
-
-% respecter le format
-%%  \begin{itemize}
-%%  \XMLaddatt*{type}{sanspuces}
-%%         \item Partner 1: organisme 1, labo 1 (pays 1)
-%%         \item Sujet 1 (max. 2 lignes)
-%%  \end{itemize}
-%%  \begin{itemize}
-%%  \XMLaddatt*{type}{sanspuces}
-%%        \item Partner 2: organisme 2, labo 2 (pays 2)
-%%        \item Sujet 2 (max. 2 lignes)
-%%  \end{itemize}
 
 \end{module}
 
@@ -2223,6 +1841,7 @@ studying vehicle-to-vehicle communication to improve roads safety.
 
 %==============================================================================
 \begin{module}{partenariat}{internationalInitiatives}{International Initiatives}
+
 %%% En savoir plus : https://intranet.inria.fr/Vie-scientifique/Information-edition-scientifiques/Comment-rediger-le-RAweb/Les-sections#eztoc27554_15
 
 %------------------------------------------------------------------------------
@@ -2233,13 +1852,14 @@ studying vehicle-to-vehicle communication to improve roads safety.
 %%% Les équipes associées impliquées dans un IIL apparaissent ici :
 
 % - - - - - - - - - - - - - -
-\subsubsection{REALMS}
+\subsubsection{REALMS Associate Team}
 \label{sec:realms}
 
 \begin{itemize}
     \XMLaddatt*{type}{sanspuces}
     \item Type: Associate Team
     \item Inria International Lab: Inria@SiliconValley
+    \item Title: Real-Time Real-World Monitoring Systems
     \item Associate teams: Inria-EVA, Prof. Glaser's team (UC Berkeley), Prof. Kerkez's team (University of Michigan, Ann Arbor)
     \item Duration: 2015-2017
     \item Objective:
@@ -2248,12 +1868,32 @@ studying vehicle-to-vehicle communication to improve roads safety.
         The REALMS associate team conducts research across the environmental engineering and networking research domains.
         Its 3-year goal is to develop easy-to-use real-world network monitoring solutions to provide real-time data for environmental and urban applications.
         This goal leads to the following objectives: building a long-term large-scale public connectivity dataset of the networks deployed; using that dataset to model TSCH networks; and building an ecosystem of tools around this technology.
-    \item website: \url{https://realms-team.github.io/}
+    \item website: \url{http://www.snowhow.io/}
     \item Inria contact: \thomas
 \end{itemize}
 
-%%% Ci-dessous, les projets rattachés à l'IIL hors les équipes associées
-%\subsubsection{Other IIL projects}
+% - - - - - - - - - - - - - -
+\subsubsection{DIVERSITY Associate Team}
+\label{sec:diversity}
+
+\begin{itemize}
+    \XMLaddatt*{type}{sanspuces}
+    \item Type: Associate Team
+    \item Inria International Lab: Inria@SiliconValley
+    \item Title: Measuring and Exploiting Diversity in Low-Power Wireless Networks
+    \item Associate teams: Inria-EVA, Prof. Bhaskar Krishnamachari's team, USC, CA, USA
+    \item Duration: 2016-2018
+    \item Objective:
+        The Grand Challenge of the DIVERSITY associate team is to develop the networking technology for tomorrow's Smart Factory.
+        The two teams come with a perfectly complementary background on standardization and experimentation (Inria-EVA) and scheduling techniques (USC-ANRG).
+        The key topic addressed by the joint team will be networking solutions for the Industrial Internet of Things (IIoT), with a particular focus on reliability and determinism.
+    \item Inria contact: \thomas
+\end{itemize}
+
+% - - - - - - - - - - - - - -
+\subsubsection{Other IIL projects}
+
+\textit{None in 2016.}
 
 %------------------------------------------------------------------------------
 \subsection{Inria Associate Teams Not Involved in an Inria International Labs}
@@ -2265,48 +1905,17 @@ studying vehicle-to-vehicle communication to improve roads safety.
 %
 
 % - - - - - - - - - - - - - -
-\subsubsection{\href{http://glaser.berkeley.edu et http://www-personal.umich.edu/~bkerkez/}{REALMS }}
-
-\begin{itemize}
-\XMLaddatt*{type}{sanspuces}
- \item Title: Real-Time Real-World Monitoring Systems
- \item International Partner (Institution -  Laboratory - Researcher):
- \begin{itemize}
-    \XMLaddatt*{type}{sanspuces}
-    \item University of California Berkeley (United States)  
- - Civil and environmentalengineering - Steven Glaser
- \end{itemize}
- \item Start year: 2015 \item See also: \url{http://glaser.berkeley.edu et http://www-personal.umich.edu/~bkerkez/}
- \item La révolution de l'Internet des objets a suscité le développement de nouveaux produits et standards; Le standard IEEE802.15.4e (2012) a introduit le saut de fréquences en temps slotté (TSCH) qui peut assurer une fiabilité de bout-en-bout de 99,999\%Â§ et une autonomie énergétique de plusieurs années. Ces performances exceptionnelles ont suscité la création à l'IETF du groupe de travail 6TISCH pour standardiser l'intégration des réseaux TSCH dans Internet. Alors que les premières données expérimentales ont mis en évidence la grande robustesse de ces réseaux, il n'existe pas de données d'un vrai réseau, accessibles en temps réel, à large échelle et portant sur une longue période. De telles données sont nécessaires pour mieux modéliser les performances du réseau et produire de meilleurs produits et standards. Les équipes des Professeurs Glaser et Kerkez déploient avec succès de tels réseaux pour étudier l'hydrologie en montagne, observer la qualité deb l'eau et gérer les eaux pluviales en environnement urbain. Il manque un modèle pour aider au déploiement et au fonctionnement de ces réseaux, ainsi qu'assurer la surveillance d'un réseau opérationnel. 
-\end{itemize}
-
-% - - - - - - - - - - - - - -
-\subsubsection{DIVERSITY}
-
-\begin{itemize}
-\XMLaddatt*{type}{sanspuces}
- \item Title: Measuring and Exploiting Diversity in Low-Power Wireless Networks
- \item International Partner (Institution -  Laboratory - Researcher):
- \begin{itemize}
-    \XMLaddatt*{type}{sanspuces}
-    \item University of Southern California (United States)  
- - Autonomous Networks Research Group (ANRG) - Bhaskar Krishnamachari
- \end{itemize}
- \item Start year: 2016\item See also: \_\_\_URL???\_\_\_
- \item The goal of the DIVERSITY associate team is to develop the networking technology for tomorrow's Smart Factory. The two teams comes with a perfectly complementary background on standardization and experimentation (Inria-EVA) and scheduling techniques (USC-ANRG). The key topic addressed by the joint team will be networking solutions for the Industrial Internet of Things (IIoT), with a particular focus on reliability and determinism. 
-\end{itemize}
-
-% - - - - - - - - - - - - - -
 \subsubsection{Tassili}
 
-The Tassili project (N° MDU 17MDU988  - Campus France  N° 37459VF) '' Gestion des caches et orchestration intelligentes dans un environnement réseau virtulaisé'' is a project in collaboration with Algeria and France.
+The Tassili project (N° MDU 17MDU988 - Campus France  N° 37459VF) ``Gestion des caches et orchestration intelligentes dans un environnement réseau virtulaisé'' is a project in collaboration with Algeria and France.
 On the French side, the project is leaded by Samia Bouzefrane (associated professor at CNAM) and \paul~(EVA team Inria).
 On the Algerian side is leaded by the University Mouloud Mammeri of Tizi-Ouzou (UMMTO) représented by Mehammed Daoui (associated professor).
 
-This project will start in January 2017 and will last three years. Three PhD theses will be conducted in co-tutelle between CNAM and UMMTO.
+This project will start in January 2017 and will last three years.
+Three PhD theses will be conducted in co-tutelle between CNAM and UMMTO.
 This project will support the stay of the tree PhD candidates for  a four months visit in France.
 These two PhD theses will be co-directed by \paul.
-The first subject is ''New intelligent caching and mobility strategies for MEC/ICN based architectures'' and the second subject concern the design of a safe  architecture for Name Data Networking.
+The first subject is ``New intelligent caching and mobility strategies for MEC/ICN based architectures'' and the second subject concern the design of a safe  architecture for Name Data Networking.
 
 %------------------------------------------------------------------------------
 \subsection{Inria International Partners}
@@ -2319,28 +1928,42 @@ The first subject is ''New intelligent caching and mobility strategies for MEC/I
 
 \begin{itemize}
     \XMLaddatt*{type}{sanspuces}    
-    \item Inria-EVA has a strong relationship with ENSI (Tunisia) and ENSIAS (Morocco).
-        A significant part of our PhD students come from these engineering schools. 
-    \item University of California, Berkeley, CA, USA
+    \item University of California, Berkeley, CA, USA (Glaser)
         \begin{itemize}
             \item Collaboration with Prof.~Steven~Glaser, Ziran~Zhang, Carlos~Oroza, Sami~Malek and Zeshi~Zheng through the REALMS associate team, see Section~\ref{sec:realms}.
+            \item Joint publication in 2016:
+                \begin{itemize}
+                    \item Long-term Monitoring of the Sierra Nevada Snowpack Using Wireless Sensor Networks. Ziran Zhang, Steven Glaser, Thomas Watteyne, Sami Malek. IEEE Internet of Things Journal, special issue on Large-scale Internet of Things: Theory and Practice, to appear in 2016.
+                    \item Demo: SierraNet: Monitoring the Snow Pack in the Sierra Nevada. Keoma Brun-Laguna, Carlos Oroza, Ziran Zhang, Sami Malek, Thomas Watteyne, Steven Glaser.  ACM International Conference on Mobile Computing and Networking (MobiCom), Workshop on Challenged Networks (CHANTS), 7 October 2016, New York, NY, USA.
+                    \item (Not so) Intuitive Results from a Smart Agriculture Low-Power Wireless Mesh Deployment. Keoma Brun-Laguna, Ana Laura Diedrichs, Diego Dujovne, Rémy Léone, Xavier Vilajosana, Thomas Watteyne. ACM International Conference on Mobile Computing and Networking (MobiCom), Workshop on Challenged Networks (CHANTS), 7 October 2016, New York, NY, USA.
+                    \item SOL: An End-to-end Solution for Real-World Remote Monitoring Systems. Keoma Brun-Laguna, Thomas Watteyne, Sami Malek, Ziran Zhang, Carlos Oroza, Steven Glaser, Branko Kerkez. IEEE International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC), Valencia, Spain, 4-7 September 2016.
+                \end{itemize}
+        \end{itemize}
+    \item University of Southern California, CA, USA
+        \begin{itemize}
+            \item Collaboration with Prof.~Bhaskar Krishnamachari through the DIVERSITY associate team, see Section~\ref{sec:diversity}.
+            \item Joint publication in 2016:
+                \begin{itemize}
+                    \item Insights into Frequency Diversity from Measurements on an Indoor Low Power Wireless Network Testbed. Pedro Henrique Gomes, Ying Chen, Thomas Watteyne, Bhaskar Krishnamachari.  IEEE Global Telecommunications Conference (GLOBECOM), Workshop on Low-Layer Implementation and Protocol Design for IoT Applications (IoT-LINK), Washington, DC, USA, 4-8 December 2016.
+                    \item Reliability through Time-Slotted Channel Hopping and Flooding-based Routing. Pedro Henrique Gomes, Thomas Watteyne, Pradipta Gosh, Bhaskar Krishnamachari. International Conference on Embedded Wireless Systems and Networks (EWSN), Dependability Competition, ACM, Graz, Austria, 14-15 February 2016.
+                \end{itemize}
+        \end{itemize}
+    \item Universidad Tecnologica Nacional, Mendoza, Argentina
+        \begin{itemize}
+            \item Collaboration with Ana Laura Diedrichs, Juan Carlos Taffernaberry, Gustavo Mercado through the SticAmSud PEACH project.
+            \item Joint publication(s) in 2016:
+                \begin{itemize}
+                    \item PEACH: Predicting Frost Events in Peach Orchards Using IoT Technology. Thomas Watteyne, Ana Laura Diedrichs, Keoma Brun-Laguna, Javier Emilio Chaar, Diego Dujovne, Juan Carlos Taffernaberry, Gustavo Mercado. EAI Endorsed Transactions on the Internet of Things, to appear in 2016.
+                    \item A Demo of the PEACH IoT-based Frost Event Prediction System for Precision Agriculture. Keoma Brun-Laguna, Ana Laura Diedrichs,  Javier Emilio Chaar, Diego Dujovne, Juan Carlos Taffernaberry, Gustavo Mercado, Thomas Watteyne. IEEE International Conference on Sensing, Communication and Networking (SECON), poster and demo session, London, UK, 27-30 June 2016
+                \end{itemize}
         \end{itemize}
     \item University of Michigan, Ann Arbor, MI, USA
         \begin{itemize}
             \item Collaboration with Prof.~Branko~Kerkez through the REALMS associate team, see Section~\ref{sec:realms}.
         \end{itemize}
-    \item KU Leuven, Belgium
-        \begin{itemize}
-            \item Collaboration with Prof.~Danny~Hughes, Prof.~Wouter~Joosen, Dr.~Nelson~Matthys, Fan~Yang, Wilfried~Daniels on MicroPnP and on security for the IoT.
-            \item Dr.~Malisa~Vucinic, postdoctoral researcher at KU Leuven, works part time in the Inria-EVA team.
-            \item We won Third Place in the IPSO CHALLENGE 2015 for common project MicroPnP.
-            \item Joint publication(s) in 2016: ... 
-        \end{itemize}
     \item Linear Technology/Dust Networks, Silicon Valley, USA
         \begin{itemize}
             \item Collaboration with Prof.~Kris~Pister, Dr.~Brett~Warneke, Dr.~Lance~Doherty, Dr.~Jonathan~Simon and Joy~Weiss on SmartMesh IP and 6TiSCH standardization.
-            \item We won the IPSO CHALLENGE 2015 People's Choice Award for common project HeadsUp!
-            \item Joint publication(s) in 2016: ...
         \end{itemize}
 \end{itemize}
 
@@ -2354,58 +1977,77 @@ The first subject is ''New intelligent caching and mobility strategies for MEC/I
 \subsubsection{Informal International Partners}
 
 \begin{itemize}
-    \XMLaddatt*{type}{sanspuces}    
-    \item University of California, Berkeley, CA, USA
+    \XMLaddatt*{type}{sanspuces}
+    \item University of California, Berkeley, CA, USA (Pister)
         \begin{itemize}
-            \item Collaboration with Prof.~Kris~Pister, Dr.~Nicola~Accettura, Dr.~Kazuki~Muraoka and David~Burnett on OpenWSN and 6TiSCH standardization.
-            \item Joint publication(s) in 2016: .....
+            \item Collaboration with Prof.~Kris Pister through the IETF 6TiSCH working group.
+            \item Joint publication in 2016:
+                \begin{itemize}
+                    \item Simple Distributed Scheduling with Collision Detection in TSCH Networks. Kazushi Muraoka, Thomas Watteyne, Nicola Accettura, Xavi Vilajosana, Kris Pister. IEEE Sensors Letters, to appear in 2016.
+                \end{itemize}
         \end{itemize}
-    \item Universitat Oberta de Catalunya, Barcelona, Spain
+    \item Open University of Catalunya, Spain
         \begin{itemize}
-            \item Collaboration with Prof.~Xavi~Vilajosana and Dr.~Pere~Tuset on OpenWSN, 6TiSCH standardization and OpenMote technologies.
-            \item We organized two OpenWSN/OpenMote tutorials together, see Section~\ref{sec:meetingseminars}.
-            \item Joint publication(s) in 2016: ....
-        \end{itemize}
-    \item University of Luxembourg, Luxembourg
-        \begin{itemize}
-            \item Collaboration with Prof.~Thomas~Engel and Dr.~Maria-Rita~Palattella on 6TiSCH standardization.
-            \item Joint publication(s) in 2016: ...
-        \end{itemize}
-    \item Universidad Diego Portales, Chile
-        \begin{itemize}
-            \item Collaboration with Prof.~Diego~Dujovne on OpenWSN and 6TiSCH standardization.
-            \item Joint publication(s) in 2016: ...
+            \item Collaboration with Xavi Vilajosana and Pere Tuset through IETF 6TiSCH working group and the OpenWSN project.
+            \item Joint publication(s) in 2016:
+                \begin{itemize}
+                    \item Distributed PID-based Scheduling for 6TiSCH Networks. Marc Domingo-Prieto, Tengfei Chang, Xavier Vilajosana, Thomas Watteyne. IEEE Communications Letters, vol PP, Issue 99, March 2016.
+                    \item Poster Abstract: A Benchmark for Low-power Wireless Networking. Simon Duquennoy, Olaf Landsiedel, Carlo Alberto Boano, Marco Zimmerling, Jan Beutel, Mun Choon Chan, Omprakash Gnawali, Mobashir Mohammad, Luca Mottola, Lothar Thiele, Xavier Vilajosana, Thiemo Voigt, Thomas Watteyne. ACM Conference on Embedded Networked Sensor Systems (ACM Sensys), Stanford, CA, USA, 14-16 November 2016.
+                    \item Rover: Poor (but Elegant) Man's Testbed. Zacharie Brodard, Hao Jiang, Tengfei Chang, Thomas Watteyne, Xavier Vilajosana, Pascal Thubert, Geraldine Texier. ACM International Symposium on Performance Evaluation of Wireless Ad Hoc, Sensor, and Ubiquitous Networks (PE-WASUN), Valletta, Malta, 13-17 November 2016.
+                    \item Determinism Through Path Diversity: Why Packet Replication Makes Sense. Jesica de Armas, Pere Tuset, Tengfei Chang, Ferran Adelantado, Thomas Watteyne, Xavier Vilajosana. International Conference on Intelligent Networking and Collaborative Systems (INCoS), Ostrava, Czech Republic, 7-9 September 2016.
+                    \item OpenWSN \& OpenMote: Demo'ing A Complete Ecosystem for the Industrial Internet of Things. Tengfei Chang, Pere Tuset-Peiro, Jonathan Munoz, Xavier Vilajosana, Thomas Watteyne. IEEE International Conference on Sensing, Communication and Networking (SECON), poster and demo session, London, UK, 27-30 June 2016.
+                    \item OpenMote+: a Range-Agile Multi-Radio Mote. Pere Tuset, Xavier Vilajosana, Thomas Watteyne. International Conference on Embedded Wireless Systems and Networks (EWSN), NexMote Workshop, ACM, Graz, Austria, 14-15 February 2016.
+                    \item Numerous IETF Internet-Drafts.
+                \end{itemize}
         \end{itemize}
     \item University of Science and Technology, Beijing, China
         \begin{itemize}
-            \item Collaboration with Prof.~Qin~Wang and Tengfei~Chang on 6TiSCH standardization and OpenWSN.
-            \item Joint publication(s) in 2016: ...
-        \end{itemize}
-    \item University of Southern California, CA, USA
-        \begin{itemize}
-            \item Collaboration with Prof.~Bhaskar~Krishnamachari, Pedro~Henrique~Gomes and Pradipta~Gosh on OpenWSN and 6TiSCH-based research.
-            \item Joint publication(s) in 2015: ...
+            \item Collaboration with Qin Wang through IETF 6TiSCH working group.
+                Tengfei Chang, engineer at Inria-EVA, comes from her team
+            \item Joint publication(s) in 2016:
+                \begin{itemize}
+                    \item On-the-Fly Bandwidth Reservation for 6TiSCH Wireless Industrial Networks. Maria-Rita Palattella, Thomas Watteyne, Qin Wang, Kazuki Muraoka, Nicola Accettura, Diego Dujovne, Alfredo Grieco, Thomas Engel. IEEE Sensors Journal, 15 January 2016.
+                    \item LLSF: Low Latency Scheduling Function for 6TiSCH Networks. Tengfei Chang, Thomas Watteyne, Qin Wang, Xavier Vilajosana. IEEE International Conference on Distributed Computing in Sensor Systems (DCOSS), Washington, DC, USA, 26-28 May 2016.
+                \end{itemize}
         \end{itemize}
     \item University of Bari, Italy
         \begin{itemize}
-            \item Collaboration with Prof.~Alfredo~Grieco, Prof.~Gennaro~Boggia, Dr.~Giuseppe~Piro and Savio~Sciancalepore on security for the IoT.
-            \item Joint publication(s) in 2016: ...
-        \end{itemize}
-    \item Swedish Institute of Computer Science (SICS), Sweden
-        \begin{itemize}
-            \item Collaboration with Prof.~Olaf~Landsiedel, Dr.~Simon~Duquennoy and Beshr~Al~Nahas on distributed scheduling for TSCH networks.
-            \item Joint publication(s) in 2016: ....
+            \item Collaboration with Savio Sciancalepore, Giuseppe Piro and Gennaro Boggia through IETF 6TiSCH and OpenWSN.
+            \item Joint publication in 2016:
+                \begin{itemize}
+                    \item Link-layer Security in TSCH Networks: Effect on Slot Duration.  Savio Sciancalepore, Malisa Vucinic, Giuseppe Piro, Gennaro Boggia, Thomas Watteyne. Wiley Transactions on Emerging Telecommunications Technologies (ETT), to appear in 2016.
+                \end{itemize}
         \end{itemize}
     \item University of Trento, Italy
         \begin{itemize}
-            \item Collaboration with Dr.~Oana~Iova on routing in the IoT.
-            \item Joint publication(s) in 2016: ...
+            \item Collaboration with Oana Iova through IETF 6TiSCH working group.
+            \item Joint publication(s) in 2016:
+                \begin{itemize}
+                    \item The Love-Hate Relationship between IEEE802.15.4 and RPL. Oana Iova, Fabrice Theoleyre, Thomas Watteyne, Thomas Noel. IEEE Communications Magazine, to appear in 2016.
+                \end{itemize}
         \end{itemize}
-    \item IMEC, Netherlands
+    \item TU Berlin, Germany
         \begin{itemize}
-            \item Collaboration with Dr.~Pouria~Zand on 6TiSCH standardization.
-            \item Joint publication(s) in 2016: ...
+            \item Collaboration with  Vlado Handziski, Adam Wolisz through IETF 6TiSCH working group.
+            \item Joint publication(s) in 2016:
+                \begin{itemize}
+                    \item Industrial Wireless IP-based Cyber Physical Systems. Thomas Watteyne, Vlado Handziski, Xavier Vilajosana, Simon Duquennoy, Oliver Hahm, Emmanuel Baccelli, Adam Wolisz. Proceedings of the IEEE, Vol. PP, Issue 99, pp. 1-14, March 2016.
+                \end{itemize}
         \end{itemize}
+    \item Mandat International, Switzerland
+        \begin{itemize}
+            \item Collaboration with Sebastien Ziegler through the H2020 F-Interop project
+            \item Joint publication(s) in 2016:
+                \begin{itemize}
+                    \item F-Interop – Online Platform of Interoperability and Performance Tests for the Internet of Things. Sébastien Ziegler, Serge Fdida, Cesar Viho, Thomas Watteyne. Conference on Interoperability in IoT (InterIoT), Paris, France, 26-28 October 2016.
+                \end{itemize}
+        \end{itemize}
+    \item KU Leuven, Belgium
+        \begin{itemize}
+            \item Collaboration with Prof.~Danny~Hughes, Prof.~Wouter~Joosen, Dr.~Nelson~Matthys, Fan~Yang, Wilfried~Daniels on MicroPnP.
+        \end{itemize}
+    \item Inria-EVA has a strong relationship with ENSI (Tunisia) and ENSIAS (Morocco).
+        A significant part of our PhD students come from these engineering schools.
 \end{itemize}
 
 %%%	Vous pouvez écrire du texte
@@ -2437,32 +2079,8 @@ The first subject is ''New intelligent caching and mobility strategies for MEC/I
             \item C\'atedra de Fisiolog\'ia Vegetal, Facultad de Ciencias Agrarias, Universidad Nacional de Cuyo, Mendoza, Argentina.
         \end{itemize}
     \item Duration: 2016-2017
-    \item Goal: TPropose a design methodology for a low­power wireless IoT sensing network, given the requirements and restrictions of a Machine Learning model to predict frost events in peach orchards and vineyards.
+    \item Goal: Propose a design methodology for a low­power wireless IoT sensing network, given the requirements and restrictions of a Machine Learning model to predict frost events in peach orchards and vineyards.
 \end{itemize}
-
-% - - - - - - - - - - - - - -
-\subsubsection{International Initiatives}
-
-\begin{itemize}
-\XMLaddatt*{type}{sanspuces}
- \item \textbf{ PEACH} 
- \item Title: PrEcision Agriculture through Climate researcH
- \item International Partners (Institution -  Laboratory - Researcher):
- \begin{itemize}
-    \XMLaddatt*{type}{sanspuces}
-    \item Universidad Diego Portales (Chile)  
- - \_\_\_DEPARTMENT???\_\_\_ - Diego Dujovne
-    \item Universidad Tecnológica de Mendoza (Argentina)  
- - \_\_\_DEPARTMENT???\_\_\_ - Gustavo Mercado
- \end{itemize}
- \item Duration: 2016 - 2017
- \item Start year: 2016\item See also: \_\_\_URL???\_\_\_
- \item In 2013, 85\%Â§ of the peach production in the Mendoza region (Argentina) was lost because of frost. Because less fruit was produced in the region, 600.000 less work days were needed to process the harvest between November 201 and March 2014, a reduction in work force of 10.600 people. Across the Mendoza region, frost has caused a loss of revenue of 950 million Argentine pesos - roughly 100 million USD - in the peach business alone.
-A frost event happens when the temperature is so low that the crops cannot recover their tissue or internal structure from the effects of water freezing inside or outside the plant. For the peach production, a critical period is when the trees are in bloom and fruit set (Aug./Sept. in Mendoza), during which the temperature needs to be kept above -3°C. Even a few hours below that temperature causes flowers to fall, preventing fruits to grow.
-Because of the huge economical impact, countermeasures exist and are used extensively.
-Today, virtually all industrial peach orchards are equi 
-\end{itemize}
-
 
 \end{module}
 
@@ -2476,20 +2094,27 @@ Today, virtually all industrial peach orchards are equi
 
 %chercheurs invités, profs invités (via université), Les internships sont à mettre dans la subsection suivante.
 
+
 \begin{itemize}
-    \item{\bf Mario Gerla},    Professor,   UCLA,                       USA,       visit 10-20 December 2016
-    \item{\bf Leila Saidane},  Professor,   ENSI, Tunis,                Tunisia,   visit November 2016
-    \item{\bf Felipe Lalanne}, Reseacher,   Inria Chile,                Chile,     visit 19–26 October 2016
-    \item{\bf Mario Gerla},    Professor,   UCLA,                       USA,       visit 31 August - 23 September 2016
-    \item{\bf Travis Massey},  PhD Studen,  UC Berkeley,                USA,       visit 22 July 2016
-    \item{\bf Diego Dujovne},  Professor,   Universidad Diego Portales, Chile,     visit 22-31 July 2016
-    \item{\bf Carlos Oroza},   PhD Student, UC Berkeley,                USA,       visit 23-29 July 2016
-    \item{\bf Ruben Milocco},  Universidad Nacional Comahue,            Argentina, visit July 2016
-    \item{\bf David Burnett},  PhD Student, UC Berkeley,                USA,       visit 13-15 June 2016
-    \item{\bf Branko Kerkez},  Professor,   U. Michigan,                USA,       visit 17-22 June 2016
-    \item{\bf Steven Glaser},  Professor,   UC Berkeley,                USA,       visit 21-25 March 2016
-    \item{\bf Filip Barac},    PhD Student, Mid Sweden University,      Sweden,    visit 8-19 February 2016
-    \item{\bf Xavi Vilajosana},Professor,   UOC/OpenMote,               Spain,     visit 2-4 February 2016
+    \item Professors/Researchers:
+        \begin{itemize}
+            \item{\bf Mario Gerla},    Professor,   UCLA,                       USA,       visit 10-20 December 2016
+            \item{\bf Leila Saidane},  Professor,   ENSI, Tunis,                Tunisia,   visit November 2016
+            \item{\bf Felipe Lalanne}, Reseacher,   Inria Chile,                Chile,     visit 19–26 October 2016
+            \item{\bf Mario Gerla},    Professor,   UCLA,                       USA,       visit 31 August - 23 September 2016
+            \item{\bf Diego Dujovne},  Professor,   Universidad Diego Portales, Chile,     visit 22-31 July 2016
+            \item{\bf Ruben Milocco},  Universidad Nacional Comahue,            Argentina, visit July 2016
+            \item{\bf Branko Kerkez},  Professor,   U. Michigan,                USA,       visit 17-22 June 2016
+            \item{\bf Steven Glaser},  Professor,   UC Berkeley,                USA,       visit 21-25 March 2016
+            \item{\bf Xavi Vilajosana},Professor,   UOC/OpenMote,               Spain,     visit 2-4 February 2016
+        \end{itemize}
+    \item PhD Students:
+        \begin{itemize}
+            \item{\bf Travis Massey},  PhD Student, UC Berkeley,                USA,       visit 22 July 2016
+            \item{\bf Carlos Oroza},   PhD Student, UC Berkeley,                USA,       visit 23-29 July 2016
+            \item{\bf David Burnett},  PhD Student, UC Berkeley,                USA,       visit 13-15 June 2016
+            \item{\bf Filip Barac},    PhD Student, Mid Sweden University,      Sweden,    visit 8-19 February 2016
+        \end{itemize}
 \end{itemize}
 
 %------------------------------------------------------------------------------
@@ -2508,12 +2133,12 @@ Today, virtually all industrial peach orchards are equi
 % - - - - - - - - - - - - - -
 \subsubsection{Sabbatical Programme}
 
-\textit{The Inria-EVA team has not participated to a sabbatical programme in 2016.}
+\textit{None in 2016.}
 
 % - - - - - - - - - - - - - -
 \subsubsection{Explorer Programme}
 
-\textit{The Inria-EVA team has not participated to a explorer programme in 2016.}
+\textit{None in 2016.}
 
 % - - - - - - - - - - - - - -
 \subsubsection{Research Stays Abroad}
